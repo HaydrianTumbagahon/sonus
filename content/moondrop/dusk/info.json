@@ -1,0 +1,24 @@
+{
+  "name": "Dusk",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 2BA + DSP",
+  "priceUSD": 359,
+  "impedance": "30 Ω (approx)",
+  "sensitivity": "122 dB/Vrms",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "USB-C DSP cable + analog cable",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Case", "DSP cable", "Analog cable", "Ear tips", "App support"],
+  "pros": ["DSP tuning flexibility", "Excellent collaboration tuning", "Great technicalities"],
+  "cons": ["DSP cable dependency for full features", "Price"],
+  "ratings": { "build": 8, "value": 8, "sound": 9 },
+  "insight": "A highly acclaimed DSP-tunable collaborative crossover project. Offers flexibility through app-controlled tuning while maintaining strong stock performance.",
+  "tags": ["mid-tier", "hybrid", "dsp", "collaboration", "tunable"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

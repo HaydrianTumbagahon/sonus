@@ -1,0 +1,24 @@
+{
+  "name": "FH11",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 1BA",
+  "priceUSD": 49,
+  "impedance": "24 Ω",
+  "sensitivity": "112 dB/mW",
+  "frequencyResponse": "20 Hz - 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Zinc alloy",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Decent hybrid intro", "Zinc faceplate", "Affordable"],
+  "cons": ["Basic performance"],
+  "ratings": { "build": 7, "value": 8, "sound": 6 },
+  "insight": "A hybrid baseline entry-level model built with zinc-alloy faceplates.",
+  "tags": ["entry-level", "hybrid", "budget"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

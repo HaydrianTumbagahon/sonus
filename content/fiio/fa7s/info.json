@@ -1,0 +1,24 @@
+{
+  "name": "FA7S",
+  "driverType": "BA",
+  "driverConfig": "Multi-BA",
+  "priceUSD": 449,
+  "impedance": "18 Ω",
+  "sensitivity": "110 dB/mW",
+  "frequencyResponse": "20 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Premium",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Clinical speed", "Monitoring accuracy", "Clean presentation"],
+  "cons": ["Can sound dry", "Less fun tuning"],
+  "ratings": { "build": 8, "value": 7, "sound": 8 },
+  "insight": "An elegant multi-BA listening architecture focused on clinical speed and monitoring accuracy.",
+  "tags": ["flagship", "ba", "monitoring", "analytical"],
+  "releaseDate": "2022-01-01",
+  "measuredBy": ""
+}

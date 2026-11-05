@@ -1,0 +1,24 @@
+{
+  "name": "Chu II",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 19,
+  "impedance": "18 Ω",
+  "sensitivity": "119 dB/Vrms",
+  "frequencyResponse": "10 Hz - 35 kHz",
+  "materials": {
+    "shell": "Metal alloy",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Detachable copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Tips", "Cable", "Simple pouch"],
+  "pros": ["Incredible value", "Removable cable", "Punchy bass", "Micro size", "Global best-seller"],
+  "cons": ["Build is basic at the price", "Cable is thin"],
+  "ratings": { "build": 7, "value": 10, "sound": 7 },
+  "insight": "A global best-seller featuring a removable cable, punchy bass, and micro-size fit. One of the best true entry points into IEMs.",
+  "tags": ["entry-level", "dd", "budget-king", "beginner-friendly", "value"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

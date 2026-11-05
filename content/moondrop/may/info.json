@@ -1,0 +1,24 @@
+{
+  "name": "May",
+  "driverType": "Hybrid",
+  "driverConfig": "Hybrid with DSP",
+  "priceUSD": 79,
+  "impedance": "30 Ω",
+  "sensitivity": "120 dB/Vrms",
+  "frequencyResponse": "20 Hz - 20 kHz",
+  "materials": {
+    "shell": "Resin / Plastic",
+    "faceplate": "Plastic",
+    "nozzle": "Plastic",
+    "cable": "USB-C DSP cable",
+    "connector": "2-Pin / Fixed DSP"
+  },
+  "accessories": ["Case", "Tips", "DSP cable"],
+  "pros": ["App-controlled DSP", "Interactive tuning", "Good value"],
+  "cons": ["Reliant on DSP cable", "Build is more plastic"],
+  "ratings": { "build": 6, "value": 8, "sound": 7 },
+  "insight": "An interactive hybrid utilizing online application-controlled DSP adjustments for flexible sound.",
+  "tags": ["entry-level", "hybrid", "dsp", "tunable"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

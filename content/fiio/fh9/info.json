@@ -1,0 +1,24 @@
+{
+  "name": "FH9",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 6BA",
+  "priceUSD": 599,
+  "impedance": "18 Ω",
+  "sensitivity": "108 dB/mW",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Titanium alloy",
+    "faceplate": "Titanium",
+    "nozzle": "Metal",
+    "cable": "Premium modular",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Multiple tips", "Modular cable"],
+  "pros": ["Excellent titanium build", "Balanced hybrid performance", "Good value for flagship"],
+  "cons": ["Weight", "Can be bright"],
+  "ratings": { "build": 9, "value": 8, "sound": 8 },
+  "insight": "A massive hybrid flagship showcasing a titanium alloy shell housing 6 BAs and a large dynamic driver.",
+  "tags": ["flagship", "hybrid", "titanium", "build-quality"],
+  "releaseDate": "2022-01-01",
+  "measuredBy": ""
+}

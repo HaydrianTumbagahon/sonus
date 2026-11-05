@@ -1,0 +1,44 @@
+{
+        "name": "Armature Art 12",
+        "driverType": "BA",
+        "driverConfig": "12BA (4-in-1 bass module + 4 mid BA + 4-in-1 treble module)",
+        "priceUSD": 799,
+        "impedance": "5 Ω",
+        "sensitivity": "121 dB/Vrms",
+        "frequencyResponse": "6 Hz - 34 kHz",
+        "materials": {
+                "shell": "3D-printed resin (HeyGears DLP)",
+                "faceplate": "CNC aluminum",
+                "nozzle": "Metal",
+                "cable": "Detachable with modular plugs",
+                "connector": "2-Pin"
+        },
+        "accessories": [
+                "Storage case",
+                "Cable with 3.5mm + 4.4mm modular plugs",
+                "Ear tips (S/M/L)",
+                "Anime-girl card",
+                "Manual & wearing guidance",
+                "Certificate & service card"
+        ],
+        "pros": [
+                "Pure full-BA architecture",
+                "Unusually weighty bass for BA",
+                "Smooth, non-sibilant treble",
+                "Solid build with engraved aluminum faceplate"
+        ],
+        "cons": [
+                "Very low impedance requires good source control",
+                "Thick shell may not suit all ears",
+                "Tuning is warmer/bass-forward rather than reference"
+        ],
+        "ratings": {
+                "build": 8,
+                "value": 7,
+                "sound": 8
+        },
+        "insight": "Moondrop's 12-driver all-BA flagship from the Armature Art series. Uses a balanced 4+4+4 three-way configuration with custom 4-in-1 bass and treble modules. Known for a warm, weighty presentation that is unusual for pure BA designs, with smooth treble and good coherence.",
+        "tags": ["flagship", "ba", "full-ba", "armature-art", "warm"],
+        "releaseDate": "2026-06-17",
+        "measuredBy": ""
+}

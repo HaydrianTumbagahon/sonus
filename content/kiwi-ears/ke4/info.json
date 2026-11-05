@@ -1,0 +1,39 @@
+{
+  "name": "KE4",
+  "driverType": "Hybrid",
+  "driverConfig": "2DD + 2BA",
+  "priceUSD": 199,
+  "impedance": "16-32 \u03a9",
+  "sensitivity": "110-122 dB",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin / Metal",
+    "faceplate": "Metal / Resin",
+    "nozzle": "Metal",
+    "cable": "Standard / Premium",
+    "connector": "2-Pin"
+  },
+  "accessories": [
+    "Carrying case",
+    "Ear tips",
+    "Cable"
+  ],
+  "pros": [
+    "Good performance for the tier"
+  ],
+  "cons": [
+    "Details to be filled by reviewer"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "KE4 from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "tags": [
+    "mid",
+    "hybrid"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

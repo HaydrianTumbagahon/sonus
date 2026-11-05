@@ -1,0 +1,24 @@
+{
+  "name": "Lan",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 39,
+  "impedance": "32 Ω",
+  "sensitivity": "123 dB/Vrms",
+  "frequencyResponse": "10 Hz - 35 kHz",
+  "materials": {
+    "shell": "Stainless steel",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Compact size", "Neutral smooth tuning", "Rugged steel shell", "Great price"],
+  "cons": ["Technicalities are basic"],
+  "ratings": { "build": 8, "value": 9, "sound": 7 },
+  "insight": "A smooth, neutral, and compact single dynamic option built in a rugged steel alloy shell.",
+  "tags": ["entry-level", "dd", "neutral", "compact", "value"],
+  "releaseDate": "2022-01-01",
+  "measuredBy": ""
+}

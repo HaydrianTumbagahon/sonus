@@ -1,0 +1,24 @@
+{
+  "name": "JH5",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA",
+  "priceUSD": 149,
+  "impedance": "19 Ω",
+  "sensitivity": "112 dB/mW",
+  "frequencyResponse": "20 Hz - 40 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "Resin",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Good driver config for price", "Decent technicalities", "Comfortable fit"],
+  "cons": ["Build is average", "Tuning is safe but not exciting"],
+  "ratings": { "build": 7, "value": 8, "sound": 7 },
+  "insight": "A 3D-printed hybrid layout with 1 dynamic driver and 4 customized balanced armatures.",
+  "tags": ["mid-tier", "hybrid", "value"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

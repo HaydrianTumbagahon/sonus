@@ -1,0 +1,24 @@
+{
+  "name": "Solis II",
+  "driverType": "Hybrid",
+  "driverConfig": "Tribrid (Dynamic + BA + Electrostatic)",
+  "priceUSD": 2999,
+  "impedance": "15 Ω",
+  "sensitivity": "122 dB/Vrms",
+  "frequencyResponse": "10 Hz - 50 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal / Resin",
+    "nozzle": "Metal",
+    "cable": "Premium modular",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Premium carrying case", "Multiple ear tip sets", "Modular cable", "Cleaning tools"],
+  "pros": ["Exceptional resolution", "Beautiful design", "Airy electrostatic treble"],
+  "cons": ["Very high price", "Requires good source"],
+  "ratings": { "build": 9, "value": 6, "sound": 9 },
+  "insight": "A multi-driver tribrid art piece featuring electrostatic drivers. Summit-fi level performance with strong technicalities and refined tuning.",
+  "tags": ["flagship", "tribrid", "electrostatic", "summit-fi"],
+  "releaseDate": "2024-01-01",
+  "measuredBy": ""
+}

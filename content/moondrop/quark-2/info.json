@@ -1,0 +1,24 @@
+{
+  "name": "Quark 2",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 15,
+  "impedance": "32 Ω",
+  "sensitivity": "115 dB/Vrms",
+  "frequencyResponse": "20 Hz - 20 kHz",
+  "materials": {
+    "shell": "Plastic",
+    "faceplate": "Plastic",
+    "nozzle": "Plastic",
+    "cable": "Fixed Type-C",
+    "connector": "Type-C"
+  },
+  "accessories": ["Tips", "Simple packaging"],
+  "pros": ["Ultra affordable", "Type-C convenience", "Pocketable", "Surprisingly usable sound"],
+  "cons": ["Very basic build", "Fixed cable", "Limited technical performance"],
+  "ratings": { "build": 5, "value": 9, "sound": 6 },
+  "insight": "An ultra-affordable Type-C connection earbud built for minimalist pocket travel.",
+  "tags": ["entry-level", "dd", "type-c", "ultra-budget", "travel"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

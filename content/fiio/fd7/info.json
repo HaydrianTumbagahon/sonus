@@ -1,0 +1,24 @@
+{
+  "name": "FD7",
+  "driverType": "DD",
+  "driverConfig": "1DD (Beryllium diaphragm)",
+  "priceUSD": 499,
+  "impedance": "32 Ω",
+  "sensitivity": "111 dB/mW",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Titanium",
+    "faceplate": "Titanium",
+    "nozzle": "Metal",
+    "cable": "Premium",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Realistic acoustic decay", "Premium materials", "Natural timbre"],
+  "cons": ["Price for single DD", "Needs power"],
+  "ratings": { "build": 9, "value": 7, "sound": 8 },
+  "insight": "A premium flagship utilizing pure beryllium-diaphragm dynamic drivers for realistic acoustic decay.",
+  "tags": ["flagship", "dd", "beryllium", "natural"],
+  "releaseDate": "2022-01-01",
+  "measuredBy": ""
+}

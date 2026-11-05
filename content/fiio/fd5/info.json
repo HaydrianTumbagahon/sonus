@@ -1,0 +1,24 @@
+{
+  "name": "FD5",
+  "driverType": "DD",
+  "driverConfig": "1DD (semi-open)",
+  "priceUSD": 299,
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB/mW",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Aluminum / Stainless",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Modular",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Expansive soundstage", "Unique semi-open design", "Good build"],
+  "cons": ["Isolation is reduced", "Needs power"],
+  "ratings": { "build": 8, "value": 8, "sound": 8 },
+  "insight": "A uniquely shaped semi-open back structural dynamic model offering expansive soundstage room.",
+  "tags": ["mid-tier", "dd", "semi-open", "soundstage"],
+  "releaseDate": "2021-01-01",
+  "measuredBy": ""
+}

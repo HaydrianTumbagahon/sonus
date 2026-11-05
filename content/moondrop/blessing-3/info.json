@@ -1,0 +1,24 @@
+{
+  "name": "Blessing 3",
+  "driverType": "Hybrid",
+  "driverConfig": "2DD + 4BA",
+  "priceUSD": 319,
+  "impedance": "14.8 Ω",
+  "sensitivity": "120 dB/Vrms",
+  "frequencyResponse": "10 Hz - 30 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Silver-plated copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Carrying case", "Ear tips (multiple sizes)", "Cable", "Cleaning brush"],
+  "pros": ["Excellent detail retrieval", "Clean neutral-bright tuning", "Great imaging", "Industry standard"],
+  "cons": ["Can be analytical", "Bass is controlled rather than fun"],
+  "ratings": { "build": 8, "value": 9, "sound": 9 },
+  "insight": "The industry-standard hybrid multi-driver set, praised for analytical detail and clean technical performance. A modern classic in the mid-tier.",
+  "tags": ["mid-tier", "hybrid", "analytical", "detail", "reference"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

@@ -1,0 +1,24 @@
+{
+  "name": "FH3",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 2BA",
+  "priceUSD": 149,
+  "impedance": "19 Ω",
+  "sensitivity": "112 dB/mW",
+  "frequencyResponse": "20 Hz - 40 kHz",
+  "materials": {
+    "shell": "Aluminum alloy",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Deep sub-bass", "Good for gaming", "Solid metal build"],
+  "cons": ["Can be bassy for some", "Not the most resolving"],
+  "ratings": { "build": 8, "value": 8, "sound": 7 },
+  "insight": "A classic staple hybrid highly rated by gamers and bass-heads for deep sub-bass punch.",
+  "tags": ["mid-tier", "hybrid", "bass", "gaming"],
+  "releaseDate": "2020-01-01",
+  "measuredBy": ""
+}

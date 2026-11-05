@@ -1,0 +1,82 @@
+[
+  {
+    "name": "7Hz",
+    "slug": "7hz",
+    "status": "live",
+    "description": "7Hz earned their legendary status in the audiophile community by breaking the \"planar barrier.\" While early planar magnetic IEMs were bulky and difficult to tune, 7Hz successfully engineered a massive 14.5mm planar driver into a comfortable form factor. They are famous for intense, holographic 3D soundstages, blisteringly fast transient speeds, and highly competitive, ultra-budget-friendly sub-brands.",
+    "logo": "/brands/7hz/logo.webp",
+    "iemCount": 13
+  },
+  {
+    "name": "DUNU",
+    "slug": "dunu",
+    "status": "live",
+    "description": "Formed originally as an OEM/ODM manufacturer in 2002, DUNU has decades of specialized acoustic experience. They are globally revered by audiophiles for having the best build quality in the Chi-Fi landscape. DUNU is famous for its advanced material science (like carbon and beryllium coatings) and its patented, universally praised modular quick-switch audio cables.",
+    "logo": "/brands/dunu/logo.png",
+    "iemCount": 8
+  },
+  {
+    "name": "FiiO",
+    "slug": "fiio",
+    "status": "live",
+    "description": "FiiO is the undisputed infrastructure and ecosystem titan of Chinese portable audio. Originally legendary for creating portable amplifiers and high-resolution Digital Audio Players (DAPs), FiiO successfully funneled its massive engineering budget into a sprawling line of IEMs. They are famous for exceptional mechanical builds, structural modularity, and high driver counts at fair price-to-performance metrics.",
+    "logo": "/brands/fiio/logo.png",
+    "iemCount": 12
+  },
+  {
+    "name": "Kinera Audio",
+    "slug": "kinera",
+    "status": "live",
+    "description": "Founded in 2016, Kinera treats IEM design like fine art. They are globally famous for their gorgeous, hand-painted custom resin outer shells and themes heavily rooted in Norse mythology. Kinera is a master of \"triple-hybrid\" and \"quad-hybrid\" platforms, packing dynamic drivers, balanced armatures, planar micro-drivers, and electrostatic units into single ear structures. They also run highly successful sister brands like Celest and QoA (Queen of Audio) to cover the budget markets.",
+    "logo": "/brands/kinera/logo.webp",
+    "iemCount": 11
+  },
+  {
+    "name": "Kiwi Ears",
+    "slug": "kiwi-ears",
+    "status": "live",
+    "description": "Kiwi Ears operates like an exclusive boutique skunkworks laboratory. Led by a highly revered, anonymous master acoustic engineer, the company focuses heavily on catering to musicians, studio engineers, and critical casual listeners. They are highly famous for hand-crafted, beautiful medical-grade resin shells and complex \"multi-brid\" setups that mash dynamic, armature, planar, and piezoelectric technologies together.",
+    "logo": "/brands/kiwi-ears/logo.png",
+    "iemCount": 14
+  },
+  {
+    "name": "KZ",
+    "slug": "kz",
+    "status": "live",
+    "description": "Founded in 2012, KZ (Knowledge Zenith) is the historic gateway grandfather of the Chi-Fi movement. They single-handedly disrupted the global audio market by introducing multi-driver hybrid setups for under $30. KZ operates as a high-volume manufacturing powerhouse, rapidly turning out aggressive, energetic V-shaped audio signatures. They are incredibly popular among budget-conscious musicians, casual listeners, and competitive gamers.",
+    "logo": "/brands/kz/logo.png",
+    "iemCount": 15
+  },
+  {
+    "name": "Moondrop",
+    "slug": "moondrop",
+    "status": "live",
+    "description": "Founded in 2015, Moondrop is arguably the most famous and culturally dominant Chi-Fi brand in the world. They popularized target-curve tuning metrics (using their signature VDSF target curve) to achieve highly natural, vocal-forward sound signatures. They are equally famous for their intricate structural engineering and their unmistakable anime-inspired aesthetic packaging.",
+    "logo": "/brands/moondrop/logo.png",
+    "iemCount": 15
+  },
+  {
+    "name": "Simgot",
+    "slug": "simgot",
+    "status": "coming-soon",
+    "iemCount": 0
+  },
+  {
+    "name": "Tanchjim",
+    "slug": "tanchjim",
+    "status": "coming-soon",
+    "iemCount": 0
+  },
+  {
+    "name": "Tangzu",
+    "slug": "tangzu",
+    "status": "coming-soon",
+    "iemCount": 0
+  },
+  {
+    "name": "Truthear",
+    "slug": "truthear",
+    "status": "coming-soon",
+    "iemCount": 0
+  }
+]

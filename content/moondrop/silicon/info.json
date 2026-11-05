@@ -1,0 +1,24 @@
+{
+  "name": "Silicon",
+  "driverType": "Hybrid",
+  "driverConfig": "Tribrid with MEMS",
+  "priceUSD": 299,
+  "impedance": "18 Ω",
+  "sensitivity": "119 dB/Vrms",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Silver-plated",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Smooth fatigue-free treble", "Modern MEMS implementation", "Clean tuning"],
+  "cons": ["Newer model, less community data"],
+  "ratings": { "build": 8, "value": 8, "sound": 8 },
+  "insight": "A modern tribrid using cutting-edge MEMS hardware for smooth, fatigue-free treble.",
+  "tags": ["mid-tier", "tribrid", "mems", "smooth"],
+  "releaseDate": "2024-01-01",
+  "measuredBy": ""
+}

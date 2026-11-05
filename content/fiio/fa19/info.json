@@ -1,0 +1,24 @@
+{
+  "name": "FA19",
+  "driverType": "BA",
+  "driverConfig": "10 Knowles Balanced Armatures per side",
+  "priceUSD": 999,
+  "impedance": "16 Ω",
+  "sensitivity": "122 dB/mW",
+  "frequencyResponse": "20 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin / Metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Premium modular",
+    "connector": "MMCX"
+  },
+  "accessories": ["Premium case", "Multiple tips", "Modular cable", "Cleaning tools"],
+  "pros": ["High driver count", "Excellent resolution", "Strong technicalities"],
+  "cons": ["Requires good amplification", "Price"],
+  "ratings": { "build": 9, "value": 7, "sound": 9 },
+  "insight": "A flagship multi-driver powerhouse utilizing 10 Knowles Balanced Armatures per ear.",
+  "tags": ["flagship", "ba", "high-driver-count", "technical"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

@@ -1,0 +1,52 @@
+{
+        "name": "Baldr 2",
+        "driverType": "Hybrid",
+        "driverConfig": "1DD + 2BA + 4EST (7-driver tribrid)",
+        "priceUSD": 1399,
+        "impedance": "22 Ω",
+        "sensitivity": "109 dB",
+        "frequencyResponse": "5 Hz - 50 kHz",
+        "materials": {
+                "shell": "Natural oak wood + synthetic resin",
+                "faceplate": "Wood / metal / resin with gold accents",
+                "nozzle": "Integrated",
+                "cable": "4-core 6N OCC gold-plated",
+                "connector": "2-Pin"
+        },
+        "accessories": [
+                "Premium leather carrying case",
+                "6N OCC gold-plated cable",
+                "3.5mm / 2.5mm / 4.4mm modular plugs (or adapters)",
+                "Final Audio Type E ear tips",
+                "Kinera custom ear tips (multiple pairs)",
+                "Foam tips",
+                "Cleaning tool"
+        ],
+        "pros": [
+                "Gorgeous oak wood design",
+                "Airy electrostatic treble extension",
+                "Refined, immersive tuning",
+                "Premium accessory package"
+        ],
+        "cons": [
+                "High price",
+                "Shell size may not suit smaller ears",
+                "Benefits from a quality source"
+        ],
+        "ratings": {
+                "build": 9,
+                "value": 7,
+                "sound": 9
+        },
+        "insight": "Kinera's Imperial Baldr 2.0 is a flagship 7-driver tribrid (1DD + 2 Knowles BA + 4 Sonion EST) housed in beautiful natural oak shells. It offers controlled bass, natural expressive mids, and extended high-frequency detail with a refined, immersive presentation.",
+        "tags": [
+                "flagship",
+                "hybrid",
+                "tribrid",
+                "electrostatic",
+                "wood-shell",
+                "summit-fi"
+        ],
+        "releaseDate": "2021-10-01",
+        "measuredBy": ""
+}

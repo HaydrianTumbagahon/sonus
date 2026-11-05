@@ -1,0 +1,24 @@
+{
+  "name": "Variations",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 2BA + 2EST (Tribrid)",
+  "priceUSD": 520,
+  "impedance": "15.2 Ω",
+  "sensitivity": "118 dB/Vrms",
+  "frequencyResponse": "9 Hz - 40 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Silver-plated copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Carrying case", "Multiple ear tips", "Cable", "Cleaning tool"],
+  "pros": ["Clean sub-bass separation", "Clear vocals", "Excellent technicalities", "VDSF tuning"],
+  "cons": ["Can be bright for some", "Fit may require tip rolling"],
+  "ratings": { "build": 8, "value": 8, "sound": 9 },
+  "insight": "The benchmark $500+ tribrid known for its clean sub-bass separation and clear vocals. One of Moondrop's most respected technical performers.",
+  "tags": ["flagship", "tribrid", "vdsf", "technical", "vocal"],
+  "releaseDate": "2021-01-01",
+  "measuredBy": ""
+}

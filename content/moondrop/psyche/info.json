@@ -1,0 +1,24 @@
+{
+  "name": "Psyche",
+  "driverType": "Hybrid",
+  "driverConfig": "Dynamic + Planar multi-driver",
+  "priceUSD": 899,
+  "impedance": "18 Ω",
+  "sensitivity": "120 dB/Vrms",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Premium copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Carrying case", "Ear tips", "Cable", "Modular plugs"],
+  "pros": ["Boutique build", "Excellent technical performance", "Unique driver combination"],
+  "cons": ["Premium pricing", "Fit can be specific"],
+  "ratings": { "build": 9, "value": 7, "sound": 9 },
+  "insight": "An ultra-premium boutique dynamic/planar flagship multi-driver design focused on high-end resolution and staging.",
+  "tags": ["flagship", "hybrid", "planar", "boutique"],
+  "releaseDate": "2023-06-01",
+  "measuredBy": ""
+}

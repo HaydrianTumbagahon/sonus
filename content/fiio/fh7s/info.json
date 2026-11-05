@@ -1,0 +1,24 @@
+{
+  "name": "FH7S",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA",
+  "priceUSD": 349,
+  "impedance": "16 Ω",
+  "sensitivity": "109 dB/mW",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Aluminum alloy",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Modular",
+    "connector": "MMCX"
+  },
+  "accessories": ["Case", "Tips", "Cable"],
+  "pros": ["Good for pop/rock", "Balanced hybrid sound", "Solid build"],
+  "cons": ["Not the most resolving"],
+  "ratings": { "build": 8, "value": 8, "sound": 8 },
+  "insight": "A multi-driver hybrid that strikes a popular balance for modern pop and rock genres.",
+  "tags": ["mid-tier", "hybrid", "versatile"],
+  "releaseDate": "2023-01-01",
+  "measuredBy": ""
+}

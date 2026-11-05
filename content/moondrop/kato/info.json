@@ -1,0 +1,24 @@
+{
+  "name": "Kato",
+  "driverType": "DD",
+  "driverConfig": "1DD (10mm)",
+  "priceUSD": 189,
+  "impedance": "32 Ω",
+  "sensitivity": "123 dB/Vrms",
+  "frequencyResponse": "10 Hz - 40 kHz",
+  "materials": {
+    "shell": "Stainless steel / Brass options",
+    "faceplate": "Metal",
+    "nozzle": "Interchangeable metal",
+    "cable": "Silver-plated copper",
+    "connector": "2-Pin"
+  },
+  "accessories": ["Case", "Multiple nozzles", "Ear tips", "Cable"],
+  "pros": ["Excellent build", "Spacious soundstage", "Interchangeable nozzles", "Polished tuning"],
+  "cons": ["Weight (metal shell)", "Stock cable is average"],
+  "ratings": { "build": 9, "value": 8, "sound": 8 },
+  "insight": "A legendary, highly polished all-metal favorite loved for its spacious soundstage and refined single-DD performance.",
+  "tags": ["mid-tier", "dd", "metal", "soundstage", "classic"],
+  "releaseDate": "2021-01-01",
+  "measuredBy": ""
+}

@@ -1,0 +1,24 @@
+{
+  "name": "JD3",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 15,
+  "impedance": "32 Ω",
+  "sensitivity": "105 dB/mW",
+  "frequencyResponse": "20 Hz - 20 kHz",
+  "materials": {
+    "shell": "Plastic",
+    "faceplate": "Plastic",
+    "nozzle": "Plastic",
+    "cable": "Fixed with mic",
+    "connector": "3.5mm"
+  },
+  "accessories": ["Tips"],
+  "pros": ["Ultra cheap", "Has mic", "Usable for calls"],
+  "cons": ["Very limited audio quality"],
+  "ratings": { "build": 4, "value": 7, "sound": 5 },
+  "insight": "A minimalist, inline-microphone entry earbud aimed at casual daily utility.",
+  "tags": ["entry-level", "dd", "ultra-budget", "mic"],
+  "releaseDate": "2020-01-01",
+  "measuredBy": ""
+}
