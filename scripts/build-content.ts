@@ -8,7 +8,7 @@ const targetRoot = path.join(contentRoot, "targets");
 const publicRoot = path.join(root, "public");
 const generatedRoot = path.join(root, "generated");
 const imageExtensions = new Set([".webp", ".png", ".jpg", ".jpeg"]);
-const frequencyPointCount = 480;
+const frequencyPointCount = 200;
 const requiredInfoFields = ["name", "priceUSD", "description"];
 const warnings: string[] = [];
 
@@ -155,23 +155,18 @@ function loadFrequencyData(iemDirectory: string, slug: string): IEMFrequencyData
 
   let leftFile: string;
   let rightFile: string;
-  if (txtFiles.length === 1) {
-    leftFile = txtFiles[0];
-    rightFile = txtFiles[0];
-  } else {
-    const markedLeft = txtFiles.find((file) => /[([]\s*1\s*[)\]]/i.test(file));
-    const markedRight = txtFiles.find((file) => /[([]\s*2\s*[)\]]/i.test(file));
+  const markedLeft = txtFiles.find((file) => /[([]\s*1\s*[)\]]/i.test(file));
+  const markedRight = txtFiles.find((file) => /[([]\s*2\s*[)\]]/i.test(file));
 
-    if (markedLeft && markedRight) {
-      leftFile = markedLeft;
-      rightFile = markedRight;
-    } else if (txtFiles.length === 2) {
-      [leftFile, rightFile] = txtFiles;
-      warn(`[${slug}] Frequency filenames lack matching (1)/(2) markers; sorted filenames were used as left/right.`);
-    } else {
-      warn(`[${slug}] Could not identify left/right frequency files among ${txtFiles.length} text files.`);
-      return undefined;
-    }
+  if (markedLeft && markedRight) {
+    leftFile = markedLeft;
+    rightFile = markedRight;
+  } else if (txtFiles.length === 2) {
+    [leftFile, rightFile] = txtFiles;
+    warn(`[${slug}] Frequency filenames lack matching (1)/(2) markers; sorted filenames were used as left/right.`);
+  } else {
+    warn(`[${slug}] Could not identify left/right frequency files among ${txtFiles.length} text files.`);
+    return undefined;
   }
 
   const left = parseFrequencyFile(path.join(iemDirectory, leftFile));

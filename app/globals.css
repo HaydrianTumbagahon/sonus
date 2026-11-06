@@ -47,6 +47,8 @@
   --font-sans: var(--font-family-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-family-sans);
+  --font-display: var(--font-anton), var(--font-family-sans);
+  --font-script: var(--font-caveat), var(--font-family-sans);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;

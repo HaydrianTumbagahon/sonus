@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_JP, Noto_Sans_SC } from "next/font/google";
+import { Anton, Caveat, Geist, Geist_Mono, Noto_Sans_JP, Noto_Sans_SC } from "next/font/google";
 import { cookies } from "next/headers";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -34,6 +34,20 @@ const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
 });
 
+const anton = Anton({
+  variable: "--font-anton",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Sonus",
   metadataBase: new URL(
@@ -61,7 +75,7 @@ export default async function RootLayout({ children }: Readonly<{
     <html
       lang={htmlLanguage[lang]}
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} ${notoSansSC.variable} ${theme}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} ${notoSansSC.variable} ${anton.variable} ${caveat.variable} ${theme}`}
     >
       <body>
         <LanguageProvider initialLang={lang}>
