@@ -1,39 +1,43 @@
 {
   "name": "Elua Ultra",
-  "driverType": "DD",
-  "driverConfig": "Dual DD",
-  "priceUSD": 35,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + BA",
+  "priceUSD": 120,
+  "impedance": "20 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
+    "Cable",
     "Ear tips",
-    "Cable"
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Improved over earlier Elua versions",
+    "Balanced hybrid signature",
+    "Good all-rounder"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not class-leading in technicalities",
+    "Average stage"
   ],
   "ratings": {
     "build": 7,
-    "value": 9,
+    "value": 8,
     "sound": 7
   },
-  "insight": "Elua Ultra from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Elua Ultra is an iterative improvement that smooths out earlier rough edges and delivers a more polished hybrid experience. It is a competent all-rounder that prioritizes balance and listenability over extreme technical performance or colorations.",
   "tags": [
-    "entry",
-    "dd"
+    "hybrid",
+    "entry-level"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

@@ -1,24 +1,44 @@
 {
   "name": "FX15",
   "driverType": "Hybrid",
-  "driverConfig": "Tribrid with Electrostatic drivers",
-  "priceUSD": 799,
-  "impedance": "24 Ω",
-  "sensitivity": "104 dB/mW",
-  "frequencyResponse": "20 Hz - 40 kHz",
+  "driverConfig": "1DD + 4BA + 1EST",
+  "priceUSD": 500,
+  "impedance": "16 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin",
+    "shell": "Resin / metal",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Premium",
+    "cable": "Premium modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Airy electrostatic treble", "Good technical performance", "Solid build"],
-  "cons": ["Can need power", "Price"],
-  "ratings": { "build": 8, "value": 7, "sound": 8 },
-  "insight": "A tribrid option introducing electrostatic drivers dedicated to ultra-extended airy treble.",
-  "tags": ["flagship", "tribrid", "electrostatic"],
+  "accessories": [
+    "Modular cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "EST adds air and extension",
+    "Good technical hybrid",
+    "Solid package"
+  ],
+  "cons": [
+    "EST implementation is subtle for some"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "FX15 brings an electrostatic driver into FiiO’s hybrid lineup for added treble air and refinement. Reviewers who value high-frequency extension often find it a worthwhile step up.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "est",
+    "mmcx"
+  ],
   "releaseDate": "2023-01-01",
+  "connector": "MMCX",
   "measuredBy": ""
 }

@@ -1,39 +1,47 @@
 {
   "name": "Eternal",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 199,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 14.5mm LCP (Liquid Crystal Polymer) dynamic driver with N52 magnet",
+  "priceUSD": 249,
+  "impedance": "30 Ω",
+  "sensitivity": "109 dB/mW @ 1 kHz",
+  "frequencyResponse": "10 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "CNC-machined aluminum",
+    "faceplate": "Sapphire-coated optical glass",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "High-purity OCC copper + single crystal silver",
+    "connector": "MMCX"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Metal carrying case",
+    "Multiple ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Beautiful sapphire glass faceplates",
+    "Warm, smooth, non-fatiguing tuning",
+    "Easy to drive",
+    "Natural midrange"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Treble is rolled off — lacks air and sparkle for some",
+    "Technical performance is good but not class-leading at the price",
+    "Faces very strong competition in the $200–250 range"
   ],
   "ratings": {
     "build": 9,
     "value": 7,
-    "sound": 9
+    "sound": 7
   },
-  "insight": "Eternal from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Eternal was 7Hz’s single-dynamic follow-up to the planar Timeless, using a large 14.5mm LCP driver and striking sapphire-coated glass faceplates. Reviewers generally liked the warm, smooth, easy-going presentation and the premium look, but many felt that at $249 it needed to be more technically impressive to stand out against strong competition. It remains a good choice for listeners who prioritize a non-fatiguing, mid-centric sound and attractive design.",
   "tags": [
-    "flagship",
-    "dd"
+    "dd",
+    "mid-tier",
+    "warm",
+    "mmcx"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2022-03-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

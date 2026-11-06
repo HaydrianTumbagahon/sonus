@@ -1,39 +1,43 @@
 {
   "name": "Sonus",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 1BA",
-  "priceUSD": 59,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + BA",
+  "priceUSD": 150,
+  "impedance": "20 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
+    "Cable",
     "Ear tips",
-    "Cable"
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Balanced hybrid performance",
+    "Good all-rounder",
+    "Competent technicalities"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not highly distinctive",
+    "Faces strong competition"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 7,
+    "value": 7,
+    "sound": 7
   },
-  "insight": "Sonus from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Sonus is a well-rounded hybrid that aims for broad appeal rather than specialization. It delivers a coherent, balanced presentation that works across many genres, though it does not have the same standout reputation as 7Hz’s planar or ultra-budget successes.",
   "tags": [
-    "mid",
-    "hybrid"
+    "hybrid",
+    "mid-tier"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

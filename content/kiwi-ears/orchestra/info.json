@@ -1,39 +1,41 @@
 {
   "name": "Orchestra",
   "driverType": "BA",
-  "driverConfig": "8BA",
-  "priceUSD": 249,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-BA",
+  "priceUSD": 250,
+  "impedance": "18 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Pure BA clarity",
+    "Good resolution"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Superseded by Orchestra II in many respects"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
+    "build": 7,
+    "value": 7,
     "sound": 8
   },
-  "insight": "Orchestra from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "The original Orchestra established Kiwi Ears’ pure-BA ambitions. Orchestra II improves upon it, but the first version remains a competent multi-BA option.",
   "tags": [
-    "mid",
+    "mid-tier",
     "ba"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

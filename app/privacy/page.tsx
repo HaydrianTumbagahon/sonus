@@ -5,7 +5,7 @@ import en from "@/messages/en.json";
 import jp from "@/messages/jp.json";
 import cn from "@/messages/cn.json";
 
-type LegalDictionary = { legal: { privacy: { title: string; sections: { title: string; body: string }[] } } };
+type LegalDictionary = { legal: { privacy: { title: string; sections: { title: string; paragraphs: string[]; bullets?: string[]; tailParagraph?: string }[] } } };
 const dictionaries = { en: en as LegalDictionary, jp: jp as LegalDictionary, cn: cn as LegalDictionary };
 
 async function getLanguage(): Promise<"en" | "jp" | "cn"> {
@@ -16,7 +16,7 @@ async function getLanguage(): Promise<"en" | "jp" | "cn"> {
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getLanguage();
   const title = dictionaries[lang].legal.privacy.title;
-  return { title: `${title} | Sonus`, description: dictionaries[lang].legal.privacy.sections[0].body };
+  return { title: `${title} | Sonus`, description: dictionaries[lang].legal.privacy.sections[0].paragraphs[0] };
 }
 
 export default async function PrivacyPage() {
@@ -34,7 +34,17 @@ export default async function PrivacyPage() {
         {page.sections.map((section) => (
           <section key={section.title} className="mb-8">
             <h2 className="mb-3 text-xl text-primary sm:text-2xl">{section.title}</h2>
-            <p className="leading-relaxed text-secondary">{section.body}</p>
+            {section.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="mb-3 leading-relaxed text-secondary">{paragraph}</p>
+            ))}
+            {section.bullets && (
+              <ul className="mb-3 list-disc space-y-2 pl-5 leading-relaxed text-secondary">
+                {section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+              </ul>
+            )}
+            {section.tailParagraph && (
+              <p className="mb-3 leading-relaxed text-secondary">{section.tailParagraph}</p>
+            )}
           </section>
         ))}
       </article>

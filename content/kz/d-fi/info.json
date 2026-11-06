@@ -2,38 +2,40 @@
   "name": "D-Fi",
   "driverType": "DD",
   "driverConfig": "1DD",
-  "priceUSD": 25,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "priceUSD": 20,
+  "impedance": "24 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Very cheap",
+    "Decent tuning for the price"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Basic in every way"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 5,
+    "value": 7,
+    "sound": 5
   },
-  "insight": "D-Fi from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "D-Fi is a true ultra-budget single-dynamic from KZ. Suitable for casual use or as a backup set.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

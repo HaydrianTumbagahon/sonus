@@ -1,39 +1,42 @@
 {
   "name": "Celest Gumiho",
   "driverType": "Hybrid",
-  "driverConfig": "Planar + BA",
-  "priceUSD": 49,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + BA",
+  "priceUSD": 60,
+  "impedance": "16 Ω",
+  "sensitivity": "108 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Fun tuning",
+    "Attractive design",
+    "Good value"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Average technicalities"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 6,
+    "value": 8,
+    "sound": 6
   },
-  "insight": "Celest Gumiho from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Celest Gumiho offers a fun, engaging hybrid signature with distinctive Celest aesthetics at a budget-friendly price.",
   "tags": [
-    "entry",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "celest"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

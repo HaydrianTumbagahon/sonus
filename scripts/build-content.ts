@@ -41,6 +41,58 @@ function parsePrice(value: unknown): number | undefined {
   return Number.isFinite(parsed) && parsed >= 0 ? parsed : undefined;
 }
 
+function normalizeDriverType(value: unknown): string | undefined {
+  if (typeof value !== "string") return undefined;
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "dd" || normalized.includes("dynamic")) return "DD";
+  if (normalized.includes("balanced armature") || normalized === "ba") return "BA";
+  if (normalized.includes("planar")) return "Planar";
+  if (normalized.includes("electrostatic") || normalized === "est") return "EST";
+  if (normalized.includes("bone conduction")) return "Bone Conduction";
+  if (normalized.includes("hybrid")) return "Hybrid";
+  return value.trim();
+}
+
+function normalizeConnector(value: unknown): string | undefined {
+  if (typeof value !== "string") return undefined;
+  const normalized = value.trim().toLowerCase();
+  if (normalized.includes("mmcx")) return "MMCX";
+  if (normalized.includes("2-pin") || normalized.includes("2pin") || normalized.includes("2 pin")) return "2-Pin";
+  return "Other";
+}
+
+function normalizeRatings(value: unknown): Record<string, number> | undefined {
+  if (!isRecord(value)) return undefined;
+  const ratings: Record<string, number> = {};
+  for (const [name, rawRating] of Object.entries(value)) {
+    const rating = typeof rawRating === "number"
+      ? rawRating
+      : typeof rawRating === "string"
+        ? Number(rawRating.trim())
+        : undefined;
+    if (rating !== undefined && Number.isFinite(rating) && rating >= 0 && rating <= 10) {
+      ratings[name] = rating;
+    } else {
+      warn(`Rating "${name}" must be a number from 0 to 10 (${String(rawRating)}).`);
+    }
+  }
+  return ratings;
+}
+
+function normalizeDate(value: unknown): string | undefined {
+  if (typeof value !== "string" || value.trim() === "") return undefined;
+  const trimmed = value.trim();
+  const isoMatch = /^(\d{4})[-/](\d{1,2})(?:[-/](\d{1,2}))?$/.exec(trimmed);
+  if (isoMatch) {
+    const year = isoMatch[1];
+    const month = isoMatch[2].padStart(2, "0");
+    const day = (isoMatch[3] ?? "01").padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+  const parsed = new Date(trimmed);
+  return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
+}
+
 function readImageFiles(directory: string): string[] {
   return readdirSync(directory, { withFileTypes: true })
     .filter((entry) => entry.isFile() && imageExtensions.has(path.extname(entry.name).toLowerCase()))
@@ -396,6 +448,7 @@ function processIem(
   }
 
   const priceUSD = parsePrice(info.priceUSD) ?? parsePrice(info.price);
+  const normalizedRatings = normalizeRatings(info.ratings);
   info = {
     ...info,
     priceUSD,
@@ -403,6 +456,10 @@ function processIem(
     personalInsight: info.personalInsight ?? info.insight,
     driverConfiguration: info.driverConfiguration ?? info.driverConfig,
     inTheBox: info.inTheBox ?? info.accessories,
+    driverType: normalizeDriverType(info.driverType),
+    connector: normalizeConnector(info.connector ?? (isRecord(info.materials) ? info.materials.connector : undefined)),
+    ...(normalizedRatings ? { ratings: normalizedRatings } : {}),
+    ...(info.releaseDate !== undefined ? { releaseDate: normalizeDate(info.releaseDate) } : {}),
   };
 
   const missingFields = requiredInfoFields.filter((field) => {

@@ -1,39 +1,47 @@
 {
   "name": "AS16 Pro X",
   "driverType": "BA",
-  "driverConfig": "16BA",
-  "priceUSD": 149,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "8BA (4× 31736 treble + 1× 30019 + 2× 29689 mids + 1× 22955 bass)",
+  "priceUSD": 50,
+  "impedance": "19 Ω",
+  "sensitivity": "116 ±3 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "3D-printed resin with metal frame",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Flat silver-plated",
+    "connector": "0.75mm 2-Pin (Pin C)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Mic option available"
   ],
   "pros": [
-    "Good performance for the tier"
+    "High BA count at a low price",
+    "High sensitivity, easy to drive",
+    "Clear and detailed presentation",
+    "Updated driver layout over original AS16 Pro"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can sound bright or analytical for some",
+    "Fit may be large for smaller ears",
+    "Typical KZ cable quality"
   ],
   "ratings": {
-    "build": 9,
-    "value": 7,
-    "sound": 9
+    "build": 6,
+    "value": 8,
+    "sound": 7
   },
-  "insight": "AS16 Pro X from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "AS16 Pro X is KZ’s refined pure-BA offering with eight armatures and an updated midrange focus. Reviewers appreciate the resolution and value, though the signature can lean bright. A strong choice for listeners who want multi-BA detail without spending much.",
   "tags": [
-    "flagship",
-    "ba"
+    "entry-level",
+    "ba",
+    "8ba",
+    "value"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-09-01",
+  "measuredBy": "",
+  "connector": "0.75mm 2-Pin (Pin C)"
 }

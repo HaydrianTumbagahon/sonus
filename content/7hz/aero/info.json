@@ -1,39 +1,44 @@
 {
   "name": "Aero",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 19,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × dynamic driver",
+  "priceUSD": 80,
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin / metal hybrid",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard detachable",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
+    "Cable",
     "Ear tips",
-    "Cable"
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Clean and balanced tuning",
+    "Good value in the sub-$100 range",
+    "Easy to drive"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not highly distinctive",
+    "Technical performance is average for the price"
   ],
   "ratings": {
     "build": 7,
-    "value": 9,
+    "value": 8,
     "sound": 7
   },
-  "insight": "Aero from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Aero is a straightforward single-dynamic offering from 7Hz that aims for a clean, balanced signature without extreme colorations. It sits in a crowded price segment and is generally viewed as a competent, no-drama daily driver rather than a specialist or technical showcase.",
   "tags": [
-    "entry",
-    "dd"
+    "dd",
+    "entry-level",
+    "balanced"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

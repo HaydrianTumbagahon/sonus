@@ -196,6 +196,29 @@ export function CompareClient({
               );
             })}
           </div>
+          <AnimatePresence>
+            {slotItems[0] && slotItems[1] && (
+              <motion.button
+                type="button"
+                initial={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.8, y: 8 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
+                transition={reduceMotion ? { duration: 0.12 } : { type: "spring", stiffness: 360, damping: 24 }}
+                onClick={() => {
+                  setView("result");
+                  window.requestAnimationFrame(() => {
+                    const result = document.getElementById("compare-results");
+                    if (result) scrollToTarget(result);
+                    else scrollToTarget(0);
+                  });
+                }}
+                className="mx-auto mt-6 flex h-[52px] items-center justify-center rounded-full px-8 text-sm font-medium text-on-brand"
+                style={{ background: "var(--brand)" }}
+              >
+                {t("compare.compare")}
+              </motion.button>
+            )}
+          </AnimatePresence>
         </div>
       </div>
       <IEMPickerModal
@@ -207,29 +230,6 @@ export function CompareClient({
         onClose={() => setPickerOpen(false)}
         onSelect={selectIem}
       />
-      <AnimatePresence>
-        {slotItems[0] && slotItems[1] && (
-          <motion.button
-            type="button"
-            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.8, y: 8 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
-            transition={reduceMotion ? { duration: 0.12 } : { type: "spring", stiffness: 360, damping: 24 }}
-            onClick={() => {
-              setView("result");
-              window.requestAnimationFrame(() => {
-                const result = document.getElementById("compare-results");
-                if (result) scrollToTarget(result);
-                else scrollToTarget(0);
-              });
-            }}
-            className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-1/2 z-[40] h-[52px] -translate-x-1/2 rounded-full px-8 text-sm font-medium text-on-brand md:bottom-[calc(1.25rem+env(safe-area-inset-bottom))]"
-            style={{ background: "var(--brand)" }}
-          >
-            {t("compare.compare")}
-          </motion.button>
-        )}
-      </AnimatePresence>
     </>
   );
 }

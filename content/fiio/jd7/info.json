@@ -1,24 +1,41 @@
 {
   "name": "JD7",
-  "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 25,
-  "impedance": "32 Ω",
-  "sensitivity": "110 dB/mW",
-  "frequencyResponse": "20 Hz - 20 kHz",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + BA",
+  "priceUSD": 80,
+  "impedance": "24 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 35 kHz",
   "materials": {
-    "shell": "Plastic",
-    "faceplate": "Plastic",
-    "nozzle": "Plastic",
-    "cable": "Fixed",
-    "connector": "3.5mm"
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Tips", "Pouch"],
-  "pros": ["Neutral tuning", "Cheap", "Simple"],
-  "cons": ["Very basic everything"],
-  "ratings": { "build": 5, "value": 7, "sound": 6 },
-  "insight": "A simple, bullet-style daily earphone aimed at neutral listening targets.",
-  "tags": ["entry-level", "dd", "neutral", "budget"],
-  "releaseDate": "2021-01-01",
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Good value hybrid",
+    "Decent technical performance for the price"
+  ],
+  "cons": [
+    "Average refinement"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "JD7 provides a capable hybrid experience at an accessible price, making it a reasonable step up from pure single-DD budget sets.",
+  "tags": [
+    "entry-level",
+    "hybrid"
+  ],
+  "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

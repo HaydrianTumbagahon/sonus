@@ -1,39 +1,46 @@
 {
   "name": "Celest Wyvern Pro",
   "driverType": "DD",
-  "driverConfig": "1DD with boom mic",
-  "priceUSD": 39,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10mm LCP dynamic",
+  "priceUSD": 25,
+  "impedance": "32 Ω",
+  "sensitivity": "105 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Resin",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Detachable 0.78mm 2-Pin (mic options available)",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable (mic versions available)",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Excellent tuning for the price",
+    "Natural vocals and full bass",
+    "Very affordable",
+    "Gaming and music friendly"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Basic build and accessories",
+    "Limited technical performance"
   ],
   "ratings": {
-    "build": 7,
+    "build": 6,
     "value": 9,
     "sound": 7
   },
-  "insight": "Celest Wyvern Pro from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Celest Wyvern Pro has earned strong community praise as one of the best true budget single-DD IEMs. Its natural midrange and well-controlled bass make it a frequent recommendation for beginners and as a secondary set, with gaming mic versions also available.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget-king",
+    "celest",
+    "gaming"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2023-08-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

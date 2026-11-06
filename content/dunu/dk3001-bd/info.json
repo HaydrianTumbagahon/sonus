@@ -1,39 +1,44 @@
 {
   "name": "DK3001 BD",
   "driverType": "Hybrid",
-  "driverConfig": "DD + BA + Planar",
-  "priceUSD": 299,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 4BA + 4 micro-planar (9-driver tribrid)",
+  "priceUSD": 280,
+  "impedance": "26 Ω",
+  "sensitivity": "108 dB/mW @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Furukawa OCC with Q-Lock Mini",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Ambitious 9-driver configuration",
+    "Good technical potential",
+    "Solid accessory package"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Complex configurations can have coherence challenges",
+    "Shell size"
   ],
   "ratings": {
     "build": 8,
-    "value": 8,
+    "value": 7,
     "sound": 8
   },
-  "insight": "DK3001 BD from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "DK3001 BD is a capable multi-driver hybrid that continues DUNU’s reputation for solid engineering. The inclusion of micro-planar drivers for the upper frequencies aims to add resolution and air. Reviewers generally view it as a well-executed mid-range option with an ambitious driver count.",
   "tags": [
-    "mid",
-    "hybrid"
+    "mid-tier",
+    "hybrid",
+    "tribrid"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

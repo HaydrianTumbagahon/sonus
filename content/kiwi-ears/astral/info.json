@@ -1,39 +1,41 @@
 {
   "name": "Astral",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 6BA",
-  "priceUSD": 349,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 150,
+  "impedance": "18 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Competent hybrid",
+    "Attractive design"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not highly distinctive"
   ],
   "ratings": {
-    "build": 9,
+    "build": 7,
     "value": 7,
-    "sound": 9
+    "sound": 7
   },
-  "insight": "Astral from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Astral is a solid mid-range hybrid from Kiwi Ears that prioritizes balance and everyday listenability.",
   "tags": [
-    "flagship",
+    "mid-tier",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

@@ -1,39 +1,48 @@
 {
   "name": "Salnotes Zero 2",
   "driverType": "DD",
-  "driverConfig": "1DD",
+  "driverConfig": "1 × 10mm dynamic (PU + metal composite diaphragm, dual-cavity)",
   "priceUSD": 25,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "impedance": "32 Ω",
+  "sensitivity": "108 dB/V @ 1 kHz",
+  "frequencyResponse": "10 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Translucent plastic",
+    "faceplate": "Metal (brushed)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Silver-plated OFC",
+    "connector": "0.78mm 2-Pin (not recessed)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Detachable cable (3.5mm, mic, or USB-C variants available)",
+    "Multiple ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Improved bass quantity and texture over the original Zero",
+    "Smoother, less peaky treble",
+    "Still exceptional value",
+    "Crinacle collaboration tuning",
+    "Multiple cable variants including USB-C"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Still uses basic plastic shells",
+    "Some prefer the more neutral original Zero",
+    "Technical performance remains at budget level"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 6,
+    "value": 10,
+    "sound": 8
   },
-  "insight": "Salnotes Zero 2 from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Zero 2 (also called Zero:2) is the Crinacle-tuned sequel that adds roughly 3 dB more bass and calms the treble compared with the original. Most reviewers consider it a successful update that makes the set more engaging while retaining the clean midrange that made the first Zero famous. It is one of the safest and most frequently recommended IEMs under $30.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget-king",
+    "crinacle",
+    "beginner-friendly"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2023-11-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

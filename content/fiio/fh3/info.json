@@ -2,23 +2,42 @@
   "name": "FH3",
   "driverType": "Hybrid",
   "driverConfig": "1DD + 2BA",
-  "priceUSD": 149,
+  "priceUSD": 110,
   "impedance": "19 Ω",
   "sensitivity": "112 dB/mW",
-  "frequencyResponse": "20 Hz - 40 kHz",
+  "frequencyResponse": "15 Hz – 40 kHz",
   "materials": {
-    "shell": "Aluminum alloy",
+    "shell": "Metal",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard",
+    "cable": "Standard modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Deep sub-bass", "Good for gaming", "Solid metal build"],
-  "cons": ["Can be bassy for some", "Not the most resolving"],
-  "ratings": { "build": 8, "value": 8, "sound": 7 },
-  "insight": "A classic staple hybrid highly rated by gamers and bass-heads for deep sub-bass punch.",
-  "tags": ["mid-tier", "hybrid", "bass", "gaming"],
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Solid metal build",
+    "Balanced hybrid signature",
+    "Good value"
+  ],
+  "cons": [
+    "Not highly resolving"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "FH3 is a well-regarded early hybrid from FiiO that still holds up as a solid mid-budget option with a coherent signature and durable metal construction.",
+  "tags": [
+    "entry-level",
+    "hybrid",
+    "mmcx"
+  ],
   "releaseDate": "2020-01-01",
+  "connector": "MMCX",
   "measuredBy": ""
 }

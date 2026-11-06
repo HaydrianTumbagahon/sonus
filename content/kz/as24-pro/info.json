@@ -1,39 +1,47 @@
 {
   "name": "AS24 Pro",
   "driverType": "BA",
-  "driverConfig": "24BA with switches",
-  "priceUSD": 299,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "12BA (standard or with tuning switches)",
+  "priceUSD": 80,
+  "impedance": "29 Ω (standard)",
+  "sensitivity": "109 ±3 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "3D-printed resin with metal faceplate",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Silver-plated",
+    "connector": "0.75mm 2-Pin (Pin C)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Tuning pin (switch version)"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Very high BA count",
+    "Tuning switch version available",
+    "Good resolution for the price",
+    "Solid resin + metal construction"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can be bright or fatiguing",
+    "Shell size",
+    "Value depends on switch usefulness"
   ],
   "ratings": {
-    "build": 9,
+    "build": 7,
     "value": 7,
-    "sound": 9
+    "sound": 7
   },
-  "insight": "AS24 Pro from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "AS24 Pro packs twelve balanced armatures per side and is available with tuning switches. It is aimed at listeners who want maximum driver count and some customization at a still-accessible price. Expect a detailed, sometimes energetic presentation typical of high-count KZ BA sets.",
   "tags": [
-    "flagship",
-    "ba"
+    "entry-level",
+    "ba",
+    "12ba",
+    "tunable"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.75mm 2-Pin (Pin C)"
 }

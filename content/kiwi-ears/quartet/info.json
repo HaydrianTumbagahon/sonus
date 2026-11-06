@@ -1,39 +1,46 @@
 {
   "name": "Quartet",
   "driverType": "Hybrid",
-  "driverConfig": "2DD + 2BA with switches",
-  "priceUSD": 159,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "2DD + 2BA (isobaric dual 10mm titanium DD + 2BA)",
+  "priceUSD": 110,
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB @ 1 kHz",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin (multiple color/faceplate options)",
+    "faceplate": "Customizable",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "0.78mm 2-Pin",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case options"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Dual isobaric dynamics for strong bass",
+    "Tuning switches for versatility",
+    "Customizable aesthetics",
+    "Fun and energetic presentation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not the most accurate or resolving",
+    "Staging is average"
   ],
   "ratings": {
-    "build": 8,
+    "build": 7,
     "value": 8,
-    "sound": 8
+    "sound": 7
   },
-  "insight": "Quartet from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Quartet uses an isobaric dual-dynamic configuration plus two BAs and tuning switches. Reviewers appreciate the versatility and energetic character, making it a good choice for listeners who want flexibility and fun rather than strict neutrality.",
   "tags": [
-    "mid",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "tunable",
+    "isobaric"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

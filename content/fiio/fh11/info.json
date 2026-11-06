@@ -1,24 +1,43 @@
 {
   "name": "FH11",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 1BA",
-  "priceUSD": 49,
+  "driverConfig": "1DD + BA",
+  "priceUSD": 50,
   "impedance": "24 Ω",
-  "sensitivity": "112 dB/mW",
-  "frequencyResponse": "20 Hz - 20 kHz",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "10 Hz – 35 kHz",
   "materials": {
-    "shell": "Resin",
-    "faceplate": "Zinc alloy",
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
     "cable": "Standard",
-    "connector": "MMCX"
+    "connector": "0.78mm 2-Pin or MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Decent hybrid intro", "Zinc faceplate", "Affordable"],
-  "cons": ["Basic performance"],
-  "ratings": { "build": 7, "value": 8, "sound": 6 },
-  "insight": "A hybrid baseline entry-level model built with zinc-alloy faceplates.",
-  "tags": ["entry-level", "hybrid", "budget"],
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Pouch"
+  ],
+  "pros": [
+    "Very affordable hybrid",
+    "Decent bass",
+    "Easy to drive"
+  ],
+  "cons": [
+    "Basic technical performance",
+    "Average build"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 6
+  },
+  "insight": "FH11 is an entry-level hybrid that provides a taste of multi-driver sound at a low price. Expectations should be kept realistic, but it serves well as a beginner or secondary set.",
+  "tags": [
+    "entry-level",
+    "hybrid"
+  ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

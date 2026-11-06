@@ -9,5 +9,6 @@ export default function LearnPage() {
     ...term,
     exampleIEMs: getExampleIEMs(term, iems, targets).map((iem) => iem.slug),
   }));
-  return <GlossaryClient terms={terms} iems={iems} />;
+  const exampleIems = iems.map(({ slug, brand, name }) => ({ slug, brand, name }));
+  return <GlossaryClient terms={terms} iems={exampleIems} />;
 }

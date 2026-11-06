@@ -1,39 +1,40 @@
 {
   "name": "Symphony",
   "driverType": "Hybrid",
-  "driverConfig": "Planar + DD",
-  "priceUSD": 79,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 70,
+  "impedance": "20 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Competent hybrid",
+    "Decent value"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not highly distinctive"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 6,
+    "value": 7,
+    "sound": 6
   },
-  "insight": "Symphony from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Symphony is a mid-budget KZ hybrid that aims for a balanced multi-driver experience without extreme tuning.",
   "tags": [
-    "mid",
+    "entry-level",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

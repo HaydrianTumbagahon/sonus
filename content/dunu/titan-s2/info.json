@@ -1,39 +1,46 @@
 {
   "name": "Titan S2",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 79,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × dual-chamber dual-magnetic-circuit dynamic (high-rigidity dome + flexible suspension composite diaphragm)",
+  "priceUSD": 80,
+  "impedance": "16 Ω @ 1 kHz",
+  "sensitivity": "107 dB/mW @ 1 kHz (125 dB/Vrms)",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "High-density chrome-plated alloy / metal",
+    "faceplate": "Metal (distinctive red accent)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "4-strand OCC + silver-plated OCC Litz with Q-Lock Mini modular plugs",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Q-Lock Mini modular cable (3.5mm + 4.4mm)",
+    "Hard case",
+    "Multiple tip types (Candy, S&S, etc.)"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Excellent value with near-flagship accessory package",
+    "Solid metal build",
+    "Modular cable with both 3.5mm and 4.4mm",
+    "Clean, slightly warm tuning"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not the most technical or resolving at the price",
+    "Tuning is safe rather than exciting for some"
   ],
   "ratings": {
-    "build": 7,
+    "build": 8,
     "value": 9,
     "sound": 7
   },
-  "insight": "Titan S2 from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Titan S2 continues DUNU’s long-running Titan philosophy of honest sound, solid metal construction, and unusually good accessories for the price. The dual-chamber dual-magnet driver and Q-Lock Mini cable make it feel more premium than its $80 street price suggests. A practical and well-equipped daily driver.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "metal-shell",
+    "value"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

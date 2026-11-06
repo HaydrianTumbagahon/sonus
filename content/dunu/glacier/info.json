@@ -1,39 +1,43 @@
 {
   "name": "Glacier",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 4BA + 4EST",
-  "priceUSD": 899,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + BA",
+  "priceUSD": 150,
+  "impedance": "18 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard / modular",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Clean tuning",
+    "Good detail",
+    "Competent hybrid"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Average stage",
+    "Not highly distinctive"
   ],
   "ratings": {
-    "build": 9,
-    "value": 7,
-    "sound": 9
+    "build": 7,
+    "value": 8,
+    "sound": 7
   },
-  "insight": "Glacier from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Glacier offers a clean and relatively neutral-leaning hybrid signature. Reviewers appreciate its restraint and clarity, making it suitable for listeners who prefer accuracy over excitement.",
   "tags": [
-    "flagship",
+    "mid-tier",
     "hybrid"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

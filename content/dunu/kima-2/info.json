@@ -1,39 +1,43 @@
 {
   "name": "Kima 2",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 129,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × dynamic driver",
+  "priceUSD": 70,
+  "impedance": "20 Ω",
+  "sensitivity": "108 dB/mW @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "4-core silver-plated OCC with Q-Lock Mini",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable (3.5mm + 4.4mm)",
+    "Case",
+    "Multiple tip types"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Improved over original Kima",
+    "Solid metal build",
+    "Good modular cable"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not highly technical",
+    "Safe tuning"
   ],
   "ratings": {
-    "build": 8,
+    "build": 7,
     "value": 8,
-    "sound": 8
+    "sound": 7
   },
-  "insight": "Kima 2 from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Kima 2 improves on its predecessor with better refinement and the excellent DUNU modular cable system. It remains a practical, well-built single-DD option for everyday listening.",
   "tags": [
-    "mid",
+    "entry-level",
     "dd"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

@@ -1,24 +1,43 @@
 {
   "name": "FD7",
   "driverType": "DD",
-  "driverConfig": "1DD (Beryllium diaphragm)",
-  "priceUSD": 499,
+  "driverConfig": "1 × large dynamic",
+  "priceUSD": 400,
   "impedance": "32 Ω",
-  "sensitivity": "111 dB/mW",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "sensitivity": "110 dB/mW",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Titanium",
-    "faceplate": "Titanium",
+    "shell": "Metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Premium",
+    "cable": "Premium modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Realistic acoustic decay", "Premium materials", "Natural timbre"],
-  "cons": ["Price for single DD", "Needs power"],
-  "ratings": { "build": 9, "value": 7, "sound": 8 },
-  "insight": "A premium flagship utilizing pure beryllium-diaphragm dynamic drivers for realistic acoustic decay.",
-  "tags": ["flagship", "dd", "beryllium", "natural"],
+  "accessories": [
+    "Modular cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "Refined single-DD performance",
+    "Premium build",
+    "Good dynamics"
+  ],
+  "cons": [
+    "Faces strong competition"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "FD7 continues FiiO’s single-dynamic flagship ambitions with refined tuning and solid construction. It is aimed at listeners who prefer the coherence of a single driver at a higher price point.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "mmcx"
+  ],
   "releaseDate": "2022-01-01",
+  "connector": "MMCX",
   "measuredBy": ""
 }

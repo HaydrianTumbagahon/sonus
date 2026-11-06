@@ -1,39 +1,44 @@
 {
   "name": "EDX Pro X",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 12,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10mm super-linear dynamic",
+  "priceUSD": 15,
+  "impedance": "23 ±3 Ω",
+  "sensitivity": "108 ±3 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Transparent resin",
+    "faceplate": "Metal-look",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Flat",
+    "connector": "0.75mm 2-Pin (Pin C)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Mic option"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Extremely affordable",
+    "Warmer, smoother V-shape",
+    "Easy to drive"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Limited technical performance",
+    "Basic build"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 5,
+    "value": 8,
+    "sound": 6
   },
-  "insight": "EDX Pro X from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "EDX Pro X is one of KZ’s safest ultra-budget single-dynamics. Its warmer, smoother character makes it more forgiving than brighter siblings and a frequent recommendation under $20.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget-king"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin (Pin C)",
   "measuredBy": ""
 }

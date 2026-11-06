@@ -1,39 +1,47 @@
 {
   "name": "ZS12 Pro X",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 5BA",
-  "priceUSD": 69,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 5BA (10mm dynamic + dual 31736 + 30019)",
+  "priceUSD": 60,
+  "impedance": "25 Ω",
+  "sensitivity": "106 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Zinc alloy",
+    "faceplate": "Zinc alloy",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Silver-plated copper",
+    "connector": "0.75mm 2-Pin (Pin C)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Tuning switches version available",
+    "Mic option"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Metal shell feels premium",
+    "Tuning switches add versatility",
+    "Strong hybrid performance for the price",
+    "Good bass from the dynamic"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Weight of metal shell",
+    "Can still show KZ brightness"
   ],
   "ratings": {
-    "build": 8,
+    "build": 7,
     "value": 8,
-    "sound": 8
+    "sound": 7
   },
-  "insight": "ZS12 Pro X from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "ZS12 Pro X upgrades the popular hybrid formula with five BAs, a zinc alloy shell, and an optional tuning-switch version. Reviewers often prefer it over the ZS10 Pro X when they want more customization and a more solid feel.",
   "tags": [
-    "mid",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "tunable",
+    "metal-shell"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.75mm 2-Pin (Pin C)"
 }

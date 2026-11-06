@@ -1,39 +1,45 @@
 {
   "name": "Cadenza",
   "driverType": "DD",
-  "driverConfig": "1DD Beryllium",
+  "driverConfig": "1 × 10mm beryllium dynamic",
   "priceUSD": 35,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB/mW",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Medical-grade 3D-printed resin",
+    "faceplate": "Resin (multiple colorways)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "4-core braided copper",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Multiple tip pairs"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Excellent Harman-adjacent tuning for the price",
+    "Natural and non-fatiguing",
+    "Very affordable",
+    "Good beginner recommendation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Average soundstage and imaging",
+    "Basic accessories"
   ],
   "ratings": {
-    "build": 7,
+    "build": 6,
     "value": 9,
     "sound": 7
   },
-  "insight": "Cadenza from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "The original Cadenza became a budget benchmark for its balanced, Harman-tracking tuning at a very low price. Reviewers and the community still frequently recommend it as a safe first IEM or secondary set.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget-king",
+    "harman"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2022-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

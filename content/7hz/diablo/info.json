@@ -1,39 +1,44 @@
 {
   "name": "Diablo",
-  "driverType": "Planar",
-  "driverConfig": "14.5mm Planar",
-  "priceUSD": 279,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverType": "DD",
+  "driverConfig": "1 × dynamic driver",
+  "priceUSD": 50,
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 35 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Energetic, V-shaped tuning",
+    "Fun factor",
+    "Low price"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can become fatiguing",
+    "Less refined than Zero series"
   ],
   "ratings": {
-    "build": 9,
+    "build": 6,
     "value": 7,
-    "sound": 9
+    "sound": 6
   },
-  "insight": "Diablo from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Diablo lives up to its name with a more aggressive, V-shaped signature aimed at excitement and impact. It prioritizes fun over long-term neutrality and is best suited to listeners who want an energetic, bass-and-treble forward presentation at a low price.",
   "tags": [
-    "flagship",
-    "planar"
+    "dd",
+    "entry-level",
+    "v-shaped",
+    "fun"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

@@ -1,39 +1,46 @@
 {
   "name": "Septet",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 4BA + 1Planar + 1PZT",
-  "priceUSD": 299,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 4BA + 1 micro-planar + 1 PZT (open-back)",
+  "priceUSD": 280,
+  "impedance": "15 Ω",
+  "sensitivity": "95 dB/mW",
+  "frequencyResponse": "8 Hz – 30 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin (open-back)",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Modular",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable (3.5mm + 4.4mm)",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Unique 4-technology hybrid",
+    "Open-back stage",
+    "Ambitious configuration"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Lower sensitivity",
+    "Reduced isolation"
   ],
   "ratings": {
-    "build": 9,
+    "build": 8,
     "value": 7,
-    "sound": 9
+    "sound": 8
   },
-  "insight": "Septet from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Septet is one of Kiwi Ears’ more experimental designs, combining dynamic, BA, micro-planar, and piezoelectric drivers in an open-back shell. Reviewers interested in unique driver configurations and open presentation often find it intriguing.",
   "tags": [
-    "flagship",
-    "hybrid"
+    "mid-tier",
+    "hybrid",
+    "open-back",
+    "pzt",
+    "micro-planar"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2024-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

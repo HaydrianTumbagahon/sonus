@@ -1,39 +1,43 @@
 {
   "name": "Celest Pandamon",
   "driverType": "Planar",
-  "driverConfig": "Planar",
-  "priceUSD": 45,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10mm square planar (SPD)",
+  "priceUSD": 80,
+  "impedance": "9 Ω",
+  "sensitivity": "108 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Metal / resin",
+    "faceplate": "Metal (panda design)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Planar speed at a low price",
+    "Lightweight",
+    "Clean midrange"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Limited sub-bass",
+    "Treble can be muted"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 6,
+    "value": 7,
+    "sound": 6
   },
-  "insight": "Celest Pandamon from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Celest Pandamon brings planar technology to a very accessible price. Reviewers note its clean midrange and planar-like speed, though bass extension and treble air are more limited than higher-end planars.",
   "tags": [
-    "entry",
-    "planar"
+    "entry-level",
+    "planar",
+    "celest"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

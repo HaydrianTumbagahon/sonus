@@ -1,39 +1,48 @@
 {
   "name": "Legato",
   "driverType": "DD",
-  "driverConfig": "Dual DD",
-  "priceUSD": 59,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Dual dynamic: 12mm woofer + 6mm tweeter (DLC composite diaphragms)",
+  "priceUSD": 109,
+  "impedance": "26 Ω",
+  "sensitivity": "108 dB/V @ 1 kHz",
+  "frequencyResponse": "10 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "CNC aviation-grade aluminum",
+    "faceplate": "Aluminum",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Silver-plated OCC + OCC",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
+    "Cable",
     "Ear tips",
-    "Cable"
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Massive, physical sub-bass impact",
+    "Unique dual-DD configuration",
+    "Fun, engaging presentation",
+    "Solid aluminum build"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Midrange can take a back seat to the bass",
+    "Treble is relatively restrained",
+    "Not ideal for those seeking neutral or reference tuning"
   ],
   "ratings": {
     "build": 8,
     "value": 8,
-    "sound": 8
+    "sound": 7
   },
-  "insight": "Legato from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Legato is unapologetically a bass-focused dual dynamic driver IEM. The 12mm woofer delivers a large, physical sub-bass shelf that many reviewers described as jaw-rattling, while the smaller 6mm driver handles mids and treble. It is one of the more successful ‘fun’ tunings from 7Hz and works especially well for electronic, hip-hop, and any genre that benefits from strong low-end authority.",
   "tags": [
-    "mid",
-    "dd"
+    "dd",
+    "dual-dd",
+    "bass",
+    "fun",
+    "entry-level"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2023-04-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

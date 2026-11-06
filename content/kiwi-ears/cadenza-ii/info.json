@@ -1,39 +1,46 @@
 {
   "name": "Cadenza II",
   "driverType": "DD",
-  "driverConfig": "1DD Titanium",
-  "priceUSD": 35,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10mm titanium-coated dynamic (KARS 2.0 acoustic resonance system)",
+  "priceUSD": 50,
+  "impedance": "18 Ω @ 1 kHz",
+  "sensitivity": "106 dB",
+  "frequencyResponse": "10 Hz – 29 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Polycarbonate composite",
+    "faceplate": "CNC aircraft-grade aluminum (matte honeycomb)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Single-crystal OFC, 0.78mm 2-Pin",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Improved KARS 2.0 tuning over original Cadenza",
+    "Natural midrange and controlled bass",
+    "Lightweight and comfortable",
+    "Excellent value"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Still budget-level technical performance",
+    "Accessories are basic"
   ],
   "ratings": {
     "build": 7,
     "value": 9,
-    "sound": 7
+    "sound": 8
   },
-  "insight": "Cadenza II from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Cadenza II refines the popular original with a titanium-coated driver and the updated KARS 2.0 resonance system. Reviewers note improved midrange naturalness and better overall balance while retaining the approachable, non-fatiguing character that made the first Cadenza a budget favorite.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "value",
+    "kars"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2026-02-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

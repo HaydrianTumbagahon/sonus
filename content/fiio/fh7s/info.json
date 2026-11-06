@@ -1,24 +1,48 @@
 {
   "name": "FH7S",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 4BA",
-  "priceUSD": 349,
-  "impedance": "16 Ω",
-  "sensitivity": "109 dB/mW",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 4BA (13.6mm DLC dynamic + 4 custom Knowles BA)",
+  "priceUSD": 400,
+  "impedance": "18 Ω @ 1 kHz",
+  "sensitivity": "104–111 dB/mW (depending on filters)",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Aluminum alloy",
-    "faceplate": "Metal",
-    "nozzle": "Metal",
-    "cable": "Modular",
+    "shell": "5-axis CNC aluminum alloy (sci-fi layered design)",
+    "faceplate": "Aluminum with air-guide nets",
+    "nozzle": "Metal with user-replaceable tuning filters",
+    "cable": "8-strand silver-plated monocrystalline copper modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Good for pop/rock", "Balanced hybrid sound", "Solid build"],
-  "cons": ["Not the most resolving"],
-  "ratings": { "build": 8, "value": 8, "sound": 8 },
-  "insight": "A multi-driver hybrid that strikes a popular balance for modern pop and rock genres.",
-  "tags": ["mid-tier", "hybrid", "versatile"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Modular cable",
+    "Replaceable tuning filters",
+    "FiiO branded tips",
+    "Case"
+  ],
+  "pros": [
+    "Distinctive CNC aluminum design",
+    "Replaceable tuning filters offer real versatility",
+    "Solid hybrid performance",
+    "Good accessory package"
+  ],
+  "cons": [
+    "Design can be polarizing",
+    "Not the most resolving in class"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "FH7S continues FiiO’s hybrid philosophy with a large DLC dynamic and four Knowles BAs, plus user-replaceable tuning filters. Reviewers appreciate the versatility and the industrial design, making it a flexible mid-high end option.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "1dd+4ba",
+    "tunable-filters",
+    "mmcx"
+  ],
+  "releaseDate": "2022-06-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

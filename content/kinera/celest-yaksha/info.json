@@ -1,39 +1,45 @@
 {
   "name": "Celest Yaksha",
   "driverType": "Hybrid",
-  "driverConfig": "4-driver multi-tech",
-  "priceUSD": 149,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "2DD + 1BA + 1 micro-planar (8mm + 10mm LCP DD + Knowles BA + micro-planar)",
+  "priceUSD": 120,
+  "impedance": "12 Ω",
+  "sensitivity": "105 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Artistic resin (red patterned)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard modular options",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Interesting 4-driver configuration with micro-planar",
+    "Good value hybrid",
+    "Distinctive faceplate design"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not the most refined in class",
+    "Average technical performance"
   ],
   "ratings": {
-    "build": 8,
+    "build": 7,
     "value": 8,
-    "sound": 8
+    "sound": 7
   },
-  "insight": "Celest Yaksha from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Celest Yaksha uses a unique 2DD + BA + micro-planar configuration. It aims to deliver a full-range hybrid experience at a more accessible price under the Celest sub-brand, with reviewers noting its energetic presentation and distinctive aesthetics.",
   "tags": [
-    "mid",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "micro-planar",
+    "celest"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

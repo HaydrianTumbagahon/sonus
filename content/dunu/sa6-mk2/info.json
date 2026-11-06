@@ -1,39 +1,49 @@
 {
   "name": "SA6 MK2",
   "driverType": "BA",
-  "driverConfig": "6BA with switches",
-  "priceUSD": 549,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "6BA (Sonion dual woofer + 2× Knowles custom mid + Knowles dual tweeter)",
+  "priceUSD": 500,
+  "impedance": "24 Ω @ 1 kHz",
+  "sensitivity": "114 ±1 dB/mW @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "German Nice-Fit hand-poured UV acrylic resin",
+    "faceplate": "High-grade stabilized wood (unique red patterns)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Hulk Pro Mini (Furukawa monocrystalline copper, Q-Lock Plus modular)",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Hulk Pro Mini cable with Q-Lock Plus (3.5mm + 4.4mm plugs)",
+    "Hard carrying case",
+    "Multiple tip types including S&S and XL"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Excellent pure BA implementation with strong resolution and layering",
+    "Two switchable tuning modes (Default + Atmospheric Immersion)",
+    "Beautiful unique wood faceplates",
+    "Premium modular cable with Q-Lock Plus",
+    "Musical yet technical presentation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Bass quantity remains moderate even with the immersion switch",
+    "Price is premium",
+    "Shell shape may not suit every ear"
   ],
   "ratings": {
     "build": 9,
-    "value": 7,
+    "value": 8,
     "sound": 9
   },
-  "insight": "SA6 MK2 from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "SA6 MK2 is frequently cited as one of the best pure balanced-armature implementations in its price range. It balances technical performance with musicality and remains a favorite among listeners who prefer the speed and precision of BA drivers. The dual tuning switches and excellent accessory package further increase its appeal.",
   "tags": [
     "flagship",
-    "ba"
+    "ba",
+    "6ba",
+    "switchable-tuning",
+    "wood-faceplate"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2023-05-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

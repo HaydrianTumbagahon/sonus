@@ -1,39 +1,49 @@
 {
   "name": "Timeless II",
   "driverType": "Planar",
-  "driverConfig": "14.5mm Planar",
+  "driverConfig": "1 × 14.5mm planar magnetic (dual-sided coated diaphragm, N52 magnets)",
   "priceUSD": 229,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "impedance": "15.2 Ω",
+  "sensitivity": "108 dB/V @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
-    "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "shell": "Redesigned aluminum with 7-layer acoustic enclosure and dual rear venting",
+    "faceplate": "Textured aluminum (pyramid pattern)",
+    "nozzle": "Interchangeable metal nozzles (multiple styles included)",
+    "cable": "4-core 7N single-crystal copper (modular 3.5mm + 4.4mm)",
+    "connector": "0.78mm 2-Pin (flush)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable (3.5mm + 4.4mm)",
+    "4 pairs of interchangeable tuning nozzles",
+    "10 pairs of ear tips",
+    "Aluminum storage case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Upgraded 14.5mm dual-coated planar driver",
+    "Interchangeable nozzles allow meaningful treble adjustment",
+    "Improved cable and modular terminations",
+    "Full-bodied bass with good detail",
+    "More refined overall presentation than the original for many listeners"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Still benefits from a capable source",
+    "Some reviewers felt the improvement over the original was incremental rather than revolutionary",
+    "Shell design remains relatively large"
   ],
   "ratings": {
     "build": 9,
-    "value": 7,
+    "value": 8,
     "sound": 9
   },
-  "insight": "Timeless II from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Timeless II addresses several common criticisms of the original by adding interchangeable nozzles, a better cable, and a revised dual-coated 14.5mm planar driver. Most reviewers find it a more flexible and slightly more refined package. The nozzles give users real control over the upper frequencies, which was one of the biggest points of debate with the first Timeless. It remains one of the strongest planar options under $250.",
   "tags": [
-    "flagship",
-    "planar"
+    "planar",
+    "mid-tier",
+    "tunable",
+    "2-pin"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-11-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

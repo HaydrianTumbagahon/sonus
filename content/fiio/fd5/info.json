@@ -1,24 +1,46 @@
 {
   "name": "FD5",
   "driverType": "DD",
-  "driverConfig": "1DD (semi-open)",
-  "priceUSD": 299,
-  "impedance": "32 Ω",
-  "sensitivity": "110 dB/mW",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 12mm beryllium-coated DLC dynamic (N52 magnet, 1.5T flux)",
+  "priceUSD": 280,
+  "impedance": "32 Ω @ 1 kHz",
+  "sensitivity": "109 dB/mW @ 1 kHz",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Aluminum / Stainless",
+    "shell": "Stainless steel / chrome",
     "faceplate": "Metal",
-    "nozzle": "Metal",
-    "cable": "Modular",
-    "connector": "MMCX"
+    "nozzle": "Interchangeable sound tubes",
+    "cable": "8-strand monocrystalline silver-plated copper modular",
+    "connector": "MMCX (expanded)"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Expansive soundstage", "Unique semi-open design", "Good build"],
-  "cons": ["Isolation is reduced", "Needs power"],
-  "ratings": { "build": 8, "value": 8, "sound": 8 },
-  "insight": "A uniquely shaped semi-open back structural dynamic model offering expansive soundstage room.",
-  "tags": ["mid-tier", "dd", "semi-open", "soundstage"],
+  "accessories": [
+    "Modular cable (2.5/3.5/4.4mm)",
+    "Multiple tip types including triple-flange",
+    "Case"
+  ],
+  "pros": [
+    "Powerful single-DD with strong magnetic flux",
+    "Interchangeable sound tubes for tuning",
+    "Excellent modular cable",
+    "Solid metal build"
+  ],
+  "cons": [
+    "Weight is noticeable",
+    "Bass can be strong for some preferences"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "FD5 is a well-regarded single-dynamic that uses a large 12mm beryllium-coated DLC driver with high magnetic flux. The interchangeable sound tubes and modular cable make it flexible, and reviewers often praise its dynamics and build quality.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "metal-shell",
+    "mmcx"
+  ],
   "releaseDate": "2021-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "MMCX"
 }

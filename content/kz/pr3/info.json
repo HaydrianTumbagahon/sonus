@@ -1,39 +1,42 @@
 {
   "name": "PR3",
   "driverType": "Planar",
-  "driverConfig": "Planar",
-  "priceUSD": 89,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 13.2mm planar magnetic",
+  "priceUSD": 50,
+  "impedance": "15 Ω",
+  "sensitivity": "98 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Alloy (mirror-like)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Planar speed and detail at low price",
+    "Attractive faceplate",
+    "Energetic and analytical"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Needs more power than typical dynamics",
+    "Can be dry or sharp"
   ],
   "ratings": {
-    "build": 9,
-    "value": 7,
-    "sound": 9
+    "build": 6,
+    "value": 8,
+    "sound": 7
   },
-  "insight": "PR3 from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "PR3 brings planar technology to a very accessible price. Reviewers who like fast transients and a more analytical presentation often recommend it, though it benefits from a slightly more capable source than typical budget dynamics.",
   "tags": [
-    "flagship",
+    "entry-level",
     "planar"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

@@ -1,39 +1,43 @@
 {
   "name": "Aurora",
   "driverType": "Hybrid",
-  "driverConfig": "Hybrid array",
-  "priceUSD": 179,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 200,
+  "impedance": "18 Ω",
+  "sensitivity": "115 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium detachable",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Case",
+    "Ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Refined hybrid tuning",
+    "Good technical performance",
+    "Solid build"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Faces strong competition at this price",
+    "Not as distinctive as Timeless or Zero series"
   ],
   "ratings": {
-    "build": 9,
+    "build": 8,
     "value": 7,
-    "sound": 9
+    "sound": 8
   },
-  "insight": "Aurora from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Aurora represents 7Hz’s effort in the more competitive mid-range hybrid segment. Reviewers generally describe it as refined and technically capable, though it has a harder time standing out against the brand’s own more famous planar and budget successes.",
   "tags": [
-    "flagship",
-    "hybrid"
+    "hybrid",
+    "mid-tier"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

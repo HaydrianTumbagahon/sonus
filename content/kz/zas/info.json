@@ -1,39 +1,44 @@
 {
   "name": "ZAS",
   "driverType": "Hybrid",
-  "driverConfig": "Multi-driver hybrid",
-  "priceUSD": 109,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 7BA (10mm dual-magnetic DD + 7 BA)",
+  "priceUSD": 70,
+  "impedance": "24 Ω",
+  "sensitivity": "109 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin with metal frame",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "200-core silver-plated",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Mic option"
   ],
   "pros": [
-    "Good performance for the tier"
+    "High driver count hybrid",
+    "Strong for monitoring / live use",
+    "Good resolution"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can be bright",
+    "Shell size"
   ],
   "ratings": {
-    "build": 9,
+    "build": 7,
     "value": 7,
-    "sound": 9
+    "sound": 7
   },
-  "insight": "ZAS from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "ZAS packs a 10mm dynamic and seven balanced armatures, making it one of KZ’s higher-count hybrids. It is often positioned toward musicians and monitoring use due to its detail and isolation.",
   "tags": [
-    "flagship",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "high-driver-count"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

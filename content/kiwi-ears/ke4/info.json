@@ -2,38 +2,41 @@
   "name": "KE4",
   "driverType": "Hybrid",
   "driverConfig": "2DD + 2BA",
-  "priceUSD": 199,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "priceUSD": 200,
+  "impedance": "16 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "New-meta tuning with body",
+    "Competent technical performance"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Bass may not suit all preferences"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
+    "build": 7,
+    "value": 7,
     "sound": 8
   },
-  "insight": "KE4 from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "KE4 follows the so-called 'new meta' tuning trend with more lower-mid body and calmer treble. Reviewers who prefer this modern balance often find it a strong mid-range option.",
   "tags": [
-    "mid",
-    "hybrid"
+    "mid-tier",
+    "hybrid",
+    "new-meta"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2024-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

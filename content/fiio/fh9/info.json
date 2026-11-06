@@ -1,24 +1,51 @@
 {
   "name": "FH9",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 6BA",
-  "priceUSD": 599,
-  "impedance": "18 Ω",
-  "sensitivity": "108 dB/mW",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 6BA (13.6mm DLC dynamic + Knowles DFK ×2 mid + SWFK treble)",
+  "priceUSD": 600,
+  "impedance": "18 Ω @ 1 kHz",
+  "sensitivity": "108 dB/mW @ 1 kHz",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Titanium alloy",
+    "shell": "Titanium alloy (semi-open design)",
     "faceplate": "Titanium",
-    "nozzle": "Metal",
-    "cable": "Premium modular",
+    "nozzle": "Metal with interchangeable filters",
+    "cable": "8-strand pure silver modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Multiple tips", "Modular cable"],
-  "pros": ["Excellent titanium build", "Balanced hybrid performance", "Good value for flagship"],
-  "cons": ["Weight", "Can be bright"],
-  "ratings": { "build": 9, "value": 8, "sound": 8 },
-  "insight": "A massive hybrid flagship showcasing a titanium alloy shell housing 6 BAs and a large dynamic driver.",
-  "tags": ["flagship", "hybrid", "titanium", "build-quality"],
+  "accessories": [
+    "Pure silver modular cable (2.5/3.5/4.4mm)",
+    "Multiple tip types",
+    "Interchangeable audio filters",
+    "Case",
+    "Tools"
+  ],
+  "pros": [
+    "Semi-open design with wide soundstage",
+    "Powerful 13.6mm DLC dynamic for bass",
+    "Excellent modular pure silver cable",
+    "Interchangeable tuning filters",
+    "Premium titanium build"
+  ],
+  "cons": [
+    "Isolation is reduced due to semi-open design",
+    "Weight is higher than closed shells",
+    "Pricey"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 7,
+    "sound": 9
+  },
+  "insight": "FH9 is one of FiiO’s most ambitious hybrids, combining a large DLC dynamic with six Knowles BAs in a semi-open titanium shell. The result is a spacious presentation with strong technical performance. Reviewers frequently highlight the soundstage and the excellent cable/accessory package.",
+  "tags": [
+    "flagship",
+    "hybrid",
+    "1dd+6ba",
+    "semi-open",
+    "mmcx"
+  ],
   "releaseDate": "2022-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "MMCX"
 }

@@ -1,39 +1,40 @@
 {
   "name": "ZAR",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 7BA",
-  "priceUSD": 129,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + multi-BA",
+  "priceUSD": 55,
+  "impedance": "22 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Solid hybrid value",
+    "Good bass + detail"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Typical KZ brightness possible"
   ],
   "ratings": {
-    "build": 9,
+    "build": 6,
     "value": 7,
-    "sound": 9
+    "sound": 7
   },
-  "insight": "ZAR from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "ZAR is a capable hybrid that sits in the mid-budget KZ range, offering a blend of dynamic bass and BA detail.",
   "tags": [
-    "flagship",
+    "entry-level",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

@@ -23,6 +23,13 @@ export function getAllIEMs(): IEM[] {
   return iems;
 }
 
+export function getIEMListingData(items: IEM[]): IEM[] {
+  return items.map((iem) => {
+    const { frData, frDataL, frDataR, ...listing } = iem;
+    return listing as IEM;
+  });
+}
+
 export function getAllTargets(): FrequencyTarget[] {
   return targets;
 }

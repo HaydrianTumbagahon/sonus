@@ -1,39 +1,43 @@
 {
   "name": "Aether",
   "driverType": "Planar",
-  "driverConfig": "15.3mm Planar",
-  "priceUSD": 189,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 15.3mm planar",
+  "priceUSD": 170,
+  "impedance": "14 Ω",
+  "sensitivity": "105 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin / metal",
+    "faceplate": "Striking design",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Pure silver options",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Multiple tip sets",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Large planar driver",
+    "Spacious stage",
+    "Good detail and air"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can have sibilance for some",
+    "Weight"
   ],
   "ratings": {
     "build": 8,
-    "value": 8,
+    "value": 7,
     "sound": 8
   },
-  "insight": "Aether from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Aether features a large 15.3mm planar driver and is often praised for its spacious stage and planar speed. Reviewers note strong technical performance with a more open presentation than many closed hybrids.",
   "tags": [
-    "mid",
+    "mid-tier",
     "planar"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2024-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

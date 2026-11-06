@@ -14,13 +14,13 @@ import type { Brand, FrequencyTarget, IEM } from "@/types/iem";
 
 export function HomeClient({
   brands,
-  iems,
+  graphIem,
   heroIems,
   topFiveIems,
   targets,
 }: {
   brands: Brand[];
-  iems: IEM[];
+  graphIem?: IEM;
   heroIems: IEM[];
   topFiveIems: IEM[];
   targets: FrequencyTarget[];
@@ -45,7 +45,7 @@ export function HomeClient({
         </div>
       </section>
 
-      <GraphTeaser iems={iems} targets={targets} />
+      <GraphTeaser iem={graphIem} targets={targets} />
 
       <section className="bg-background text-primary">
         <div className="mx-auto flex max-w-[1600px] flex-col items-start justify-between gap-8 px-4 pb-[calc(3.5rem+var(--wave-h))] pt-[calc(3.5rem+var(--wave-h))] sm:px-8 sm:pb-[calc(4rem+var(--wave-h))] sm:pt-[calc(4rem+var(--wave-h))] md:flex-row md:items-center 2xl:px-12">

@@ -11,33 +11,22 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import type { FrequencyTarget, IEM } from "@/types/iem";
 
 type GraphTeaserProps = {
-  iems: IEM[];
+  iem?: IEM;
   targets: FrequencyTarget[];
 };
 
-function averageRating(iem: IEM): number {
-  const values = ["build", "sound", "value"]
-    .map((key) => iem.ratings?.[key])
-    .filter((value): value is number => typeof value === "number" && Number.isFinite(value));
-  if (values.length === 0) return typeof iem.ratings?.overall === "number" ? iem.ratings.overall : 0;
-  return values.reduce((total, value) => total + value, 0) / values.length;
-}
-
-export function GraphTeaser({ iems, targets }: GraphTeaserProps) {
+export function GraphTeaser({ iem, targets }: GraphTeaserProps) {
   const { t } = useLanguage();
   const [highlightRange, setHighlightRange] = useState<[number, number] | undefined>();
-  const highestRated = [...iems]
-    .filter((iem) => iem.frData && iem.frData.length > 0)
-    .sort((left, right) => averageRating(right) - averageRating(left))[0];
   const target = targets.find((item) => /Harman\s+IE\s+2019/i.test(item.name));
 
   const series: FrequencyGraphSeries[] = [];
-  if (highestRated) {
+  if (iem) {
     series.push({
-      id: highestRated.slug,
-      label: `${highestRated.brand} ${highestRated.name}`,
+      id: iem.slug,
+      label: `${iem.brand} ${iem.name}`,
       color: "var(--graph-1)",
-      data: highestRated.frData ?? [],
+      data: iem.frData ?? [],
     });
   }
   if (target) {

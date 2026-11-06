@@ -1,24 +1,50 @@
 {
   "name": "FA19",
   "driverType": "BA",
-  "driverConfig": "10 Knowles Balanced Armatures per side",
-  "priceUSD": 999,
-  "impedance": "16 Ω",
-  "sensitivity": "122 dB/mW",
-  "frequencyResponse": "20 Hz - 40 kHz",
+  "driverConfig": "10BA (4× custom Knowles bass + 2× Knowles ED mid + 4× Knowles SWFK treble)",
+  "priceUSD": 700,
+  "impedance": "10 Ω @ 1 kHz",
+  "sensitivity": "106 dB/mW @ 1 kHz",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal",
+    "shell": "DLP 3D-printed acrylic resin",
+    "faceplate": "Decorative patterned",
     "nozzle": "Metal",
-    "cable": "Premium modular",
-    "connector": "MMCX"
+    "cable": "8-strand 224-wire pure silver Litz with twist-lock modular plugs",
+    "connector": "MMCX (expanded/reinforced)"
   },
-  "accessories": ["Premium case", "Multiple tips", "Modular cable", "Cleaning tools"],
-  "pros": ["High driver count", "Excellent resolution", "Strong technicalities"],
-  "cons": ["Requires good amplification", "Price"],
-  "ratings": { "build": 9, "value": 7, "sound": 9 },
-  "insight": "A flagship multi-driver powerhouse utilizing 10 Knowles Balanced Armatures per ear.",
-  "tags": ["flagship", "ba", "high-driver-count", "technical"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Pure silver modular cable (3.5mm + 4.4mm)",
+    "Extensive tip selection (silicone, foam, SpinFit, HS18)",
+    "Travel case",
+    "MMCX tool",
+    "Cleaning brush"
+  ],
+  "pros": [
+    "High-resolution pure BA flagship performance",
+    "Excellent pure silver cable and modular plugs",
+    "Very complete accessory package",
+    "Tuning switch for flexibility",
+    "Lightweight shells"
+  ],
+  "cons": [
+    "Very low impedance requires a clean, low-noise source",
+    "Can sound analytical depending on preference",
+    "Price is premium"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 7,
+    "sound": 9
+  },
+  "insight": "FA19 is FiiO’s pure balanced-armature flagship using ten custom Knowles drivers. Reviewers praise its resolution, layering, and the high-quality pure silver cable. The very low 10Ω impedance means source pairing is important, but when driven well it delivers a refined, technical pure-BA experience.",
+  "tags": [
+    "flagship",
+    "ba",
+    "10ba",
+    "mmcx"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

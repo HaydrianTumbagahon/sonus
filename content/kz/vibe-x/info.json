@@ -1,39 +1,40 @@
 {
   "name": "Vibe X",
   "driverType": "DD",
-  "driverConfig": "Dual driver stage",
-  "priceUSD": 59,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD",
+  "priceUSD": 25,
+  "impedance": "24 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Affordable",
+    "Fun tuning"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Average technicalities"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 5,
+    "value": 7,
+    "sound": 6
   },
-  "insight": "Vibe X from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Vibe X is a simple, fun single-dynamic aimed at casual listeners who want energetic sound at a low price.",
   "tags": [
-    "mid",
+    "entry-level",
     "dd"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

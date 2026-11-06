@@ -1,39 +1,51 @@
 {
   "name": "Falcon Ultra",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 229,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10.7mm dynamic (2nd-gen ECLIPSƎ pure metal foil diaphragm, ring-type magnet)",
+  "priceUSD": 200,
+  "impedance": "16 Ω @ 1 kHz",
+  "sensitivity": "108 dB ±1 dB @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
-    "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "shell": "Stainless steel",
+    "faceplate": "Stainless steel",
+    "nozzle": "Interchangeable (two distinct nozzles for tuning)",
+    "cable": "DUW-02 PRO (silver-plated copper Litz, Q-Lock LITE modular)",
+    "connector": "MMCX (patented Catch-Hold expandable pin)"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable (3.5mm + 4.4mm)",
+    "Interchangeable nozzles",
+    "Large carrying case",
+    "Candy + S&S tips",
+    "Pouch"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Strong single-DD performance with good resolution",
+    "Interchangeable nozzles for tuning flexibility",
+    "Excellent accessory package and modular cable",
+    "Solid metal build",
+    "Easy to drive"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Bass can lack ultimate depth for some",
+    "Average soundstage dimensions",
+    "Weight is noticeable"
   ],
   "ratings": {
     "build": 8,
     "value": 8,
     "sound": 8
   },
-  "insight": "Falcon Ultra from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Falcon Ultra is DUNU’s refined single-dynamic flagship in the mid-range. The 2nd-generation ECLIPSƎ driver and interchangeable nozzles give it both technical competence and user flexibility. Reviewers generally praise the clear, vibrant presentation and the unusually complete accessory set for the price.",
   "tags": [
-    "mid",
-    "dd"
+    "mid-tier",
+    "dd",
+    "metal-shell",
+    "tunable-nozzles",
+    "mmcx"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2023-06-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

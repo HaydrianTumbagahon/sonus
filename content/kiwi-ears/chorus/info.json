@@ -1,39 +1,42 @@
 {
   "name": "Chorus",
   "driverType": "DD",
-  "driverConfig": "1DD DLC",
-  "priceUSD": 29,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × DLC dynamic",
+  "priceUSD": 40,
+  "impedance": "32 Ω",
+  "sensitivity": "103 dB/mW",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin (open-back design)",
+    "faceplate": "Metal with pattern",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Silver-plated copper (mic options)",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable (mic / USB-C options)",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Open-back design for stage",
+    "Good tuning",
+    "Mic versions available"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Reduced isolation"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
+    "build": 6,
+    "value": 8,
     "sound": 7
   },
-  "insight": "Chorus from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Chorus is essentially an open-back take on the Belle tuning. Reviewers who prioritize soundstage and air over isolation often prefer it, and the availability of mic/USB-C cables adds practicality.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "open-back"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2024-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

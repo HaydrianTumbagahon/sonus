@@ -12,7 +12,7 @@ import type { IEM } from "@/types/iem";
 export function TermCard({ term, terms, iems, expanded, onToggle }: {
   term: GlossaryTerm;
   terms: GlossaryTerm[];
-  iems: IEM[];
+  iems: Array<Pick<IEM, "slug" | "brand" | "name">>;
   expanded: boolean;
   onToggle: () => void;
 }) {

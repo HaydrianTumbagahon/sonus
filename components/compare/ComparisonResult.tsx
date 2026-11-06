@@ -29,6 +29,34 @@ function textValue(value: unknown, fallback = "-"): string {
   return String(value);
 }
 
+function asRecord(value: unknown): Record<string, unknown> | undefined {
+  return typeof value === "object" && value !== null && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : undefined;
+}
+
+function normalizedText(value: unknown, fallback = "-"): string {
+  if (value === undefined || value === null || value === "") return fallback;
+  if (Array.isArray(value)) return value.map((item) => normalizedText(item, "")).filter(Boolean).join(", ") || fallback;
+  if (typeof value === "object") {
+    const record = value as Record<string, unknown>;
+    const entries = Object.values(record).filter((item) => item !== undefined && item !== null && item !== "");
+    return entries.length > 0 ? entries.map((item) => normalizedText(item, "")).filter(Boolean).join(", ") : fallback;
+  }
+  return String(value);
+}
+
+function humanizeKey(key: string): string {
+  return key.replace(/([A-Z])/g, " $1").replace(/^./, (letter) => letter.toUpperCase()).trim();
+}
+
+function buildValue(iem: IEM, key: string): unknown {
+  const build = asRecord(iem.build) ?? asRecord(iem.buildDetails);
+  const buildDetails = asRecord(iem.buildDetails);
+  const materials = asRecord(iem.materials);
+  return build?.[key] ?? buildDetails?.[key] ?? materials?.[key] ?? iem[`${key}Material`] ?? iem[key];
+}
+
 function averageChannels(iem: IEM): FrequencyPoint[] {
   if (iem.frData?.length) return iem.frData;
   const map = new Map<number, number[]>();
@@ -135,23 +163,57 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
     return pair.findIndex((iem) => iem.ratings?.[key] === highestValue);
   };
 
-  const rows = [
-    { label: t("spec.driverConfiguration"), values: pair.map((iem) => textValue(iem.driverConfiguration)) },
-    { label: t("spec.driverType"), values: pair.map((iem) => textValue(iem.driverType)) },
-    { label: t("spec.tier"), values: pair.map((iem) => textValue(iem.tier)) },
-    { label: t("spec.impedance"), values: pair.map((iem) => textValue(iem.impedance ?? iem.specs?.impedance)) },
-    { label: t("spec.sensitivity"), values: pair.map((iem) => textValue(iem.sensitivity ?? iem.specs?.sensitivity)) },
-    { label: t("spec.frequencyResponse"), values: pair.map((iem) => textValue(iem.frequencyResponse ?? iem.specs?.frequencyResponse)) },
-    { label: t("spec.shell"), values: pair.map((iem) => textValue(iem.build?.shell)) },
-    { label: t("spec.faceplate"), values: pair.map((iem) => textValue(iem.build?.faceplate)) },
-    { label: t("spec.nozzle"), values: pair.map((iem) => textValue(iem.build?.nozzle)) },
-    { label: t("spec.cable"), values: pair.map((iem) => textValue(iem.build?.cable)) },
-    { label: t("spec.connector"), values: pair.map((iem) => textValue(iem.connector ?? iem.build?.connector ?? iem.specs?.connector)) },
-    { label: t("compare.accessories"), values: pair.map((iem) => textValue(iem.inTheBox)) },
-    { label: t("compare.personalInsight"), values: pair.map((iem) => textValue(iem.personalInsight)) },
-    { label: t("compare.pros"), values: pair.map((iem) => textValue(iem.pros)) },
-    { label: t("compare.cons"), values: pair.map((iem) => textValue(iem.cons)) },
-  ];
+  const standardRows = [
+    { key: "driverConfiguration", label: t("spec.driverConfiguration"), values: pair.map((iem) => normalizedText(iem.driverConfiguration ?? iem.specs?.driverConfiguration)) },
+    { key: "driverType", label: t("spec.driverType"), values: pair.map((iem) => normalizedText(iem.driverType ?? iem.specs?.driverType)) },
+    { key: "tier", label: t("spec.tier"), values: pair.map((iem) => normalizedText(iem.tier ?? iem.specs?.tier)) },
+    { key: "impedance", label: t("spec.impedance"), values: pair.map((iem) => normalizedText(iem.impedance ?? iem.specs?.impedance)) },
+    { key: "sensitivity", label: t("spec.sensitivity"), values: pair.map((iem) => normalizedText(iem.sensitivity ?? iem.specs?.sensitivity)) },
+    { key: "frequencyResponse", label: t("spec.frequencyResponse"), values: pair.map((iem) => normalizedText(iem.frequencyResponse ?? iem.specs?.frequencyResponse)) },
+    { key: "weight", label: t("spec.weight"), values: pair.map((iem) => normalizedText(iem.weight ?? iem.specs?.weight)) },
+    { key: "shell", label: t("spec.shell"), values: pair.map((iem) => normalizedText(buildValue(iem, "shell"))) },
+    { key: "faceplate", label: t("spec.faceplate"), values: pair.map((iem) => normalizedText(buildValue(iem, "faceplate"))) },
+    { key: "nozzle", label: t("spec.nozzle"), values: pair.map((iem) => normalizedText(buildValue(iem, "nozzle"))) },
+    { key: "cable", label: t("spec.cable"), values: pair.map((iem) => normalizedText(buildValue(iem, "cable"))) },
+    { key: "connector", label: t("spec.connector"), values: pair.map((iem) => normalizedText(iem.connector ?? buildValue(iem, "connector") ?? iem.specs?.connector)) },
+    { key: "releaseDate", label: t("spec.releaseDate"), values: pair.map((iem) => normalizedText(iem.releaseDate ?? iem.specs?.releaseDate)) },
+    { key: "description", label: t("spec.description"), values: pair.map((iem) => normalizedText(iem.description ?? iem.specs?.description)) },
+    { key: "personalInsight", label: t("compare.personalInsight"), values: pair.map((iem) => normalizedText(iem.personalInsight ?? iem.insight ?? iem.specs?.personalInsight)) },
+    { key: "inTheBox", label: t("compare.accessories"), values: pair.map((iem) => normalizedText(iem.inTheBox ?? iem.boxContents ?? iem.accessories ?? iem.specs?.inTheBox)) },
+    { key: "pros", label: t("compare.pros"), values: pair.map((iem) => normalizedText(iem.pros)) },
+    { key: "cons", label: t("compare.cons"), values: pair.map((iem) => normalizedText(iem.cons)) },
+    { key: "measuredBy", label: t("compare.measuredBy"), values: pair.map((iem) => normalizedText(iem.measuredBy)) },
+    { key: "measuredOn", label: t("compare.measuredOn"), values: pair.map((iem) => normalizedText(iem.measuredOn)) },
+  ].filter((row) => row.values.some((value) => value !== "-"));
+
+  const customKeys = [...new Set(pair.flatMap((iem) => Object.keys(iem.specs ?? {})))];
+  const knownKeys = new Set([
+    "driverConfiguration", "driverType", "tier", "impedance", "sensitivity", "frequencyResponse",
+    "weight", "shell", "faceplate", "nozzle", "cable", "connector", "releaseDate", "description",
+    "personalInsight", "inTheBox", "pros", "cons", "measuredBy", "measuredOn", "build", "buildDetails",
+    "materials", "boxContents", "accessories", "insight", "brand", "brandSlug", "name", "priceUSD",
+    "ratings", "images", "frData", "frDataL", "frDataR", "tags", "id", "slug",
+  ]);
+  const customRows = customKeys.filter((key) => !knownKeys.has(key)).map((key) => {
+    const translationKey = `spec.${key}`;
+    const translated = t(translationKey);
+    return {
+      key: `custom-${key}`,
+      label: translated === translationKey ? humanizeKey(key) : translated,
+      values: pair.map((iem) => normalizedText(iem.specs?.[key])),
+    };
+  }).filter((row) => row.values.some((value) => value !== "-"));
+
+  const unknownKeys = [...new Set(pair.flatMap((iem) =>
+    Object.keys(iem).filter((key) => !knownKeys.has(key) && !key.startsWith("frData")),
+  ))];
+  const unknownRows = unknownKeys.map((key) => ({
+    key: `unknown-${key}`,
+    label: humanizeKey(key),
+    values: pair.map((iem) => normalizedText(iem[key])),
+  })).filter((row) => row.values.some((value) => value !== "-"));
+
+  const rows = [...standardRows, ...customRows, ...unknownRows];
 
   const series: FrequencyGraphSeries[] = pair.map((iem, index) => ({
     id: iem.slug,
@@ -244,16 +306,16 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
   return (
     <section id="compare-results" aria-label={t("compare.title")} className="relative isolate mx-auto max-w-[1200px] px-3 pb-14 pt-[calc(2rem+var(--wave-h))] sm:px-6 sm:pt-[calc(2rem+var(--wave-h))] md:px-8">
       <div className="relative z-[1]">
-        {pair.length === 2 ? (
+        {pair.length <= 3 ? (
           <>
             <div role="table" aria-label={t("compare.title")} className="md:hidden overflow-hidden rounded-xl border border-border bg-surface">
-              <div role="row" className="grid grid-cols-2 divide-x divide-border border-b border-border">
+              <div role="row" className="grid divide-x divide-border border-b border-border" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                 {pair.map((iem, index) => <ColumnHeader key={iem.slug} iem={iem} index={index} mobile />)}
               </div>
               {rows.map((row, rowIndex) => (
                 <motion.div key={row.label} role="row" initial={reduceMotion ? false : { opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.25, delay: reduceMotion ? 0 : rowIndex * 0.04 }} className="border-t border-border px-2 py-3">
                   <div role="rowheader" className="mb-2 text-center text-[10px] uppercase text-tertiary">{row.label}</div>
-                  <div className="grid grid-cols-2 divide-x divide-border text-center text-xs leading-snug sm:text-sm">
+                  <div className="grid divide-x divide-border text-center text-xs leading-snug sm:text-sm" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                     {row.values.map((value, index) => <div key={index} role="cell" className="min-w-0 break-words px-1.5">{value}</div>)}
                   </div>
                 </motion.div>
@@ -261,7 +323,7 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
               <div role="row" className="border-t border-border px-2 py-3">
                 <div role="rowheader" className="mb-2 text-center text-[10px] uppercase text-tertiary">{t("product.sections.ratings")}</div>
                 {ratingKeys.map((key) => (
-                  <div key={key} className="grid grid-cols-2 divide-x divide-border py-1 text-center">
+                  <div key={key} className="grid divide-x divide-border py-1 text-center" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                     {pair.map((iem, index) => (
                       <span key={iem.slug} role="cell" className="min-w-0 px-1.5 font-mono text-lg text-primary">
                         {typeof iem.ratings?.[key] === "number" ? formatRating(iem.ratings[key]) : "-"}<Winner active={numericWinner(key) === index} />
@@ -273,21 +335,21 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
             </div>
 
             <motion.div role="table" aria-label={t("compare.title")} initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: revealEase }} className="hidden md:block">
-              <div role="row" className="grid grid-cols-2 gap-4">
+              <div role="row" className="grid gap-4" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                 {pair.map((iem, index) => <ColumnHeader key={iem.slug} iem={iem} index={index} mobile={false} />)}
               </div>
               <div role="rowgroup" className="mt-4 overflow-hidden rounded-xl border border-border bg-surface">
                 {rows.map((row, rowIndex) => (
                   <motion.div key={row.label} role="row" initial={reduceMotion ? false : { opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.25, delay: reduceMotion ? 0 : rowIndex * 0.04 }} className="border-t border-border first:border-t-0 px-4 py-4">
                     <div role="rowheader" className="mb-2 text-xs uppercase text-tertiary">{row.label}</div>
-                    <div className="grid grid-cols-2 divide-x divide-border text-sm leading-snug text-primary">
+                    <div className="grid divide-x divide-border text-sm leading-snug text-primary" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                       {row.values.map((value, index) => <div key={index} role="cell" className="min-w-0 break-words px-4 first:pl-0">{value}</div>)}
                     </div>
                   </motion.div>
                 ))}
                 <motion.div role="row" className="border-t border-border px-4 py-4">
                   <div role="rowheader" className="mb-3 text-xs uppercase text-tertiary">{t("product.sections.ratings")}</div>
-                  <div className="grid grid-cols-2 divide-x divide-border">
+                  <div className="grid divide-x divide-border" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                     {pair.map((iem, index) => (
                       <div key={iem.slug} role="cell" className="grid grid-cols-4 px-4 first:pl-0 text-center font-mono text-sm text-primary">
                         {ratingKeys.map((key) => (
@@ -322,7 +384,7 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
               role="table"
               aria-label={t("compare.title")}
               data-lenis-prevent
-              className="[container-type:inline-size] [--compare-column-width:44vw] md:[--compare-column-width:280px] overflow-x-auto overscroll-x-contain scroll-snap-type-x-proximity touch-action-pan-x-pan-y cursor-grab rounded-xl"
+              className="[container-type:inline-size] [--compare-column-width:44vw] md:[--compare-column-width:calc((100cqw_-_32px)/3)] overflow-x-auto overscroll-x-contain scroll-snap-type-x-proximity touch-action-pan-x-pan-y cursor-grab rounded-xl"
               style={{
                 touchAction: "pan-x pan-y",
                 WebkitMaskImage: "linear-gradient(to right, transparent, black 12px, black calc(100% - 12px), transparent)",

@@ -1,39 +1,44 @@
 {
   "name": "ZSN Pro X",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 1BA",
-  "priceUSD": 20,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 1BA (10mm dual-magnetic DD + 30095 BA)",
+  "priceUSD": 25,
+  "impedance": "25 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin cavity with zinc alloy faceplate",
+    "faceplate": "Zinc alloy",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Detachable",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Mic option"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Very popular budget hybrid",
+    "Clear treble from the 30095 BA",
+    "Good everyday value"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can be sharp in treble",
+    "Average stage"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 6,
+    "value": 8,
+    "sound": 6
   },
-  "insight": "ZSN Pro X from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "ZSN Pro X remains one of the most recommended budget hybrids. The combination of a dual-magnetic dynamic and a 30095 BA delivers clear treble and punchy bass at a price that makes it easy to recommend as a first upgrade.",
   "tags": [
-    "entry",
-    "hybrid"
+    "entry-level",
+    "hybrid",
+    "budget-king"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2022-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

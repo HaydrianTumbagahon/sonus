@@ -1,39 +1,42 @@
 {
   "name": "Freya Vanir",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 3BA + 1MEMS",
-  "priceUSD": 299,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 400,
+  "impedance": "20 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Premium resin",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Refined hybrid tuning",
+    "Attractive design",
+    "Good technical balance"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Faces strong competition"
   ],
   "ratings": {
     "build": 8,
-    "value": 8,
+    "value": 7,
     "sound": 8
   },
-  "insight": "Freya Vanir from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Freya Vanir sits in Kinera’s mid-high range with a refined hybrid presentation and the brand’s signature artistic shell design.",
   "tags": [
-    "mid",
+    "mid-tier",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

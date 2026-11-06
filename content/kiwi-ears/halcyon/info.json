@@ -1,39 +1,41 @@
 {
   "name": "Halcyon",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 3BA + MEMS",
-  "priceUSD": 379,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 200,
+  "impedance": "16 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Refined hybrid",
+    "Good technical balance"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Faces strong competition"
   ],
   "ratings": {
-    "build": 9,
+    "build": 7,
     "value": 7,
-    "sound": 9
+    "sound": 8
   },
-  "insight": "Halcyon from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Halcyon aims for a mature, refined hybrid presentation. Reviewers appreciate its balance and suitability for longer listening sessions.",
   "tags": [
-    "flagship",
+    "mid-tier",
     "hybrid"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2024-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

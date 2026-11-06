@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { BellRing, ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -33,13 +32,8 @@ export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) 
       </PageBand>
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
 
-      <header className="grid gap-6 border-y border-border bg-surface px-5 py-7 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center sm:px-8 sm:py-9">
-        <div className="flex size-20 items-center justify-center overflow-hidden rounded-lg border border-border bg-background text-xl font-semibold text-secondary sm:size-24">
-          {brand.logo ? (
-            <Image src={brand.logo} alt={`${brand.name} ${t("showroom.logoAlt")}`} width={96} height={96} className="size-full object-contain p-2" priority />
-          ) : brand.name.slice(0, 2).toUpperCase()}
-        </div>
-        <div className="min-w-0 space-y-3">
+      <header className="border-y border-border bg-surface px-5 py-7 sm:px-8 sm:py-9">
+        <div className="min-w-0 max-w-3xl space-y-3">
           <div className="flex flex-wrap items-center gap-3">
             {comingSoon && <Badge variant="secondary">{t("brand.comingSoon")}</Badge>}
           </div>

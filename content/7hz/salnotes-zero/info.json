@@ -1,39 +1,47 @@
 {
   "name": "Salnotes Zero",
   "driverType": "DD",
-  "driverConfig": "1DD",
+  "driverConfig": "1 × 10mm dynamic (metal composite diaphragm, N52 magnet)",
   "priceUSD": 20,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "impedance": "32 Ω",
+  "sensitivity": "108 dB/V @ 1 kHz",
+  "frequencyResponse": "10 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Plastic (ergonomic)",
+    "faceplate": "Stainless steel",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "High-purity OFC, detachable",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Detachable cable",
+    "Multiple pairs of ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Exceptional tuning for the price — widely considered a budget benchmark",
+    "Clean, balanced, near-Harman signature",
+    "Detachable cable at a very low price",
+    "Surprisingly good resolution and note definition"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Basic plastic shells and accessories",
+    "Not the last word in technical performance or soundstage",
+    "Build quality is functional rather than premium"
   ],
   "ratings": {
-    "build": 7,
-    "value": 9,
-    "sound": 7
+    "build": 6,
+    "value": 10,
+    "sound": 8
   },
-  "insight": "Salnotes Zero from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "The original Salnotes Zero became a phenomenon by delivering a well-tuned, balanced sound signature at a price where most IEMs were either V-shaped toys or poorly executed. Reviewers and the community quickly adopted it as one of the best true entry-level recommendations. It proved that good tuning does not require a high price and remains a common suggestion for anyone’s first ‘serious’ IEM.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "budget-king",
+    "harman",
+    "beginner-friendly"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2022-07-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

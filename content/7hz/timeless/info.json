@@ -1,39 +1,51 @@
 {
   "name": "Timeless",
   "driverType": "Planar",
-  "driverConfig": "14.5mm Planar",
-  "priceUSD": 199,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 14.2mm planar magnetic (double-sided N52 magnet array, ultra-thin diaphragm)",
+  "priceUSD": 220,
+  "impedance": "14.8 Ω",
+  "sensitivity": "104 dB/mW",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "CNC-machined aviation-grade aluminum with hard oxidation",
+    "faceplate": "Aluminum (circular, flat)",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Single crystal copper + silver-plated single crystal copper with silver foil",
+    "connector": "MMCX"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Choice of 3.5mm / 2.5mm / 4.4mm cable at purchase",
+    "Aluminum carrying case",
+    "Multiple silicone ear tip styles",
+    "Spare nozzle covers"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Landmark planar performance that popularized budget planars",
+    "Excellent detail retrieval and speed",
+    "Deep, textured bass for a planar",
+    "Solid aluminum build and distinctive circular design",
+    "Very good technical performance for the price"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Treble can be peaky/bright for sensitive listeners (especially around 8 kHz)",
+    "Benefits noticeably from a source with good current delivery",
+    "Large circular shells may not fit smaller ears comfortably",
+    "Tip selection is critical for seal and bass response"
   ],
   "ratings": {
     "build": 8,
-    "value": 8,
-    "sound": 8
+    "value": 9,
+    "sound": 9
   },
-  "insight": "Timeless from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "The original Timeless is one of the most important IEMs of the early 2020s. It brought genuine planar magnetic performance — speed, resolution, and textured bass — to a price point that previously only offered dynamic drivers. Reviewers almost universally praised its technical ability and the way it democratized planar sound. The main point of contention remains the treble, which some find exciting and others find a bit sharp depending on tip choice and source. Even years later it remains a frequently recommended benchmark when evaluating newer planar IEMs.",
   "tags": [
-    "mid",
-    "planar"
+    "planar",
+    "mid-tier",
+    "benchmark",
+    "technical",
+    "mmcx"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2021-09-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

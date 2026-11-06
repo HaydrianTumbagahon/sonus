@@ -1,39 +1,47 @@
 {
   "name": "Orchestra II",
   "driverType": "BA",
-  "driverConfig": "10BA",
-  "priceUSD": 499,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "10BA (4-way crossover: 2 subwoofer + 4 low-mid + 2 mid-treble + 2 ultra-high custom BAs)",
+  "priceUSD": 350,
+  "impedance": "19 Ω @ 1 kHz",
+  "sensitivity": "109 dB SPL/mW",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Solid resin with acoustic-deadening gel fill",
+    "faceplate": "Metal honeycomb design",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Single-crystal copper silver-plated modular",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Modular cable (3.5mm + 4.4mm plugs)",
+    "Multiple tip sets",
+    "Carrying case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "High driver count pure BA with strong resolution",
+    "Excellent modular cable included",
+    "Good isolation from solid-core shells",
+    "Professional-oriented tuning",
+    "Versatile across genres"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Shells can be relatively large/heavy",
+    "Not the most 'fun' or colored signature"
   ],
   "ratings": {
-    "build": 9,
-    "value": 7,
+    "build": 8,
+    "value": 8,
     "sound": 9
   },
-  "insight": "Orchestra II from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Orchestra II is Kiwi Ears’ pure balanced-armature flagship with ten custom drivers and a four-way crossover. Reviewers praise its clarity, resolution, and professional-grade presentation. The solid shells and modular cable make it a strong all-rounder for critical listening.",
   "tags": [
     "flagship",
-    "ba"
+    "ba",
+    "10ba",
+    "professional"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

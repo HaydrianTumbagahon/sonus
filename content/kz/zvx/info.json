@@ -1,39 +1,45 @@
 {
   "name": "ZVX",
   "driverType": "DD",
-  "driverConfig": "1DD CNC",
-  "priceUSD": 29,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 10mm dual-cavity dynamic",
+  "priceUSD": 20,
+  "impedance": "24 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Full metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Detachable 0.75mm 2-Pin",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Mic option"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Full metal shell feels premium",
+    "Energetic V-shape",
+    "Very affordable"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Treble can be forward",
+    "Shell size may not suit small ears"
   ],
   "ratings": {
     "build": 7,
-    "value": 9,
-    "sound": 7
+    "value": 8,
+    "sound": 6
   },
-  "insight": "ZVX from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "ZVX stands out in the ultra-budget range with a full metal shell and an energetic V-shaped signature. Reviewers who want excitement and a more premium feel at a low price often prefer it over resin siblings.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "metal-shell",
+    "budget"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.75mm 2-Pin",
   "measuredBy": ""
 }

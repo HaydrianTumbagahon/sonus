@@ -1,39 +1,43 @@
 {
   "name": "Zen Pro",
-  "driverType": "DD",
-  "driverConfig": "1DD high-flux",
-  "priceUSD": 499,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA",
+  "priceUSD": 350,
+  "impedance": "18 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium modular",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Well-integrated hybrid",
+    "Good technical balance",
+    "Mature presentation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Not the most unique tuning",
+    "Faces strong competition"
   ],
   "ratings": {
-    "build": 9,
+    "build": 8,
     "value": 7,
-    "sound": 9
+    "sound": 8
   },
-  "insight": "Zen Pro from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Zen Pro aims for a mature, well-integrated hybrid presentation. It prioritizes coherence and refinement over flashy colorations, which many reviewers appreciate for long listening sessions.",
   "tags": [
-    "flagship",
-    "dd"
+    "mid-tier",
+    "hybrid"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

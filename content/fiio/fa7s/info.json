@@ -1,24 +1,45 @@
 {
   "name": "FA7S",
   "driverType": "BA",
-  "driverConfig": "Multi-BA",
-  "priceUSD": 449,
-  "impedance": "18 Ω",
-  "sensitivity": "110 dB/mW",
-  "frequencyResponse": "20 Hz - 40 kHz",
+  "driverConfig": "6BA (Knowles custom configuration)",
+  "priceUSD": 300,
+  "impedance": "18 Ω @ 1 kHz",
+  "sensitivity": "111 dB/mW @ 1 kHz",
+  "frequencyResponse": "15 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin",
+    "shell": "316L stainless steel",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Premium",
+    "cable": "Silver-plated monocrystalline copper modular",
     "connector": "MMCX"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Clinical speed", "Monitoring accuracy", "Clean presentation"],
-  "cons": ["Can sound dry", "Less fun tuning"],
-  "ratings": { "build": 8, "value": 7, "sound": 8 },
-  "insight": "An elegant multi-BA listening architecture focused on clinical speed and monitoring accuracy.",
-  "tags": ["flagship", "ba", "monitoring", "analytical"],
-  "releaseDate": "2022-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Modular cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Warm and smooth BA presentation",
+    "Solid stainless steel build",
+    "Good modular cable"
+  ],
+  "cons": [
+    "Not the most technical pure BA",
+    "Can lack ultimate air"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "FA7S offers a warmer, more relaxed pure balanced-armature presentation compared with more analytical BA sets. Reviewers who prefer a softer character often appreciate its midrange and overall listenability.",
+  "tags": [
+    "mid-tier",
+    "ba",
+    "6ba",
+    "mmcx"
+  ],
+  "releaseDate": "2021-01-01",
+  "measuredBy": "",
+  "connector": "MMCX"
 }

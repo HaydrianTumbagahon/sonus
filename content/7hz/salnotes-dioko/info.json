@@ -1,39 +1,47 @@
 {
   "name": "Salnotes Dioko",
   "driverType": "Planar",
-  "driverConfig": "14.6mm Planar",
-  "priceUSD": 79,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × 14.6mm planar magnetic (N55 magnets, double-sided array)",
+  "priceUSD": 90,
+  "impedance": "16 Ω",
+  "sensitivity": "106 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "CNC-machined aluminum",
+    "faceplate": "Sapphire-coated tempered glass",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "4-core 216-strand Litz (OCC copper + silver-plated OCC)",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
+    "Premium Litz cable",
     "Ear tips",
-    "Cable"
+    "Storage box"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Planar performance at a very accessible price",
+    "Crinacle collaboration tuning",
+    "Attractive glass faceplates",
+    "Good bass extension and midrange naturalness for the price"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Can be power hungry — benefits from a dongle or DAP",
+    "Fit can be problematic for smaller ears due to shell shape",
+    "Treble can become splashy on some tracks"
   ],
   "ratings": {
     "build": 8,
-    "value": 8,
+    "value": 9,
     "sound": 8
   },
-  "insight": "Salnotes Dioko from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Dioko was 7Hz and Crinacle’s attempt to bring planar technology even further down in price after the success of the Timeless. At around $90–100 it offered a large 14.6mm planar driver, attractive sapphire-coated glass faceplates, and a tuning aimed at natural balance. Reviewers generally praised the value and the fact that it gave many listeners their first real taste of planar speed and resolution without spending Timeless money.",
   "tags": [
-    "mid",
-    "planar"
+    "planar",
+    "entry-level",
+    "crinacle",
+    "value"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2022-06-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

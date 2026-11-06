@@ -1,39 +1,44 @@
 {
   "name": "Imperial Nanna",
   "driverType": "Hybrid",
-  "driverConfig": "Tribrid",
-  "priceUSD": 599,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 1BA + 2EST",
+  "priceUSD": 949,
+  "impedance": "60 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "5 Hz – 50 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Premium resin",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "6N OCC silver-plated",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Multiple tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Same core strengths as Nanna 2.0",
+    "EST air",
+    "Detailed presentation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Higher impedance",
+    "Premium price"
   ],
   "ratings": {
     "build": 9,
     "value": 7,
     "sound": 9
   },
-  "insight": "Imperial Nanna from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Imperial Nanna is closely related to Nanna 2.0, offering the same 1DD + 1BA + 2EST configuration with refined tuning and premium presentation. Reviewers treat it as part of the same highly regarded family.",
   "tags": [
     "flagship",
-    "hybrid"
+    "hybrid",
+    "est"
   ],
-  "releaseDate": "2023-01-01",
+  "releaseDate": "2021-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

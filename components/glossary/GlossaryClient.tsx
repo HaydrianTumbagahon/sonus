@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { TermCard } from "@/components/glossary/TermCard";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { glossaryCategories, type GlossaryCategory, type GlossaryTerm } from "@/data/glossary";
@@ -19,11 +19,28 @@ function categoryId(category: GlossaryCategory) {
   return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-export function GlossaryClient({ terms, iems }: { terms: GlossaryTerm[]; iems: IEM[] }) {
+export function GlossaryClient({ terms, iems }: {
+  terms: GlossaryTerm[];
+  iems: Array<Pick<IEM, "slug" | "brand" | "name">>;
+}) {
   const { t } = useLanguage();
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(categoryId(glossaryCategories[0]));
-  const [openSlug, setOpenSlug] = useState<string | null>(null);
+  const [openSlugs, setOpenSlugs] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const closeOpenCards = () => setOpenSlugs(new Set());
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") closeOpenCards();
+    };
+
+    window.addEventListener("blur", closeOpenCards);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      window.removeEventListener("blur", closeOpenCards);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   const filteredTerms = useMemo(() => {
     const search = query.trim().toLocaleLowerCase();
@@ -109,8 +126,13 @@ export function GlossaryClient({ terms, iems }: { terms: GlossaryTerm[]; iems: I
                     term={term}
                     terms={terms}
                     iems={iems}
-                    expanded={openSlug === term.slug}
-                    onToggle={() => setOpenSlug((current) => current === term.slug ? null : term.slug)}
+                    expanded={openSlugs.has(term.slug)}
+                    onToggle={() => setOpenSlugs((current) => {
+                      const next = new Set(current);
+                      if (next.has(term.slug)) next.delete(term.slug);
+                      else next.add(term.slug);
+                      return next;
+                    })}
                   />
                 ))}
               </div>

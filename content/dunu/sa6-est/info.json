@@ -1,39 +1,48 @@
 {
   "name": "SA6 EST",
   "driverType": "Hybrid",
-  "driverConfig": "6BA + 2EST",
-  "priceUSD": 649,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "6BA + 2EST (Sonion custom LF BA ×2 + Knowles mid ×2 + Knowles HF ×2 + Sonion EST ×2)",
+  "priceUSD": 550,
+  "impedance": "55 Ω @ 1 kHz",
+  "sensitivity": "117 dB/mW @ 1 kHz (130 dB/Vrms)",
+  "frequencyResponse": "5 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "German Nice-Fit hand-poured UV acrylic resin",
+    "faceplate": "Color-painted Nebula design",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Hulk Pro Mini with Q-Lock Plus modular plugs",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
+    "Hulk Pro Mini cable (3.5mm + 4.4mm)",
     "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Multiple ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "EST drivers add air and extension to the treble",
+    "High resolution and refined presentation",
+    "Attractive Nebula faceplates",
+    "Dual-system quad crossover for precise control",
+    "Premium modular cable"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Higher impedance than pure BA sibling",
+    "Pricey",
+    "Fit can be specific"
   ],
   "ratings": {
     "build": 9,
     "value": 7,
     "sound": 9
   },
-  "insight": "SA6 EST from Dunu. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "SA6 EST adds two Sonion electrostatic drivers to the SA6 platform for improved treble extension and air. Reviewers who value high-frequency refinement often praise the sense of openness and detail it brings while retaining the coherent BA foundation of the series.",
   "tags": [
     "flagship",
-    "hybrid"
+    "hybrid",
+    "est",
+    "6ba+2est"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

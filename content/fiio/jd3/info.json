@@ -2,23 +2,40 @@
   "name": "JD3",
   "driverType": "DD",
   "driverConfig": "1DD",
-  "priceUSD": 15,
+  "priceUSD": 30,
   "impedance": "32 Ω",
-  "sensitivity": "105 dB/mW",
-  "frequencyResponse": "20 Hz - 20 kHz",
+  "sensitivity": "108 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Plastic",
-    "faceplate": "Plastic",
-    "nozzle": "Plastic",
-    "cable": "Fixed with mic",
-    "connector": "3.5mm"
+    "shell": "Plastic / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Fixed or simple",
+    "connector": "0.78mm 2-Pin or Fixed"
   },
-  "accessories": ["Tips"],
-  "pros": ["Ultra cheap", "Has mic", "Usable for calls"],
-  "cons": ["Very limited audio quality"],
-  "ratings": { "build": 4, "value": 7, "sound": 5 },
-  "insight": "A minimalist, inline-microphone entry earbud aimed at casual daily utility.",
-  "tags": ["entry-level", "dd", "ultra-budget", "mic"],
-  "releaseDate": "2020-01-01",
+  "accessories": [
+    "Tips",
+    "Pouch"
+  ],
+  "pros": [
+    "Very low price",
+    "Decent tuning for the cost"
+  ],
+  "cons": [
+    "Basic in every way"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 7,
+    "sound": 5
+  },
+  "insight": "JD3 is a true budget option from FiiO’s more affordable lines. Suitable for casual use or as a backup set.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2022-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

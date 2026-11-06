@@ -1,39 +1,41 @@
 {
   "name": "Quintet",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 2BA + 1Planar + 1PZT",
-  "priceUSD": 219,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 4BA",
+  "priceUSD": 180,
+  "impedance": "16 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Solid 5-driver hybrid",
+    "Good all-rounder"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Average stage"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 7,
+    "value": 7,
+    "sound": 7
   },
-  "insight": "Quintet from Kiwi Ears. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Quintet is a capable 1DD + 4BA hybrid that prioritizes balance and coherence. A practical mid-range option from Kiwi Ears.",
   "tags": [
-    "mid",
+    "mid-tier",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }

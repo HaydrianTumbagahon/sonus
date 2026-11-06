@@ -5,7 +5,7 @@ import en from "@/messages/en.json";
 import jp from "@/messages/jp.json";
 import cn from "@/messages/cn.json";
 
-type LegalDictionary = { legal: { terms: { title: string; imagesTitle: string; imagesNote: string; sections: { title: string; body: string }[] } } };
+type LegalDictionary = { legal: { terms: { title: string; sections: { title: string; paragraphs: string[] }[] } } };
 const dictionaries = { en: en as LegalDictionary, jp: jp as LegalDictionary, cn: cn as LegalDictionary };
 
 async function getLanguage(): Promise<"en" | "jp" | "cn"> {
@@ -16,7 +16,7 @@ async function getLanguage(): Promise<"en" | "jp" | "cn"> {
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getLanguage();
   const title = dictionaries[lang].legal.terms.title;
-  return { title: `${title} | Sonus`, description: dictionaries[lang].legal.terms.sections[0].body };
+  return { title: `${title} | Sonus`, description: dictionaries[lang].legal.terms.sections[0].paragraphs[0] };
 }
 
 export default async function TermsPage() {
@@ -34,10 +34,9 @@ export default async function TermsPage() {
         {page.sections.map((section) => (
           <section key={section.title} className="mb-8">
             <h2 className="mb-3 text-xl text-primary sm:text-2xl">{section.title}</h2>
-            <p className="leading-relaxed text-secondary">{section.body}</p>
-            {section.title === page.imagesTitle && (
-              <p className="mt-2 leading-relaxed text-secondary">{page.imagesNote}</p>
-            )}
+            {section.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="mb-3 leading-relaxed text-secondary">{paragraph}</p>
+            ))}
           </section>
         ))}
       </article>

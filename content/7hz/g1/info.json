@@ -1,39 +1,43 @@
 {
   "name": "G1 Professional",
   "driverType": "DD",
-  "driverConfig": "DLC DD",
-  "priceUSD": 69,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1 × dynamic driver",
+  "priceUSD": 40,
+  "impedance": "32 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 30 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Ear tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "More neutral/monitoring-oriented tuning",
+    "Low price",
+    "Clean presentation"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Limited refinement and technical performance",
+    "Basic accessories"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 6,
+    "value": 7,
+    "sound": 6
   },
-  "insight": "G1 Professional from 7Hz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "G1 Professional targets a cleaner, more neutral presentation than most budget sets. It is functional and honest rather than exciting, making it a possible choice for users who want something closer to a monitoring-style signature without spending much.",
   "tags": [
-    "mid",
-    "dd"
+    "dd",
+    "entry-level",
+    "neutral"
   ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

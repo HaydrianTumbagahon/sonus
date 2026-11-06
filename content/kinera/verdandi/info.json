@@ -1,39 +1,42 @@
 {
   "name": "Verdandi",
   "driverType": "Hybrid",
-  "driverConfig": "Hybrid + Bone Conduction",
-  "priceUSD": 699,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 350,
+  "impedance": "18 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Premium resin",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Premium cable",
+    "Case",
+    "Tips"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Refined tuning",
+    "Attractive design",
+    "Good all-rounder"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Competition is strong at this price"
   ],
   "ratings": {
-    "build": 9,
+    "build": 8,
     "value": 7,
-    "sound": 9
+    "sound": 8
   },
-  "insight": "Verdandi from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Verdandi offers a mature hybrid presentation with Kinera’s characteristic artistic shells. Reviewers appreciate its balance and refinement for long listening sessions.",
   "tags": [
-    "flagship",
+    "mid-tier",
     "hybrid"
   ],
   "releaseDate": "2023-01-01",
+  "connector": "0.78mm 2-Pin",
   "measuredBy": ""
 }
