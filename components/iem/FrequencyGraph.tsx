@@ -27,6 +27,10 @@ type Props = {
   measuredOn?: string;
   showZones?: boolean;
   animationTrigger?: boolean;
+  variant?: "default" | "bare" | "onBrand";
+  highlightRange?: [number, number];
+  compact?: boolean;
+  newSeriesIds?: string[];
 };
 
 type PlotPoint = { x: number; y: number };
@@ -171,7 +175,11 @@ function visibleFrequencyLabels(
   xForFrequency: (frequency: number) => number,
   t: (key: string) => string,
   locale: string,
+  compactMode = false,
 ): Set<number> {
+  if (compactMode) {
+    return new Set([20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000]);
+  }
   const compact = width < 620;
   const visible = new Set(requiredLabels);
   const optional = frequencyTicks.filter((tick) => !requiredLabels.has(tick));
@@ -210,6 +218,10 @@ export function FrequencyGraph({
   measuredOn,
   showZones = true,
   animationTrigger = true,
+  variant = "default",
+  highlightRange,
+  compact = false,
+  newSeriesIds = [],
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
@@ -221,6 +233,7 @@ export function FrequencyGraph({
   const reduceMotion = useReducedMotion();
   const { lang, t } = useLanguage();
   const locale = lang === "jp" ? "ja-JP" : lang === "cn" ? "zh-CN" : "en-US";
+  const onBrand = variant === "onBrand";
 
   useEffect(() => {
     const element = containerRef.current;
@@ -256,8 +269,14 @@ export function FrequencyGraph({
   }, [inView, reduceMotion]);
 
   const chartWidth = Math.max(width, 1);
-  const chartHeight = Math.max(300, height ?? (width > 0 ? width / (width < 640 ? 1.5 : 2.3) : 360));
-  const chartMargins = { ...margins, left: width < 420 ? 44 : margins.left, right: width < 420 ? 8 : margins.right };
+  const chartHeight = compact
+    ? (width > 0 && width < 768 ? Math.max(260, height ?? 260) : 380)
+    : variant === "bare" || variant === "onBrand"
+    ? (width > 0 && width < 700 ? (height ?? 320) : (height ?? 420))
+    : Math.max(300, height ?? (width > 0 ? width / (width < 640 ? 1.5 : 2.3) : 360));
+  const chartMargins = compact
+    ? { ...margins, left: width < 420 ? 34 : 40, bottom: 28, right: width < 420 ? 14 : 14 }
+    : { ...margins, left: width < 420 ? 44 : margins.left, right: width < 420 ? 14 : margins.right };
   const plotWidth = Math.max(1, chartWidth - chartMargins.left - chartMargins.right);
   const plotHeight = chartHeight - chartMargins.top - chartMargins.bottom;
   const cleaned = useMemo(() => series.map((item) => ({ ...item, points: cleanData(item.data) })), [series]);
@@ -282,17 +301,26 @@ export function FrequencyGraph({
   });
 
   const visible = prepared.filter((item) => !hiddenIds.has(item.id));
-  const yTicks = makeYTicks(minimumDb, maximumDb);
+  const allPreparedDb = prepared.flatMap((item) => item.points.map((point) => point.db));
+  const yMinimumDb = allPreparedDb.length > 0 ? Math.min(minimumDb, Math.floor(Math.min(...allPreparedDb) / 5) * 5) : minimumDb;
+  const yMaximumDb = allPreparedDb.length > 0 ? Math.max(maximumDb, Math.ceil(Math.max(...allPreparedDb) / 5) * 5) : maximumDb;
+  const yTicks = makeYTicks(yMinimumDb, yMaximumDb);
 
   const xForFrequency = (frequency: number) => chartMargins.left +
     ((Math.log10(frequency) - Math.log10(minFrequency)) / (Math.log10(maxFrequency) - Math.log10(minFrequency))) * plotWidth;
-  const yForDb = (db: number) => chartMargins.top + ((maximumDb - db) / (maximumDb - minimumDb)) * plotHeight;
-  const visibleTicks = visibleFrequencyLabels(chartWidth, xForFrequency, t, locale);
+  const yForDb = (db: number) => chartMargins.top + ((yMaximumDb - db) / (yMaximumDb - yMinimumDb)) * plotHeight;
+  const visibleTicks = visibleFrequencyLabels(chartWidth, xForFrequency, t, locale, compact && chartWidth < 768);
   const plotted = visible.map((item): PreparedSeries => {
     const points = item.points.map((point) => ({ x: xForFrequency(point.frequency), y: yForDb(point.db) }));
     return {
       ...item,
-      stroke: item.isTarget ? "var(--text-tertiary)" : channelIsLeft(item) ? `color-mix(in srgb, ${item.color} 65%, black)` : item.color,
+      stroke: onBrand
+        ? (item.isTarget ? "var(--on-brand)" : "var(--graph-line-on-brand)")
+        : item.isTarget
+          ? "var(--graph-6)"
+          : channelIsLeft(item)
+            ? `color-mix(in srgb, ${item.color} 65%, black)`
+            : item.color,
       isLeftChannel: channelIsLeft(item),
       path: monotonePath(points),
     };
@@ -346,7 +374,13 @@ export function FrequencyGraph({
     <ul aria-label={t("graphUi.legend")} className={className}>
       {prepared.map((item) => {
         const hidden = hiddenIds.has(item.id);
-        const stroke = item.isTarget ? "var(--text-tertiary)" : channelIsLeft(item) ? `color-mix(in srgb, ${item.color} 65%, black)` : item.color;
+        const stroke = onBrand
+          ? (item.isTarget ? "var(--on-brand)" : "var(--graph-line-on-brand)")
+          : item.isTarget
+            ? "var(--graph-6)"
+            : channelIsLeft(item)
+              ? `color-mix(in srgb, ${item.color} 65%, black)`
+              : item.color;
         return (
           <li key={item.id} className="flex min-w-0 items-center gap-1">
             <button type="button" aria-pressed={!hidden} aria-label={`${t(hidden ? "graphUi.showSeries" : "graphUi.hideSeries")} ${item.label}`} onClick={() => toggleSeries(item.id)} className={`inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm px-2 text-left text-xs font-bold transition-opacity ${hidden ? "opacity-45" : ""}`}>
@@ -392,11 +426,29 @@ export function FrequencyGraph({
               const widthForZone = x2 - x1;
               const label = t(`frequencyZones.${compactTicks ? zone.shortKey : zone.key}`);
               const canFitLabel = widthForZone >= label.length * (compactTicks ? 5.5 : 7);
+              const isHighlighted = highlightRange
+                ? zone.end > highlightRange[0] && zone.start < highlightRange[1]
+                : false;
+              const zoneOpacity = onBrand
+                ? highlightRange
+                  ? (isHighlighted ? 0.3 : 0)
+                  : 0
+                : highlightRange ? (isHighlighted ? 0.62 : 0.08) : (index % 2 === 0 ? 0.18 : 0.3);
               return (
                 <g key={zone.key}>
-                  <rect x={x1} y={chartMargins.top} width={widthForZone} height={plotHeight} fill="var(--surface-subtle)" fillOpacity={index % 2 === 0 ? 0.18 : 0.3} />
-                  {index > 0 && <line x1={x1} x2={x1} y1={chartMargins.top - 3} y2={chartMargins.top + plotHeight} stroke="var(--border)" strokeDasharray="3 4" strokeOpacity="0.75" />}
-                  {canFitLabel && <text x={(x1 + x2) / 2} y={chartMargins.top - 22} textAnchor="middle" fontSize={compactTicks ? "9" : "10"} fill="var(--text-tertiary)" fontFamily="var(--font-family-sans)">{label}</text>}
+                  <rect
+                    x={x1}
+                    y={chartMargins.top}
+                    width={widthForZone}
+                    height={plotHeight}
+                    fill={onBrand ? "var(--graph-line-on-brand)" : "var(--surface-subtle)"}
+                    fillOpacity={zoneOpacity}
+                    stroke={onBrand && isHighlighted ? "var(--graph-line-on-brand)" : undefined}
+                    strokeWidth={onBrand && isHighlighted ? 2 : undefined}
+                    style={{ transition: "fill-opacity 250ms ease, stroke-opacity 250ms ease" }}
+                  />
+                  {index > 0 && <line x1={x1} x2={x1} y1={chartMargins.top - 3} y2={chartMargins.top + plotHeight} stroke={onBrand ? "color-mix(in srgb, var(--on-brand) 30%, transparent)" : "var(--border)"} strokeDasharray="3 4" strokeOpacity={onBrand ? "0.3" : "0.75"} />}
+                  {canFitLabel && <text x={(x1 + x2) / 2} y={chartMargins.top - 22} textAnchor="middle" fontSize={compactTicks ? "9" : "10"} fill={onBrand ? "var(--on-brand)" : "var(--text-tertiary)"} fillOpacity={highlightRange ? (isHighlighted ? 1 : 0.25) : (onBrand ? 1 : 1)} fontWeight={highlightRange && isHighlighted ? 700 : 400} fontFamily="var(--font-family-sans)" style={{ transition: "fill-opacity 250ms ease, font-weight 250ms ease" }}>{label}</text>}
                 </g>
               );
             })}
@@ -406,8 +458,8 @@ export function FrequencyGraph({
               const major = tick % 10 === 0;
               return (
                 <g key={`y-${tick}`}>
-                  <line x1={chartMargins.left} x2={chartWidth - chartMargins.right} y1={y} y2={y} stroke="var(--border)" strokeOpacity={major ? "0.76" : "0.45"} strokeWidth={major ? "1.1" : "0.7"} shapeRendering="crispEdges" />
-                  <text x={chartMargins.left - 7} y={y + 4} textAnchor="end" fontSize="10" fill="var(--text-tertiary)" fontFamily="var(--font-geist-mono)">{tick}</text>
+                  <line x1={chartMargins.left} x2={chartWidth - chartMargins.right} y1={y} y2={y} stroke={onBrand ? "color-mix(in srgb, var(--on-brand) 18%, transparent)" : "var(--border)"} strokeOpacity={onBrand ? "1" : major ? "0.76" : "0.45"} strokeWidth={onBrand && major ? "1.1" : "0.7"} shapeRendering="crispEdges" />
+                  <text x={chartMargins.left - 7} y={y + 4} textAnchor="end" fontSize="10" fill={onBrand ? "var(--on-brand)" : "var(--text-tertiary)"} fontFamily="var(--font-geist-mono)">{tick}</text>
                 </g>
               );
             })}
@@ -416,13 +468,13 @@ export function FrequencyGraph({
               const x = xForFrequency(tick);
               return (
                 <g key={`x-${tick}`}>
-                  <line x1={x} x2={x} y1={chartMargins.top} y2={chartMargins.top + plotHeight} stroke="var(--border)" strokeOpacity={emphasizedTicks.has(tick) ? "0.8" : "0.38"} strokeWidth={emphasizedTicks.has(tick) ? "1.1" : "0.7"} shapeRendering="crispEdges" />
-                  {visibleTicks.has(tick) && <text x={x} y={chartMargins.top + plotHeight + 20} textAnchor={tick === 20 ? "start" : tick === 20000 ? "end" : "middle"} fontSize={compactTicks ? "9" : "10"} fill="var(--text-tertiary)" fontFamily="var(--font-geist-mono)">{formatTick(tick, compactTicks, t, locale)}</text>}
+                  <line x1={x} x2={x} y1={chartMargins.top} y2={chartMargins.top + plotHeight} stroke={onBrand ? "color-mix(in srgb, var(--on-brand) 18%, transparent)" : "var(--border)"} strokeOpacity={onBrand ? (emphasizedTicks.has(tick) ? "0.32" : "1") : emphasizedTicks.has(tick) ? "0.8" : "0.38"} strokeWidth={emphasizedTicks.has(tick) ? "1.1" : "0.7"} shapeRendering="crispEdges" />
+                  {visibleTicks.has(tick) && <text x={x} y={chartMargins.top + plotHeight + 20} textAnchor={tick === 20 ? "start" : tick === 20000 ? "end" : "middle"} fontSize={compactTicks ? "9" : "10"} fill={onBrand ? "var(--on-brand)" : "var(--text-tertiary)"} fontFamily="var(--font-geist-mono)">{formatTick(tick, compactTicks, t, locale)}</text>}
                 </g>
               );
             })}
 
-            <text x="12" y={chartMargins.top + plotHeight / 2} textAnchor="middle" transform={`rotate(-90 12 ${chartMargins.top + plotHeight / 2})`} fontSize="10" fill="var(--text-tertiary)" fontFamily="var(--font-geist-mono)">dB</text>
+            <text x="12" y={chartMargins.top + plotHeight / 2} textAnchor="middle" transform={`rotate(-90 12 ${chartMargins.top + plotHeight / 2})`} fontSize="10" fill={onBrand ? "var(--on-brand)" : "var(--text-tertiary)"} fontFamily="var(--font-geist-mono)">dB</text>
             <text x={chartMargins.left + plotWidth / 2} y={chartMargins.top + plotHeight / 2 + 5} textAnchor="middle" fontSize="32" fontWeight="600" letterSpacing="0" fill="var(--text-tertiary)" fillOpacity="0.055" fontFamily="var(--font-family-sans)">Sonus</text>
 
             <g clipPath={`url(#${clipId})`} fill="none">
@@ -430,18 +482,46 @@ export function FrequencyGraph({
                 {plotted.filter((item) => item.path.length > 0).map((item) => {
                   const first = item.points[0];
                   const last = item.points[item.points.length - 1];
+                  const isNewSeries = newSeriesIds.includes(item.id);
+                  const intersectsHighlight = highlightRange
+                    ? item.points.some((point) => point.frequency >= highlightRange[0] && point.frequency <= highlightRange[1])
+                    : false;
+                  const lineOpacity = onBrand && highlightRange && !intersectsHighlight ? 0.55 : 1;
+                  const lineWidth = highlightRange && intersectsHighlight ? 4.5 : (item.strokeWidth ?? (item.isTarget ? (onBrand ? 2 : 1.75) : 3));
                   return (
                     <g key={item.id}>
+                      {onBrand && !item.isTarget && (
+                        <motion.path
+                          d={item.path}
+                          stroke="var(--on-brand)"
+                          strokeWidth="5"
+                          strokeOpacity="0.25"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          vectorEffect="non-scaling-stroke"
+                          animate={{ d: item.path, opacity: lineOpacity }}
+                          transition={{ duration: reduceMotion ? 0 : 0.25 }}
+                        />
+                      )}
                       <motion.path
                         d={item.path}
                         stroke={item.stroke}
-                        strokeWidth={item.strokeWidth ?? (item.isTarget ? 1.75 : 3)}
+                        strokeWidth={lineWidth}
                         strokeDasharray={item.isTarget || item.dashed ? "7 6" : undefined}
+                        strokeOpacity={onBrand
+                          ? (item.isTarget ? 0.6 : !item.isLeftChannel ? 0.65 : lineOpacity)
+                          : lineOpacity}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         vectorEffect="non-scaling-stroke"
-                        initial={reduceMotion ? false : { opacity: 0.9 }}
-                        animate={{ d: item.path, pathLength: 1, opacity: 1 }}
+                        initial={reduceMotion || !isNewSeries ? false : { opacity: 0.9, pathLength: 0 }}
+                        animate={{
+                          d: item.path,
+                          pathLength: 1,
+                          opacity: onBrand
+                            ? (item.isTarget ? 0.6 : !item.isLeftChannel ? 0.65 : lineOpacity)
+                            : lineOpacity,
+                        }}
                         exit={reduceMotion ? undefined : { opacity: 0 }}
                         transition={reduceMotion ? { duration: 0 } : { pathLength: { duration: 0 }, d: { duration: 0.42, ease: "easeOut" }, opacity: { duration: 0.2 }}}
                       />
@@ -458,7 +538,7 @@ export function FrequencyGraph({
                   );
                 })}
               </AnimatePresence>
-              {hoverFrequency !== null && interactionReady && <line x1={hoverX} x2={hoverX} y1={chartMargins.top} y2={chartMargins.top + plotHeight} stroke="var(--text-tertiary)" strokeWidth="1" strokeDasharray="3 4" vectorEffect="non-scaling-stroke" />}
+              {hoverFrequency !== null && interactionReady && <line x1={hoverX} x2={hoverX} y1={chartMargins.top} y2={chartMargins.top + plotHeight} stroke={onBrand ? "color-mix(in srgb, var(--on-brand) 60%, transparent)" : "var(--text-tertiary)"} strokeWidth="1" strokeDasharray="3 4" vectorEffect="non-scaling-stroke" />}
             </g>
 
             <rect
@@ -490,7 +570,7 @@ export function FrequencyGraph({
               <ul className="space-y-1.5">
                 {hoverValues.map((item) => (
                   <li key={item.id} className="flex items-center justify-between gap-4 text-secondary">
-                    <span className="flex min-w-0 items-center gap-2"><span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: item.isTarget ? "var(--text-tertiary)" : item.color }} /><span className="truncate">{item.label}</span></span>
+                    <span className="flex min-w-0 items-center gap-2"><span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: item.isTarget ? "var(--graph-6)" : item.color }} /><span className="truncate">{item.label}</span></span>
                     <span className="shrink-0 font-mono text-primary">{item.db === undefined ? t("graph.empty") : `${item.db.toFixed(2)} ${t("graph.decibels")}`}</span>
                   </li>
                 ))}
@@ -502,7 +582,7 @@ export function FrequencyGraph({
         {showLegend && series.length > 0 && <div className="absolute bottom-[48px] left-[64px] hidden max-h-32 max-w-[55%] overflow-y-auto md:block">{renderLegend("flex flex-col items-start gap-0.5")}</div>}
       </div>
 
-      <p className="text-xs text-tertiary">{t("graphModes.normalizedCaption")}</p>
+      <p className={`text-xs ${onBrand ? "" : "text-tertiary"}`} style={onBrand ? { color: "var(--on-brand)" } : undefined}>{t("graphModes.normalizedCaption")}</p>
       <p id={`${clipId}-summary`} className="sr-only">{t("graph.dataSummary")}: {dataSummary || t("graph.empty")}</p>
       {showLegend && series.length > 0 && <div className="md:hidden">{renderLegend("flex flex-col items-start gap-0.5")}</div>}
       {measuredBy && <p className="text-xs text-tertiary">{t("graphUi.measuredBy").replace("{name}", measuredBy)}</p>}

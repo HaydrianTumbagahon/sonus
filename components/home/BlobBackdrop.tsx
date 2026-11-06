@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+"use client";
+import { motion, useReducedMotion } from "framer-motion";
 import type { CSSProperties } from "react";
 
 type BlobBackdropProps = {
@@ -7,6 +8,7 @@ type BlobBackdropProps = {
   size?: number | string;
   rotation?: number;
   opacity?: number;
+  color?: "brand" | "brand-hover";
   accentColor?: "accent" | "accent-hover";
   delay?: number;
 };
@@ -17,10 +19,14 @@ export function BlobBackdrop({
   size = 340,
   rotation = 0,
   opacity = 0.7,
+  color = "brand",
   accentColor = "accent",
   delay = 0,
 }: BlobBackdropProps) {
-  const fill = accentColor === "accent" ? "var(--accent)" : "var(--accent-hover)";
+  const reduceMotion = useReducedMotion();
+  const fill = color === "brand-hover" || accentColor === "accent-hover"
+    ? "var(--brand-hover)"
+    : "var(--brand)";
   const style: CSSProperties = {
     width: typeof size === "number" ? `${size}px` : size,
     height: typeof size === "number" ? `${size}px` : size,
@@ -35,7 +41,7 @@ export function BlobBackdrop({
       aria-hidden="true"
       className={`pointer-events-none absolute ${className}`}
       style={style}
-      animate={{ x: [0, 14, -10, 0], y: [0, -12, 6, 0], rotate: [rotation, rotation + 8, rotation - 6, rotation] }}
+      animate={reduceMotion ? undefined : { x: [0, 14, -10, 0], y: [0, -12, 6, 0], rotate: [rotation, rotation + 8, rotation - 6, rotation] }}
       transition={{ duration: 12, ease: "easeInOut", delay, repeat: Infinity, repeatType: "mirror" }}
     >
       <svg viewBox="0 0 420 420" preserveAspectRatio="none" className="h-full w-full" aria-hidden="true">

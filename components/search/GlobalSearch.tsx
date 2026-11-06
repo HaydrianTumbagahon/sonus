@@ -170,10 +170,9 @@ export function GlobalSearch() {
     void Promise.all([
       import("fuse.js"),
       import("@/lib/data"),
-      import("@/data/glossary"),
-    ]).then(([fuseModule, dataModule, glossaryModule]) => {
-      const { getAllBrands, getAllIEMs } = dataModule;
-      const documents = makeSearchDocuments(getAllIEMs(), getAllBrands(), glossaryModule.glossaryTerms);
+    ]).then(([fuseModule, dataModule]) => {
+      const { getAllBrands, getAllIEMs, getAllGlossaryTerms } = dataModule;
+      const documents = makeSearchDocuments(getAllIEMs(), getAllBrands(), getAllGlossaryTerms());
       const FuseConstructor = fuseModule.default;
       setSearchIndex(new FuseConstructor(documents, {
         keys: [

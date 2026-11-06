@@ -1,5 +1,5 @@
 import { CompareClient } from "@/components/compare/CompareClient";
-import { getAllIEMs } from "@/lib/data";
+import { getAllBrands, getAllIEMs } from "@/lib/data";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -15,5 +15,5 @@ export default async function ComparePage({
     ? Array.isArray(value) ? value.join(",") : value ?? ""
     : null;
 
-  return <CompareClient allIems={getAllIEMs()} initialIems={initialIems} />;
+  return <CompareClient allIems={getAllIEMs()} brands={getAllBrands()} initialIems={initialIems} />;
 }

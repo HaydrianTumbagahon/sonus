@@ -23,7 +23,7 @@ export function IEMCard({ iem }: { iem: IEM }) {
 
   const setModalOpen = (nextOpen: boolean) => {
     setOpen(nextOpen);
-    if (!nextOpen) requestAnimationFrame(() => detailsTriggerRef.current?.focus());
+    if (!nextOpen) requestAnimationFrame(() => detailsTriggerRef.current?.focus({ preventScroll: true }));
   };
 
   return (

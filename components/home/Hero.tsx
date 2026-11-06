@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState, type TouchEvent } from "react";
 import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { useLanguage } from "@/components/providers/LanguageProvider";
@@ -145,7 +145,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
   };
 
   return (
-    <section className="dark snap-start relative isolate min-h-[min(100svh,860px)] w-full overflow-hidden bg-[var(--background)] text-primary">
+    <section className="snap-start relative isolate min-h-[min(100svh,780px)] w-full overflow-hidden bg-[var(--background)] pt-[calc(var(--header-offset)+16px)] text-primary">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_42%,color-mix(in_srgb,var(--surface)_24%,transparent),transparent_64%)]" />
 
       <motion.div
@@ -162,25 +162,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
           transition={reduceMotion ? undefined : { duration: 12, ease: "easeInOut", repeat: Infinity }}
           className="size-full"
         >
-          <path d="M420 0 C560 65 360 135 495 245 C640 365 365 410 515 535 C660 655 405 720 530 835 C615 915 540 960 625 1000 H1000 V0 Z" fill="var(--accent)" />
-        </motion.svg>
-      </motion.div>
-
-      <motion.div
-        aria-hidden="true"
-        initial={reduceMotion ? false : { opacity: 0, scale: 0.82, x: "10%" }}
-        animate={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: reduceMotion ? 0 : 0.82, delay: reduceMotion ? 0 : 0.22, ease: "easeOut" }}
-        className="pointer-events-none absolute bottom-[9%] right-[32%] hidden h-[31%] w-[26%] md:block"
-      >
-        <motion.svg
-          viewBox="0 0 400 320"
-          preserveAspectRatio="none"
-          animate={reduceMotion ? undefined : { x: [0, -8, 4, 0], y: [0, 5, -6, 0], scale: [1, 0.985, 1.015, 1] }}
-          transition={reduceMotion ? undefined : { duration: 13, ease: "easeInOut", repeat: Infinity }}
-          className="size-full"
-        >
-          <path d="M70 45 C145 -8 238 22 305 95 C376 171 336 273 243 294 C153 315 47 278 20 191 C-2 122 17 81 70 45 Z" fill="var(--accent-hover)" />
+          <path d="M420 0 C560 65 360 135 495 245 C640 365 365 410 515 535 C660 655 405 720 530 835 C615 915 540 960 625 1000 H1000 V0 Z" fill="var(--brand)" />
         </motion.svg>
       </motion.div>
 
@@ -193,29 +175,11 @@ export function Hero({ iems }: { iems: IEM[] }) {
         transition={{ duration: reduceMotion ? 0 : 0.9, ease: "easeOut" }}
         className="pointer-events-none absolute inset-x-[-8%] bottom-[-4%] h-[53%] w-[116%] md:hidden"
       >
-        <path d="M0 178 C120 95 235 214 390 163 C540 113 656 182 774 142 C871 109 934 137 1000 92 V500 H0 Z" fill="var(--accent)" />
+        <path d="M0 178 C120 95 235 214 390 163 C540 113 656 182 774 142 C871 109 934 137 1000 92 V500 H0 Z" fill="var(--brand)" />
       </motion.svg>
 
-      <motion.div
-        aria-hidden="true"
-        initial={reduceMotion ? false : { opacity: 0, scale: 0.78, y: "12%" }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: reduceMotion ? 0 : 0.8, delay: reduceMotion ? 0 : 0.24, ease: "easeOut" }}
-        className="pointer-events-none absolute bottom-[31%] right-[7%] h-[17%] w-[51%] md:hidden"
-      >
-        <motion.svg
-          viewBox="0 0 500 260"
-          preserveAspectRatio="none"
-          animate={reduceMotion ? undefined : { x: [0, 5, -6, 0], y: [0, -4, 5, 0], scale: [1, 1.02, 0.99, 1] }}
-          transition={reduceMotion ? undefined : { duration: 13, ease: "easeInOut", repeat: Infinity }}
-          className="size-full"
-        >
-          <path d="M82 34 C172 -6 296 17 390 73 C488 132 479 218 388 247 C282 281 104 239 34 174 C-16 127 4 67 82 34 Z" fill="var(--accent-hover)" />
-        </motion.svg>
-      </motion.div>
-
-      <div className="relative z-10 mx-auto grid min-h-[min(100svh,860px)] max-w-[1600px] grid-cols-1 items-center gap-2 px-5 pb-5 pt-[calc(var(--header-offset)+16px)] sm:px-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-0 md:px-10 md:pb-10 2xl:px-12">
-        <div className="relative z-10 max-w-3xl md:py-12">
+      <div className="relative z-10 mx-auto grid min-h-[calc(min(100svh,780px)-var(--header-offset))] max-w-[1600px] grid-cols-1 items-center gap-2 px-5 pb-5 pt-8 sm:px-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-0 md:px-10 md:pb-10 md:pt-0 2xl:px-12">
+        <div className="relative z-10 max-w-3xl text-center md:py-12 md:text-left">
           <motion.p
             initial={reduceMotion ? false : { opacity: 0, y: 18, rotate: -4 }}
             animate={{ opacity: 1, y: 0, rotate: -4 }}
@@ -229,7 +193,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
             animate={{ opacity: 1, x: 0, skewX: -12 }}
             transition={{ duration: reduceMotion ? 0 : 0.56, delay: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
             className="origin-left text-[clamp(64px,12vw,180px)] font-display uppercase leading-[0.9] tracking-wide text-primary"
-            style={{ textShadow: "4px 4px 0 color-mix(in srgb, var(--accent) 60%, transparent)" }}
+            style={{ textShadow: "4px 4px 0 color-mix(in srgb, var(--brand-text) 60%, transparent)" }}
           >
             {t("home.heroWord")}
           </motion.h1>
@@ -237,23 +201,10 @@ export function Hero({ iems }: { iems: IEM[] }) {
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.5, delay: reduceMotion ? 0 : 0.38, ease: "easeOut" }}
-            className="mt-3 text-right font-script text-2xl leading-tight text-secondary sm:mt-4 sm:text-4xl"
+            className="mt-3 text-center font-script text-2xl leading-tight text-secondary sm:mt-4 sm:text-4xl md:text-left md:ml-0"
           >
             {t("home.heroScriptBottom")}
           </motion.p>
-          <motion.a
-            href="/learn"
-            initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.48, delay: reduceMotion ? 0 : 0.52, ease: "easeOut" }}
-            whileTap={reduceMotion ? undefined : { scale: 0.96 }}
-            className="group mt-7 inline-flex h-[52px] items-center gap-4 rounded-full bg-accent pl-6 pr-2 text-sm font-semibold text-primary transition-colors hover:bg-accent-hover focus-visible:outline-offset-4 sm:mt-9"
-          >
-            {t("home.heroLearnMore")}
-            <span aria-hidden="true" className="flex size-9 items-center justify-center rounded-full bg-background text-primary">
-              <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </span>
-          </motion.a>
         </div>
 
         <div
@@ -282,9 +233,14 @@ export function Hero({ iems }: { iems: IEM[] }) {
           onClickCapture={handleImageClickCapture}
           className="relative z-10 mx-auto mt-0 flex min-h-[312px] w-full max-w-[660px] touch-pan-y flex-col items-center justify-end focus-visible:outline-offset-4 md:min-h-[590px] md:justify-center"
         >
-          <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 size-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent-muted/40 sm:size-[390px] md:size-[470px]" />
-
           <div className="relative flex h-[280px] w-full items-center justify-center sm:h-[390px] md:h-[500px]">
+            <motion.div
+              aria-hidden="true"
+              animate={reduceMotion ? { scale: 1 } : { scale: [1, 1.03, 1] }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 12, ease: "easeInOut", repeat: Infinity }}
+              className="pointer-events-none absolute left-1/2 top-1/2 z-[1] aspect-square size-[min(78vw,515px)] rounded-full md:size-[580px]"
+              style={{ border: "1.5px solid var(--brand-outline)", background: "transparent", x: "-50%", y: "-50%" }}
+            />
             <AnimatePresence mode="wait" initial={!reduceMotion}>
               {activeIem && (
                 <motion.div
@@ -335,7 +291,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -4 }}
                   transition={{ duration: reduceMotion ? 0.12 : 0.2, ease: "easeOut" }}
-                  className="pointer-events-none absolute left-0 top-[39%] hidden sm:block md:left-[-2%] md:top-[45%]"
+                  className="pointer-events-none absolute left-0 hidden -translate-y-6 sm:block sm:top-[39%] md:left-[-2%] md:top-[45%] md:-translate-y-10"
                 >
                   <p className="font-sans text-xs font-medium text-secondary">{activeIem.brand}</p>
                   {typeof activeIem.priceUSD === "number" && (
@@ -356,7 +312,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
                   exit={{ opacity: 0 }}
                   transition={{ duration: reduceMotion ? 0.12 : 0.2 }}
                   className="pointer-events-none absolute right-0 top-[38%] hidden font-display text-7xl leading-none text-transparent sm:block md:right-0 md:top-[40%] md:text-8xl"
-                  style={{ WebkitTextStroke: "2px color-mix(in srgb, var(--accent-muted) 50%, transparent)" }}
+                  style={{ WebkitTextStroke: "2px var(--brand-outline)" }}
                 >
                   {String(activeIndex + 1).padStart(2, "0")}
                 </motion.p>
@@ -365,7 +321,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
           )}
 
           <div className="relative z-10 mt-2 flex min-h-11 items-center justify-center gap-2 md:mt-0 md:absolute md:bottom-4">
-            <button type="button" aria-label={t("home.heroPreviousSlide")} onClick={() => changeSlide(-1)} disabled={slideCount < 2} className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-accent disabled:opacity-40">
+            <button type="button" aria-label={t("home.heroPreviousSlide")} onClick={() => changeSlide(-1)} disabled={slideCount < 2} className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-brand-text disabled:opacity-40">
               <ChevronLeft aria-hidden="true" className="size-6" />
             </button>
             <div className="flex min-h-11 items-center gap-2 px-1" role="group" aria-label={t("home.heroPagination")}>
@@ -376,11 +332,11 @@ export function Hero({ iems }: { iems: IEM[] }) {
                   aria-current={index === activeIndex ? "true" : undefined}
                   aria-label={slideLabel(index)}
                   onClick={() => setActiveIndex(index)}
-                  className={`h-2 rounded-full transition-[width,background-color] duration-200 ${index === activeIndex ? "w-6 bg-accent-muted" : "w-2 bg-text-tertiary/50 hover:bg-text-secondary"}`}
+                  className={`h-2 rounded-full transition-[width,background-color] duration-200 ${index === activeIndex ? "w-6 bg-brand" : "w-2 bg-text-tertiary/50 hover:bg-text-secondary"}`}
                 />
               ))}
             </div>
-            <button type="button" aria-label={t("home.heroNextSlide")} onClick={() => changeSlide(1)} disabled={slideCount < 2} className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-accent disabled:opacity-40">
+            <button type="button" aria-label={t("home.heroNextSlide")} onClick={() => changeSlide(1)} disabled={slideCount < 2} className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-brand-text disabled:opacity-40">
               <ChevronRight aria-hidden="true" className="size-6" />
             </button>
           </div>

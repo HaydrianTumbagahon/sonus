@@ -5,13 +5,17 @@ type AppStore = {
   settingsOpen: boolean;
   searchOpen: boolean;
   compareList: string[];
+  compareFullToast: boolean;
   setSettingsOpen: (open: boolean) => void;
   setSearchOpen: (open: boolean) => void;
   setCompareList: (slugs: string[]) => void;
   addToCompare: (slug: string) => void;
+  setCompareSlot: (index: number, slug: string) => void;
+  clearCompareSlot: (index: number) => void;
   removeFromCompare: (slug: string) => void;
   clearCompare: () => void;
   toggleCompare: (slug: string) => void;
+  dismissCompareFullToast: () => void;
 };
 
 export const useAppStore = create<AppStore>()(
@@ -20,15 +24,29 @@ export const useAppStore = create<AppStore>()(
       settingsOpen: false,
       searchOpen: false,
       compareList: [],
+      compareFullToast: false,
       setSettingsOpen: (settingsOpen) => set({ settingsOpen }),
       setSearchOpen: (searchOpen) => set({ searchOpen }),
-      setCompareList: (slugs) => set({ compareList: [...new Set(slugs)].slice(0, 6) }),
+      setCompareList: (slugs) => set({ compareList: [...new Set(slugs)].slice(0, 6), compareFullToast: false }),
       addToCompare: (slug) =>
         set((state) =>
           state.compareList.includes(slug) || state.compareList.length >= 6
-            ? state
-            : { compareList: [...state.compareList, slug] },
+            ? state.compareList.includes(slug) ? state : { ...state, compareFullToast: true }
+            : { compareList: [...state.compareList, slug], compareFullToast: false },
         ),
+      setCompareSlot: (index, slug) =>
+        set((state) => {
+          const sanitizedIndex = Math.max(0, Math.min(index, 5));
+          const next = state.compareList.filter((item) => item !== slug);
+          if (next[sanitizedIndex]) next[sanitizedIndex] = slug;
+          else next.push(slug);
+          return { compareList: [...new Set(next)].slice(0, 6), compareFullToast: false };
+        }),
+      clearCompareSlot: (index) =>
+        set((state) => ({
+          compareList: state.compareList.filter((_, itemIndex) => itemIndex !== index),
+          compareFullToast: false,
+        })),
       removeFromCompare: (slug) =>
         set((state) => ({
           compareList: state.compareList.filter((item) => item !== slug),
@@ -41,9 +59,10 @@ export const useAppStore = create<AppStore>()(
           }
 
           return state.compareList.length >= 6
-            ? state
-            : { compareList: [...state.compareList, slug] };
+            ? { ...state, compareFullToast: true }
+            : { compareList: [...state.compareList, slug], compareFullToast: false };
         }),
+      dismissCompareFullToast: () => set({ compareFullToast: false }),
     }),
     {
       name: "sonus-compare-list",

@@ -2,6 +2,8 @@
 
 import type { GlossaryTerm } from "@/data/glossary";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { glossaryImages } from "@/data/glossaryImages";
+import { useEffect, useState } from "react";
 
 const frequencyZones: Record<string, [number, number]> = {
   "sub-bass": [0, 18],
@@ -14,6 +16,15 @@ const frequencyZones: Record<string, [number, number]> = {
 
 export function TermVisual({ term }: { term: GlossaryTerm }) {
   const { t } = useLanguage();
+  const image = glossaryImages[term.slug];
+  const [imageState, setImageState] = useState<"loading" | "loaded" | "fallback">(image ? "loading" : "fallback");
+
+  useEffect(() => {
+    if (!image || imageState !== "loading") return;
+    const timeout = window.setTimeout(() => setImageState("fallback"), 8000);
+    return () => window.clearTimeout(timeout);
+  }, [image, imageState, term.slug]);
+
   if (term.visual === "none") return null;
 
   return (
@@ -36,12 +47,36 @@ export function TermVisual({ term }: { term: GlossaryTerm }) {
           <path d="M0 58H320" stroke="var(--border)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
         </svg>
       ) : (
+        image && imageState !== "fallback" ? (
+          <div className="space-y-2">
+            <div className="relative aspect-[16/7] max-h-[220px] overflow-hidden rounded-md bg-surface-subtle sm:max-h-[280px]">
+              {imageState === "loading" && <div aria-hidden="true" className="absolute inset-0 animate-pulse bg-surface-subtle" />}
+              <img
+                src={image.url}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+                width={900}
+                height={394}
+                onLoad={() => setImageState("loaded")}
+                onError={() => setImageState("fallback")}
+                className={`h-full w-full object-contain transition-opacity duration-200 ${imageState === "loaded" ? "opacity-100" : "opacity-0"}`}
+              />
+            </div>
+            <p className="text-xs text-tertiary">
+              Image: {image.credit}{" "}
+              <a href={image.sourcePage} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Source</a>
+            </p>
+          </div>
+        ) : (
         <svg role="img" aria-label={t("glossary.diagram")} viewBox="0 0 320 100" className="h-20 w-full" preserveAspectRatio="xMidYMid meet">
           <path d="M70 50h58m64 0h58M150 31v38" fill="none" stroke="var(--border)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
           <rect x="22" y="27" width="48" height="46" rx="8" fill="var(--surface-subtle)" stroke="var(--graph-1)" strokeWidth="2" />
           <circle cx="150" cy="50" r="22" fill="var(--accent-muted)" stroke="var(--graph-2)" strokeWidth="2" />
           <rect x="230" y="27" width="68" height="46" rx="8" fill="var(--surface-subtle)" stroke="var(--graph-3)" strokeWidth="2" />
         </svg>
+        )
       )}
     </figure>
   );

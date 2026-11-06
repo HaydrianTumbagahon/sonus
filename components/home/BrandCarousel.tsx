@@ -17,6 +17,20 @@ type DragSession = {
   moved: boolean;
 };
 
+const brandOrder = [
+  "7hz",
+  "dunu",
+  "fiio",
+  "kinera",
+  "kiwi-ears",
+  "kz",
+  "moondrop",
+  "simgot",
+  "tanchjim",
+  "tangzu",
+  "truthear",
+] as const;
+
 function wrapOffset(offset: number, width: number): number {
   if (width <= 0) return offset;
   const wrapped = ((offset % width) + width) % width;
@@ -30,13 +44,17 @@ function brandMonogram(name: string): string {
 export function BrandCarousel({ brands }: { brands: Brand[] }) {
   const { t } = useLanguage();
   const reduceMotion = useReducedMotion();
+  const orderedBrands = [...brands].sort((left, right) => {
+    const leftIndex = brandOrder.indexOf(left.slug as (typeof brandOrder)[number]);
+    const rightIndex = brandOrder.indexOf(right.slug as (typeof brandOrder)[number]);
+    return (leftIndex < 0 ? brandOrder.length : leftIndex) - (rightIndex < 0 ? brandOrder.length : rightIndex);
+  });
   const viewportRef = useRef<HTMLDivElement>(null);
   const firstSetRef = useRef<HTMLDivElement>(null);
   const offset = useMotionValue(0);
   const setWidthRef = useRef(0);
   const dragRef = useRef<DragSession | null>(null);
   const inertiaRef = useRef(0);
-  const hoveredRef = useRef(false);
   const focusedRef = useRef(false);
   const inViewportRef = useRef(false);
   const documentHiddenRef = useRef(true);
@@ -102,7 +120,7 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
   useAnimationFrame((time, delta) => {
     const draggingNow = dragRef.current !== null;
     const hasInertia = !reduceMotion && Math.abs(inertiaRef.current) > 1;
-    const paused = reduceMotion || hoveredRef.current || focusedRef.current || draggingNow || !inViewportRef.current || documentHiddenRef.current || hasInertia;
+    const paused = reduceMotion || focusedRef.current || draggingNow || !inViewportRef.current || documentHiddenRef.current || hasInertia;
     const targetSpeed = paused ? 0 : 40;
     const speed = speedRef.current;
 
@@ -212,8 +230,6 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
       aria-roledescription={t("home.brandCarouselRole")}
       aria-label={t("home.brandCarousel")}
       tabIndex={reduceMotion ? 0 : undefined}
-      onPointerEnter={(event) => { if (event.pointerType !== "touch") hoveredRef.current = true; }}
-      onPointerLeave={(event) => { if (event.pointerType !== "touch") hoveredRef.current = false; }}
       onFocusCapture={() => { focusedRef.current = true; }}
       onBlurCapture={(event) => {
         if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
@@ -235,9 +251,9 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
               key={setIndex}
               ref={setIndex === 0 ? firstSetRef : undefined}
               aria-hidden={duplicate || undefined}
-              className="flex shrink-0 items-center gap-6 pr-6"
+              className="flex shrink-0 items-center gap-6"
             >
-              {brands.map((brand) => {
+              {orderedBrands.map((brand) => {
                 const comingSoon = brand.status === "coming-soon";
                 return (
                   <motion.a
@@ -247,23 +263,23 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
                     aria-label={t("home.viewBrandIems").replace("{brand}", brand.name)}
                     tabIndex={duplicate ? -1 : undefined}
                     draggable={false}
-                    whileHover={reduceMotion ? undefined : { borderColor: "var(--accent)" }}
+                    whileHover={reduceMotion ? undefined : { borderColor: "var(--brand-text)" }}
                     whileTap={reduceMotion ? undefined : { scale: 0.97 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
-                    className={`relative flex size-[88px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-logo-tile p-3 transition-colors focus-visible:outline-offset-2 sm:size-[106px] ${comingSoon ? "opacity-60" : ""}`}
+                    className={`relative flex size-[104px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-logo-tile transition-colors focus-visible:outline-offset-2 md:size-[128px] ${comingSoon ? "opacity-60" : ""}`}
                   >
                     {brand.logo ? (
                       <motion.span
                         aria-hidden="true"
                         whileHover={reduceMotion ? undefined : { scale: 1.06 }}
                         transition={{ duration: 0.18, ease: "easeOut" }}
-                        className="relative h-[70%] w-[82%]"
+                        className="relative h-[60%] w-[60%]"
                       >
                         <Image
                           src={brand.logo}
                           alt=""
                           fill
-                          sizes="(min-width: 640px) 140px, 112px"
+                          sizes="128px"
                           draggable={false}
                           className="pointer-events-none object-contain"
                         />
@@ -274,15 +290,14 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
                           aria-hidden="true"
                           whileHover={reduceMotion ? undefined : { scale: 1.06 }}
                           transition={{ duration: 0.18, ease: "easeOut" }}
-                          className="font-mono text-lg font-semibold text-accent"
+                          className="font-display text-lg font-normal text-primary"
                         >
                           {brandMonogram(brand.name)}
                         </motion.span>
-                        <span aria-hidden="true" className="max-w-full truncate text-[10px] font-medium text-secondary">{brand.name}</span>
                       </span>
                     )}
                     {comingSoon && (
-                      <span aria-hidden="true" className="absolute right-1.5 top-1.5 rounded-sm border border-border bg-background px-1.5 py-0.5 text-[9px] font-medium leading-none text-secondary">
+                      <span aria-hidden="true" className="absolute bottom-2 rounded-full border border-border bg-background px-1.5 py-0.5 text-[9px] leading-none text-secondary">
                         {t("common.soon")}
                       </span>
                     )}

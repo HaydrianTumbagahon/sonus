@@ -10,6 +10,7 @@ import { IEMGrid } from "@/components/iem/IEMGrid";
 import { defaultShowroomFilters, parseShowroomFilters, serializeShowroomFilters, type DriverFilter, type ShowroomFilters } from "@/components/iem/filter-types";
 import { getIEMTier } from "@/lib/tiers";
 import type { Brand, IEM } from "@/types/iem";
+import { PageBand } from "@/components/layout/PageBand";
 
 const driverAliases: Record<Exclude<DriverFilter, "all">, string[]> = {
   dd: ["dd", "dynamic driver", "dynamic"],
@@ -121,10 +122,14 @@ export function ShowroomClient({
   const clearFilters = () => setFilters(defaultShowroomFilters);
 
   return (
-    <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold text-primary">{t("showroom.title")}</h1>
-      </header>
+    <>
+      <PageBand outlineWord="SHOWROOM" tone="brand">
+        <h1 className="origin-left text-[clamp(2.5rem,6vw,5rem)] font-normal uppercase leading-[0.9] [font-family:var(--font-anton),var(--font-family-sans)] [transform:skewX(-12deg)] [color:var(--on-brand)] [text-shadow:4px_4px_0_color-mix(in_srgb,var(--on-brand)_25%,transparent)]">
+          {t("showroom.title")}
+        </h1>
+      </PageBand>
+      <div className="relative isolate overflow-hidden pt-[calc(2rem+var(--wave-h))]">
+        <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
 
       <section aria-label={t("showroomUi.filters")} className="space-y-3">
         <label className="relative block w-full sm:max-w-sm">
@@ -163,6 +168,8 @@ export function ShowroomClient({
           </button>
         </div>
       )}
-    </div>
+        </div>
+      </div>
+    </>
   );
 }

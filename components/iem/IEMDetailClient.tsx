@@ -13,6 +13,7 @@ import { IEMGallery } from "@/components/iem/IEMGallery";
 import { IEMSectionNav } from "@/components/iem/IEMSectionNav";
 import { useAppStore } from "@/lib/store";
 import type { IEM } from "@/types/iem";
+import { PageBand } from "@/components/layout/PageBand";
 
 function asRecord(value: unknown): Record<string, unknown> | undefined {
   return typeof value === "object" && value !== null && !Array.isArray(value)
@@ -71,7 +72,6 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   const inCompare = useAppStore((state) => state.compareList.includes(iem.slug));
-  const compareCount = useAppStore((state) => state.compareList.length);
   const toggleCompare = useAppStore((state) => state.toggleCompare);
   const [showZones, setShowZones] = useState(true);
   const [comparisonSlug, setComparisonSlug] = useState("");
@@ -112,16 +112,19 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
   const price = typeof iem.priceUSD === "number" ? formatPrice(iem.priceUSD) : t("common.priceUnavailable");
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-12">
+    <>
+      <PageBand size="compact" outlineWord={iem.brand.toUpperCase()}>
+        <Link href={`/brand/${encodeURIComponent(iem.brandSlug)}`} className="inline-flex min-h-11 items-center text-sm font-medium text-secondary hover:text-accent">
+          {iem.brand}
+        </Link>
+        <h1 id="iem-title" className="origin-left text-[clamp(2rem,5vw,4rem)] font-normal uppercase leading-[0.9] text-primary [font-family:var(--font-anton),var(--font-family-sans)] [transform:skewX(-12deg)] [text-shadow:4px_4px_0_color-mix(in_srgb,var(--brand-text)_60%,transparent)]">{iem.name}</h1>
+      </PageBand>
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-12">
         <div className="min-w-0 space-y-14">
           <section aria-labelledby="iem-title" className="scroll-mt-24 grid gap-8 md:grid-cols-2 md:items-start">
             <IEMGallery iem={iem} />
             <div className="space-y-5 md:py-4">
-              <Link href={`/brand/${encodeURIComponent(iem.brandSlug)}`} className="inline-flex min-h-11 items-center text-sm font-medium text-secondary hover:text-accent">
-                {iem.brand}
-              </Link>
-              <h1 id="iem-title" className="text-3xl font-semibold text-primary sm:text-4xl">{iem.name}</h1>
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant="secondary">{driverLabel(iem, t)}</Badge>
                 {driverConfiguration && <span className="text-sm text-secondary">{driverConfiguration}</span>}
@@ -130,7 +133,6 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
               <div className="flex flex-wrap gap-3 pt-2">
                 <button
                   type="button"
-                  disabled={!inCompare && compareCount >= 6}
                   aria-pressed={inCompare}
                   onClick={() => toggleCompare(iem.slug)}
                   className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${inCompare ? "bg-surface-subtle text-primary" : "bg-accent text-background hover:bg-accent-hover"}`}
@@ -268,5 +270,6 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
         <aside><IEMSectionNav /></aside>
       </div>
     </div>
+    </>
   );
 }

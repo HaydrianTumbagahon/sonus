@@ -8,7 +8,7 @@ const targetRoot = path.join(contentRoot, "targets");
 const publicRoot = path.join(root, "public");
 const generatedRoot = path.join(root, "generated");
 const imageExtensions = new Set([".webp", ".png", ".jpg", ".jpeg"]);
-const frequencyPointCount = 200;
+const frequencyPointCount = 480;
 const requiredInfoFields = ["name", "priceUSD", "description"];
 const warnings: string[] = [];
 
@@ -155,18 +155,23 @@ function loadFrequencyData(iemDirectory: string, slug: string): IEMFrequencyData
 
   let leftFile: string;
   let rightFile: string;
-  const markedLeft = txtFiles.find((file) => /[([]\s*1\s*[)\]]/i.test(file));
-  const markedRight = txtFiles.find((file) => /[([]\s*2\s*[)\]]/i.test(file));
-
-  if (markedLeft && markedRight) {
-    leftFile = markedLeft;
-    rightFile = markedRight;
-  } else if (txtFiles.length === 2) {
-    [leftFile, rightFile] = txtFiles;
-    warn(`[${slug}] Frequency filenames lack matching (1)/(2) markers; sorted filenames were used as left/right.`);
+  if (txtFiles.length === 1) {
+    leftFile = txtFiles[0];
+    rightFile = txtFiles[0];
   } else {
-    warn(`[${slug}] Could not identify left/right frequency files among ${txtFiles.length} text files.`);
-    return undefined;
+    const markedLeft = txtFiles.find((file) => /[([]\s*1\s*[)\]]/i.test(file));
+    const markedRight = txtFiles.find((file) => /[([]\s*2\s*[)\]]/i.test(file));
+
+    if (markedLeft && markedRight) {
+      leftFile = markedLeft;
+      rightFile = markedRight;
+    } else if (txtFiles.length === 2) {
+      [leftFile, rightFile] = txtFiles;
+      warn(`[${slug}] Frequency filenames lack matching (1)/(2) markers; sorted filenames were used as left/right.`);
+    } else {
+      warn(`[${slug}] Could not identify left/right frequency files among ${txtFiles.length} text files.`);
+      return undefined;
+    }
   }
 
   const left = parseFrequencyFile(path.join(iemDirectory, leftFile));
@@ -220,6 +225,134 @@ function loadTargets(): FrequencyTarget[] {
     const data = resampleFrequencyResponse(parseFrequencyFile(path.join(targetRoot, file)));
     if (!data) warn(`[targets/${file}] No parseable frequency response data.`);
     return { slug, name: targetName(slug), data: data ?? [] };
+  });
+}
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function cleanGlossaryText(value: string): string {
+  return value
+    .split(/\r?\n/)
+    .filter((line) => !/^#/.test(line.trim()) && line.trim() !== "No related terms listed.")
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function loadGlossary(): Array<{
+  slug: string;
+  term: string;
+  category: "Hardware & Design" | "Sound Frequencies & Tuning" | "Audio Quality & Performance";
+  shortDefinition: string;
+  explanation: string;
+  visual: "diagram" | "frequency-zone" | "waveform" | "none";
+  related: string[];
+  exampleIEMs: string[];
+}> {
+  const filePath = path.join(contentRoot, "glossary.json");
+  if (!existsSync(filePath)) {
+    warn("[glossary] content/glossary.json is missing.");
+    return [];
+  }
+
+  const parsed = readJson(filePath);
+  if (!isRecord(parsed) || !Array.isArray(parsed.categories)) {
+    warn("[glossary] content/glossary.json must contain a categories array.");
+    return [];
+  }
+
+  const results: Array<{
+    slug: string;
+    term: string;
+    category: "Hardware & Design" | "Sound Frequencies & Tuning" | "Audio Quality & Performance";
+    shortDefinition: string;
+    explanation: string;
+    visual: "diagram" | "frequency-zone" | "waveform" | "none";
+    related: string[];
+    exampleIEMs: string[];
+  }> = [];
+
+  for (const categoryValue of parsed.categories) {
+    if (!isRecord(categoryValue) || !Array.isArray(categoryValue.terms)) continue;
+
+    const title = typeof categoryValue.title === "string" ? categoryValue.title.toLowerCase() : "";
+    let category: "Hardware & Design" | "Sound Frequencies & Tuning" | "Audio Quality & Performance";
+    if (title.includes("hardware") || title.includes("design")) category = "Hardware & Design";
+    else if (title.includes("frequency") || title.includes("tuning") || title.includes("sound")) category = "Sound Frequencies & Tuning";
+    else category = "Audio Quality & Performance";
+
+    for (const termValue of categoryValue.terms) {
+      if (!isRecord(termValue)) {
+        warn("[glossary] Term entry must contain an object.");
+        continue;
+      }
+
+      const termName = typeof termValue.term === "string" ? termValue.term : "";
+      const termId = typeof termValue.id === "string" && termValue.id.length > 0 ? termValue.id : slugify(termName);
+      const shortDefinition = typeof termValue.short === "string" ? termValue.short : "";
+      const explanation = typeof termValue.description === "string"
+        ? cleanGlossaryText(termValue.description)
+        : "";
+
+      if (!termName) warn(`[glossary/${termId}] Missing term field.`);
+      if (!shortDefinition) warn(`[glossary/${termId}] Missing short field.`);
+      if (!explanation) warn(`[glossary/${termId}] Missing description field.`);
+
+      let slug = typeof termValue.slug === "string" && termValue.slug.length > 0
+        ? termValue.slug
+        : termId === "ear-tips" ? "eartips"
+          : termId === "v-shaped" ? "v-shape"
+            : termId === "2-pin" ? "2-pin-mmcx"
+              : termId === "mmcx" ? "mmcx"
+                : slugify(termName);
+
+      const legacySlugMap: Record<string, string> = {
+        "dynamic-driver-dd": "dynamic-driver",
+        "balanced-armature-ba": "balanced-armature",
+        "planar-magnetic-driver": "planar-magnetic",
+        "electrostatic-driver-est": "electrostatic",
+        "hybrid-multi-driver": "hybrid",
+      };
+      slug = legacySlugMap[slug] ?? slug;
+
+      const visual = category === "Hardware & Design"
+        ? "diagram"
+        : category === "Sound Frequencies & Tuning"
+          ? "frequency-zone"
+          : "waveform";
+
+      results.push({
+        slug,
+        term: termName,
+        category,
+        shortDefinition,
+        explanation,
+        visual,
+        related: Array.isArray(termValue.related)
+          ? termValue.related.filter((item): item is string => typeof item === "string")
+          : [],
+        exampleIEMs: Array.isArray(termValue.examples)
+          ? termValue.examples.filter((item): item is string => typeof item === "string")
+          : [],
+      });
+    }
+  }
+
+  const unique = new Set<string>();
+  return results.filter((term) => {
+    if (unique.has(term.slug)) {
+      warn(`[glossary/${term.slug}] Duplicate glossary slug.`);
+      return false;
+    }
+    unique.add(term.slug);
+    return true;
   });
 }
 
@@ -396,12 +529,14 @@ function main() {
   }
 
   const targets = loadTargets();
+  const glossary = loadGlossary();
   mkdirSync(generatedRoot, { recursive: true });
   writeFileSync(path.join(generatedRoot, "iems.json"), `${JSON.stringify(iems, null, 2)}\n`);
   writeFileSync(path.join(generatedRoot, "brands.json"), `${JSON.stringify(brands, null, 2)}\n`);
   writeFileSync(path.join(generatedRoot, "targets.json"), `${JSON.stringify(targets, null, 2)}\n`);
+  writeFileSync(path.join(generatedRoot, "glossary.json"), `${JSON.stringify(glossary, null, 2)}\n`);
 
-  console.log(`Content validation: ${iems.length} IEM(s), ${brands.length} brand(s), ${warnings.length} warning(s).`);
+  console.log(`Content validation: ${iems.length} IEM(s), ${brands.length} brand(s), ${glossary.length} glossary term(s), ${warnings.length} warning(s).`);
   for (const warning of warnings) {
     console.warn(`WARN ${warning}`);
   }

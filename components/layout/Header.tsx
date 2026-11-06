@@ -447,7 +447,7 @@ export function Header() {
         style={{ transformOrigin: "top center", borderRadius: reduceMotion ? (standby ? "28px 28px 999px 999px" : "9999px") : undefined }}
         aria-hidden={standby || !linksVisible}
         inert={standby || !linksVisible}
-        className={`pointer-events-auto mt-3 flex items-center rounded-full border border-border/80 bg-background/80 shadow-lg backdrop-blur-xl sm:mt-4 ${condensed ? "gap-1 px-2 py-1.5" : "gap-2 px-2.5 py-2"}`}
+        className={`pointer-events-auto mt-3 flex items-center rounded-full border border-border/80 bg-background/85 shadow-lg backdrop-blur-xl sm:mt-4 ${condensed ? "gap-1 px-2 py-1.5" : "gap-2 px-2.5 py-2"}`}
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -512,7 +512,7 @@ export function Header() {
         style={{ pointerEvents: standby ? "auto" : "none", transformOrigin: "top center" }}
         className="absolute left-1/2 top-0 inline-flex min-h-11 w-16 -translate-x-1/2 items-start justify-center focus-visible:outline-offset-2"
       >
-        <span aria-hidden="true" className="absolute left-1/2 top-0 flex h-7 w-14 -translate-x-1/2 items-center justify-center rounded-b-full border-x border-b border-t-0 border-border/80 bg-background/80 shadow-lg backdrop-blur-xl">
+        <span aria-hidden="true" className="absolute left-1/2 top-0 flex h-7 w-14 -translate-x-1/2 items-center justify-center rounded-b-full border-x border-b border-t-0 border-border/80 bg-background/85 shadow-lg backdrop-blur-xl">
           <motion.span
             animate={reduceMotion || tabHovered ? { y: 0 } : { y: [0, 2, 0] }}
             transition={reduceMotion || tabHovered ? { duration: 0.15 } : { duration: 1.6, repeat: Infinity, ease: "easeInOut" }}

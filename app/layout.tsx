@@ -5,7 +5,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import { ScrollIndicators } from "@/components/layout/ScrollIndicators";
+import { ScrollReset } from "@/components/layout/ScrollReset";
 import { SettingsPanel } from "@/components/layout/SettingsPanel";
+import { CompareFullToast } from "@/components/compare/CompareFullToast";
 import { GlobalSearch } from "@/components/search/GlobalSearch";
 import { CurrencyProvider, type Currency } from "@/components/providers/CurrencyProvider";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
@@ -82,16 +85,19 @@ export default async function RootLayout({ children }: Readonly<{
           <CurrencyProvider initialCurrency={currency}>
             <ThemeProvider initialTheme={theme}>
               <TooltipProvider>
-                <div className="min-h-dvh">
+                <div className="min-h-dvh transition-colors duration-200 motion-reduce:transition-none">
+                  <ScrollReset />
                   <Header />
                   <GlobalSearch />
-                  <main className="min-h-[40vh] pt-[var(--header-offset)] pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-0">
+                  <main className="min-h-[40vh]">
                     {children}
                   </main>
                   <Footer />
                   <MobileNav />
                   <ScrollToTop />
+                  <ScrollIndicators />
                   <SettingsPanel />
+                  <CompareFullToast />
                 </div>
               </TooltipProvider>
             </ThemeProvider>

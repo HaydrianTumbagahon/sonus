@@ -21,6 +21,11 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-muted: var(--accent-muted);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-text: var(--brand-text);
+  --color-on-brand: var(--on-brand);
+  --color-brand-outline: var(--brand-outline);
   --color-accent-foreground: var(--background);
   --color-muted: var(--surface-subtle);
   --color-muted-foreground: var(--text-secondary);
@@ -38,6 +43,14 @@
   --color-chart-4: var(--graph-4);
   --color-chart-5: var(--graph-5);
   --color-chart-6: var(--graph-6);
+  --color-compare-1: var(--compare-1);
+  --color-compare-2: var(--compare-2);
+  --color-compare-3: var(--compare-3);
+  --color-compare-4: var(--compare-4);
+  --color-compare-5: var(--compare-5);
+  --color-compare-6: var(--compare-6);
+  --color-compare-a: var(--compare-a);
+  --color-compare-b: var(--compare-b);
   --color-graph-1: var(--graph-1);
   --color-graph-2: var(--graph-2);
   --color-graph-3: var(--graph-3);
@@ -60,6 +73,7 @@
 
 :root {
   --header-offset: 80px;
+  --wave-h: 48px;
   color-scheme: light;
   --background: #ffffff;
   --logo-tile: #FFFFFF;
@@ -72,23 +86,46 @@
   --accent: #1d4ed8;
   --accent-hover: #1e40af;
   --accent-muted: #dbeafe;
+  --brand: #60A5FA;
+  --brand-hover: #93C5FD;
+  --brand-text: #2563EB;
+  --on-brand: #0B1220;
+  --brand-outline: color-mix(in srgb, #2563EB 40%, transparent);
+  --compare-1: #2563EB;
+  --compare-2: #EA580C;
+  --compare-3: #16A34A;
+  --compare-4: #C026D3;
+  --compare-5: #DC2626;
+  --compare-6: #CA8A04;
+  --compare-a: var(--compare-1);
+  --compare-b: var(--compare-2);
   --destructive: #b42318;
   --shadow-soft-sm: 0 1px 2px rgb(15 23 42 / 0.06);
   --shadow-soft-md: 0 6px 18px rgb(15 23 42 / 0.08);
   --shadow-soft-lg: 0 16px 40px rgb(15 23 42 / 0.1);
-  --graph-1: #1d4ed8;
-  --graph-2: #0e7490;
-  --graph-3: #4f46e5;
-  --graph-4: #0f766e;
-  --graph-5: #334155;
-  --graph-6: #b45309;
+  --graph-1: #2563EB;
+  --graph-2: #EA580C;
+  --graph-3: #16A34A;
+  --graph-4: #C026D3;
+  --graph-5: #DC2626;
+  --graph-6: #CA8A04;
+  --graph-line-on-brand: #FFFFFF;
   --font-family-sans: var(--font-geist-sans), sans-serif;
 }
 
 @media (min-width: 768px) {
   :root {
     --header-offset: 96px;
+    --wave-h: 96px;
   }
+}
+
+main {
+  padding-bottom: calc(var(--wave-h) + 32px);
+}
+
+main:has([data-home]) {
+  padding-bottom: 0;
 }
 
 .dark {
@@ -104,6 +141,19 @@
   --accent: #60a5fa;
   --accent-hover: #93c5fd;
   --accent-muted: #1e3a5f;
+  --brand: #1D4ED8;
+  --brand-hover: #2563EB;
+  --brand-text: #60A5FA;
+  --on-brand: #F8FAFC;
+  --brand-outline: color-mix(in srgb, #60A5FA 45%, transparent);
+  --compare-1: #60A5FA;
+  --compare-2: #FB923C;
+  --compare-3: #4ADE80;
+  --compare-4: #E879F9;
+  --compare-5: #F87171;
+  --compare-6: #FACC15;
+  --compare-a: var(--compare-1);
+  --compare-b: var(--compare-2);
   --destructive: #fca5a5;
   --shadow-soft-sm: 0 1px 3px rgb(0 0 0 / 0.24);
   --shadow-soft-md: 0 8px 22px rgb(0 0 0 / 0.28);
@@ -114,6 +164,7 @@
   --graph-4: #5eead4;
   --graph-5: #cbd5e1;
   --graph-6: #fbbf24;
+  --graph-line-on-brand: #FFFFFF;
 }
 
 :lang(ja) {
@@ -155,9 +206,11 @@
   scroll-margin-top: calc(var(--header-offset) + 16px);
 }
 
+html,
+body,
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) var(--background);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .brand-carousel-mask {
@@ -166,22 +219,9 @@
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-*::-webkit-scrollbar-thumb {
-  border: 2px solid var(--background);
-  border-radius: 999px;
-  background: var(--text-tertiary);
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .skeleton-shimmer {

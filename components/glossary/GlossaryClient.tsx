@@ -5,6 +5,8 @@ import { TermCard } from "@/components/glossary/TermCard";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { glossaryCategories, type GlossaryCategory, type GlossaryTerm } from "@/data/glossary";
 import { scrollToTarget } from "@/lib/scroll";
+import { PageBand } from "@/components/layout/PageBand";
+import { WaveLines } from "@/components/layout/WaveLines";
 import type { IEM } from "@/types/iem";
 
 const categoryKeys: Record<GlossaryCategory, string> = {
@@ -21,6 +23,7 @@ export function GlossaryClient({ terms, iems }: { terms: GlossaryTerm[]; iems: I
   const { t } = useLanguage();
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(categoryId(glossaryCategories[0]));
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
 
   const filteredTerms = useMemo(() => {
     const search = query.trim().toLocaleLowerCase();
@@ -43,11 +46,15 @@ export function GlossaryClient({ terms, iems }: { terms: GlossaryTerm[]; iems: I
   };
 
   return (
-    <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 lg:py-10">
+    <>
+      <PageBand outlineWord="LEARN" tone="brand">
+        <h1 className="origin-left text-[clamp(2.5rem,6vw,5rem)] font-normal uppercase leading-[0.9] [font-family:var(--font-anton),var(--font-family-sans)] [transform:skewX(-12deg)] [color:var(--on-brand)] [text-shadow:4px_4px_0_color-mix(in_srgb,var(--on-brand)_25%,transparent)]">
+          {t("glossary.title")}
+        </h1>
+      </PageBand>
+      <div className="relative isolate overflow-hidden pt-[calc(2rem+var(--wave-h))]">
+        <div className="relative z-10 mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 lg:py-10">
       <header className="flex flex-wrap items-end justify-between gap-4">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-semibold text-primary">{t("glossary.title")}</h1>
-        </div>
         <label className="w-full max-w-sm">
           <span className="sr-only">{t("glossary.searchPlaceholder")}</span>
           <input
@@ -80,22 +87,43 @@ export function GlossaryClient({ terms, iems }: { terms: GlossaryTerm[]; iems: I
         </ul>
       </nav>
 
-      {visibleCategories.length > 0 ? visibleCategories.map((category) => (
-        <section key={category} id={categoryId(category)} aria-labelledby={`${categoryId(category)}-heading`} className="anchor-target space-y-4">
-          <h2 id={`${categoryId(category)}-heading`} className="border-b border-border pb-3 text-xl font-semibold text-primary">
-            {t(categoryKeys[category])}
-          </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {filteredTerms.filter((term) => term.category === category).map((term) => (
-              <TermCard key={term.slug} term={term} terms={terms} iems={iems} />
-            ))}
-          </div>
-        </section>
-      )) : (
+      {visibleCategories.length > 0 ? visibleCategories.map((category) => {
+        const sectionVariant = category === "Hardware & Design"
+          ? "sectionA"
+          : category === "Sound Frequencies & Tuning"
+            ? "sectionB"
+            : "sectionC";
+        return (
+          <section key={category} id={categoryId(category)} aria-labelledby={`${categoryId(category)}-heading`} className="anchor-target relative overflow-clip space-y-4">
+            <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+              <WaveLines variant={sectionVariant} />
+            </div>
+            <div className="relative z-10 space-y-4">
+              <h2 id={`${categoryId(category)}-heading`} className="border-b border-border pb-3 text-xl font-semibold text-primary">
+                {t(categoryKeys[category])}
+              </h2>
+              <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {filteredTerms.filter((term) => term.category === category).map((term) => (
+                  <TermCard
+                    key={term.slug}
+                    term={term}
+                    terms={terms}
+                    iems={iems}
+                    expanded={openSlug === term.slug}
+                    onToggle={() => setOpenSlug((current) => current === term.slug ? null : term.slug)}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      }) : (
         <p role="status" className="rounded-md border border-dashed border-border bg-surface px-6 py-10 text-center text-sm text-secondary">
           {t("glossary.noResults")}
         </p>
       )}
-    </div>
+      </div>
+      </div>
+    </>
   );
 }

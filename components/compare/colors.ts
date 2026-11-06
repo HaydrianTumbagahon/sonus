@@ -1,10 +1,10 @@
 export const compareColors = [
-  "var(--graph-1)",
-  "var(--graph-2)",
-  "var(--graph-3)",
-  "var(--graph-4)",
-  "var(--graph-5)",
-  "var(--graph-6)",
+  "var(--compare-1)",
+  "var(--compare-2)",
+  "var(--compare-3)",
+  "var(--compare-4)",
+  "var(--compare-5)",
+  "var(--compare-6)",
 ] as const;
 
 export function compareColor(index: number) {

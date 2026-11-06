@@ -45,7 +45,17 @@ export function GlossaryDetailClient({
 
       <section aria-labelledby="term-explanation" className="space-y-3">
         <h2 id="term-explanation" className="text-lg font-semibold text-primary">{t("glossary.explanation")}</h2>
-        <p className="max-w-3xl text-sm leading-7 text-secondary">{term.explanation}</p>
+        <div className="max-w-3xl space-y-4 text-sm leading-7 text-secondary">
+          {term.explanation
+            .split(/\r?\n/)
+            .map((line) => line.trim())
+            .filter((line) => line && !/^#/.test(line) && line !== "No related terms listed.")
+            .join("\n")
+            .split(/\n\s*\n/)
+            .filter(Boolean).map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </section>
 
       {term.visual !== "none" && (
@@ -55,29 +65,29 @@ export function GlossaryDetailClient({
         </section>
       )}
 
-      <section aria-labelledby="related-terms" className="space-y-3">
+      {relatedTerms.length > 0 && <section aria-labelledby="related-terms" className="space-y-3">
         <h2 id="related-terms" className="text-lg font-semibold text-primary">{t("glossary.related")}</h2>
-        {relatedTerms.length > 0 ? (
-          <ul className="flex flex-wrap gap-2">
-            {relatedTerms.map((related) => (
-              <li key={related.slug}>
-                <Link href={`/learn/${related.slug}`} className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-4 text-sm text-secondary hover:bg-surface-subtle hover:text-primary">
-                  {related.term}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        ) : <p className="text-sm text-secondary">{t("glossary.noRelated")}</p>}
-      </section>
+        <ul className="flex flex-wrap gap-2">
+          {relatedTerms.map((related) => (
+            <li key={related.slug}>
+              <Link href={`/learn/${related.slug}`} className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-4 text-sm text-secondary hover:bg-surface-subtle hover:text-primary">
+                {related.term}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>}
 
+      {exampleIems.length > 0 && (
       <section aria-labelledby="example-iems" className="space-y-4">
         <h2 id="example-iems" className="text-lg font-semibold text-primary">{t("glossary.examples")}</h2>
-        {exampleIems.length > 0 ? (
+        {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {exampleIems.map((iem) => <IEMCard key={iem.slug} iem={iem} />)}
           </div>
-        ) : <p className="text-sm text-secondary">{t("glossary.noExamples")}</p>}
+        }
       </section>
+      )}
 
       <nav aria-label={t("glossary.title")} className="grid grid-cols-2 gap-3 border-t border-border pt-6">
         {previous ? (

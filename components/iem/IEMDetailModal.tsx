@@ -61,6 +61,15 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [showZones, setShowZones] = useState(true);
   const [transformOrigin, setTransformOrigin] = useState("center center");
+  const [scrollFade, setScrollFade] = useState({ top: false, bottom: true });
+
+  const updateScrollFade = (element: HTMLDivElement) => {
+    const top = element.scrollTop > 4;
+    const bottom = element.scrollHeight - element.scrollTop - element.clientHeight > 4;
+    setScrollFade((current) =>
+      current.top === top && current.bottom === bottom ? current : { top, bottom },
+    );
+  };
 
   const closePopup = useCallback(() => {
     if (closing.current) return;
@@ -76,6 +85,10 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
 
   useEffect(() => {
     if (open) setPresent(true);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) setScrollFade({ top: false, bottom: true });
   }, [open]);
 
   useEffect(() => {
@@ -115,7 +128,7 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
     lenis?.stop();
 
     const focusFrame = window.requestAnimationFrame(() => {
-      popupRef.current?.querySelector<HTMLElement>("[data-modal-close]")?.focus();
+      popupRef.current?.querySelector<HTMLElement>("[data-modal-close]")?.focus({ preventScroll: true });
     });
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -129,22 +142,22 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
       )].filter((element) => element.getClientRects().length > 0);
       if (focusable.length === 0) {
         event.preventDefault();
-        popupRef.current.focus();
+        popupRef.current.focus({ preventScroll: true });
         return;
       }
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (!popupRef.current.contains(document.activeElement)) {
         event.preventDefault();
-        (event.shiftKey ? last : first).focus();
+        (event.shiftKey ? last : first).focus({ preventScroll: true });
         return;
       }
       if (event.shiftKey && (document.activeElement === first || document.activeElement === popupRef.current)) {
         event.preventDefault();
-        last.focus();
+        last.focus({ preventScroll: true });
       } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
-        first.focus();
+        first.focus({ preventScroll: true });
       }
     };
 
@@ -155,7 +168,7 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
       body.style.overflow = previousOverflow;
       body.style.paddingRight = previousPaddingRight;
       lenis?.start();
-      requestAnimationFrame(() => (triggerElement ?? previousActiveElement.current)?.focus());
+      requestAnimationFrame(() => (triggerElement ?? previousActiveElement.current)?.focus({ preventScroll: true }));
     };
   }, [present, mounted, triggerRef, closePopup]);
 
@@ -166,7 +179,6 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
   const images = [iem.images.hero, ...iem.images.gallery].filter((image): image is string => Boolean(image));
   const selectedIemImage = images[selectedImage];
   const inCompare = compareList.includes(iem.slug);
-  const compareAtLimit = compareList.length >= 6 && !inCompare;
   const price = typeof iem.priceUSD === "number" ? formatPrice(iem.priceUSD) : t("common.priceUnavailable");
   const build = { ...recordValue(iem.materials), ...recordValue(iem.build) };
   const accessories = stringList(iem.inTheBox ?? iem.accessories);
@@ -233,7 +245,6 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
             <div className="flex flex-wrap gap-3">
               <button
                 type="button"
-                disabled={compareAtLimit}
                 aria-pressed={inCompare}
                 onClick={() => toggleCompare(iem.slug)}
                 className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-4 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50 ${inCompare ? "border border-border bg-surface-subtle text-primary" : "bg-accent text-background hover:bg-accent-hover"}`}
@@ -409,7 +420,20 @@ export function IEMDetailModal({ iem, open, onOpenChange, triggerRef }: Props) {
                 >
                   <X aria-hidden="true" className="size-5" />
                 </button>
-                <div data-lenis-prevent className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+                <div
+                  data-lenis-prevent
+                  className="min-h-0 flex-1 overflow-y-auto overscroll-contain"
+                  onScroll={(event) => updateScrollFade(event.currentTarget)}
+                  style={{
+                    maskImage: scrollFade.top && scrollFade.bottom
+                      ? "linear-gradient(to bottom, transparent, black 18px, black calc(100% - 18px), transparent)"
+                      : scrollFade.top
+                        ? "linear-gradient(to bottom, transparent, black 18px, black)"
+                        : scrollFade.bottom
+                          ? "linear-gradient(to bottom, black calc(100% - 18px), transparent)"
+                          : "none",
+                  }}
+                >
                   {details}
                 </div>
               </motion.div>

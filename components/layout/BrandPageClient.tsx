@@ -11,6 +11,7 @@ import { IEMSortSelect } from "@/components/iem/IEMSortSelect";
 import { sortIEMs } from "@/components/iem/sortIEMs";
 import type { SortOption } from "@/components/iem/filter-types";
 import type { Brand, IEM } from "@/types/iem";
+import { PageBand } from "@/components/layout/PageBand";
 
 export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) {
   const { t } = useLanguage();
@@ -21,12 +22,16 @@ export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) 
   const itemCount = t("brand.itemCount").replace("{count}", String(brand.iemCount));
 
   return (
-    <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
+    <>
+      <PageBand size="compact" outlineWord={brand.name.toUpperCase()}>
       <nav aria-label={t("brand.breadcrumb")} className="flex items-center gap-2 text-sm text-secondary">
         <Link href="/showroom" className="min-h-11 inline-flex items-center hover:text-primary">{t("nav.showroom")}</Link>
         <ChevronRight aria-hidden="true" className="size-4" />
         <span aria-current="page" className="text-primary">{brand.name}</span>
       </nav>
+        <h1 className="origin-left mt-2 text-[clamp(2rem,5vw,4rem)] font-normal uppercase leading-[0.9] text-primary [font-family:var(--font-anton),var(--font-family-sans)] [transform:skewX(-12deg)] [text-shadow:4px_4px_0_color-mix(in_srgb,var(--brand-text)_60%,transparent)]">{brand.name}</h1>
+      </PageBand>
+      <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
 
       <header className="grid gap-6 border-y border-border bg-surface px-5 py-7 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center sm:px-8 sm:py-9">
         <div className="flex size-20 items-center justify-center overflow-hidden rounded-lg border border-border bg-background text-xl font-semibold text-secondary sm:size-24">
@@ -36,7 +41,6 @@ export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) 
         </div>
         <div className="min-w-0 space-y-3">
           <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-3xl font-semibold text-primary">{brand.name}</h1>
             {comingSoon && <Badge variant="secondary">{t("brand.comingSoon")}</Badge>}
           </div>
           <p className="max-w-3xl text-sm leading-relaxed text-secondary">{description}</p>
@@ -72,5 +76,6 @@ export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) 
         )}
       </section>
     </div>
+    </>
   );
 }

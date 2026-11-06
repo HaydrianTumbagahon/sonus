@@ -20,6 +20,6 @@
 - The builder copies images to `public/iems/<brand-slug>/<iem-folder>/`. Use `hero.*` as hero when present, otherwise the alphabetically first image; remaining images form the gallery.
 - Frequency files use squig.link text data. `(1)` marks LEFT and `(2)` marks RIGHT. Parse tabs, commas, or spaces; skip headers and non-numeric lines. Resample each channel to 200 logarithmically spaced points from 20 Hz to 20 kHz using linear interpolation in log-frequency, average left and right dB, then round frequency to 1 decimal and dB to 2. Do not normalize stored data; graph normalization is a UI toggle defaulting to the 1 kHz reference. `measuredBy` credit is optional per IEM.
 - Missing hero, missing frequency data, bad ratings, and duplicate slugs are warnings and must not fail the build; unparseable JSON does fail it.
-- Glossary copy in `data/glossary.ts` is temporary lorem ipsum; keep a TODO comment at the top until real copy is supplied.
+- Runtime exception: Learn page visual containers may load freely licensed diagram images from `upload.wikimedia.org` and `commons.wikimedia.org`.
 - Work in small steps. After each task, list files created/changed and wait. Do not add features that were not asked for.
 - Read `docs/SPEC.md` before starting any task.
