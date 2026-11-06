@@ -145,7 +145,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
   };
 
   return (
-    <section className="dark snap-start relative isolate min-h-[min(100svh,780px)] w-full overflow-hidden bg-[var(--background)] pt-[var(--header-offset)] text-primary">
+    <section className="dark snap-start relative isolate min-h-[min(100svh,860px)] w-full overflow-hidden bg-[var(--background)] text-primary">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_42%,color-mix(in_srgb,var(--surface)_24%,transparent),transparent_64%)]" />
 
       <motion.div
@@ -214,7 +214,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
         </motion.svg>
       </motion.div>
 
-      <div className="relative z-10 mx-auto grid min-h-[calc(min(100svh,780px)-var(--header-offset))] max-w-[1600px] grid-cols-1 items-center gap-2 px-5 pb-5 pt-8 sm:px-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-0 md:px-10 md:pb-10 md:pt-0 2xl:px-12">
+      <div className="relative z-10 mx-auto grid min-h-[min(100svh,860px)] max-w-[1600px] grid-cols-1 items-center gap-2 px-5 pb-5 pt-[calc(var(--header-offset)+16px)] sm:px-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-0 md:px-10 md:pb-10 2xl:px-12">
         <div className="relative z-10 max-w-3xl md:py-12">
           <motion.p
             initial={reduceMotion ? false : { opacity: 0, y: 18, rotate: -4 }}

@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowLeft,
-  ArrowRight,
-  BookOpen,
-  GitCompareArrows,
-  Headphones,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { BrandCarousel } from "@/components/home/BrandCarousel";
 import { Hero } from "@/components/home/Hero";
@@ -40,12 +34,6 @@ function makeIllustrativeCurve(): FrequencyPoint[] {
   });
 }
 
-const quickLinks = [
-  { href: "/learn", icon: BookOpen, title: "home.basicsTitle", description: "home.basicsDescription" },
-  { href: "/showroom", icon: Headphones, title: "home.showroomTitle", description: "home.showroomDescription" },
-  { href: "/compare", icon: GitCompareArrows, title: "home.compareTitle", description: "home.compareDescription" },
-] as const;
-
 export function HomeClient({ brands, iems, heroIems }: { brands: Brand[]; iems: IEM[]; heroIems: IEM[] }) {
   const { t } = useLanguage();
   const reduceMotion = useReducedMotion();
@@ -73,33 +61,6 @@ export function HomeClient({ brands, iems, heroIems }: { brands: Brand[]; iems: 
   return (
     <div>
       <Hero iems={heroIems} />
-
-      <section aria-labelledby="quick-start-title" className="mx-auto max-w-[1600px] px-4 py-16 sm:px-8 sm:py-20 2xl:px-12">
-        <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase text-accent">{t("home.quickStartEyebrow")}</p>
-          <h2 id="quick-start-title" className="mt-3 text-3xl font-semibold text-primary sm:text-4xl">{t("home.quickStartTitle")}</h2>
-          <p className="mt-3 text-base leading-7 text-secondary">{t("home.quickStartDescription")}</p>
-        </div>
-        <div className="mt-8 grid gap-3 md:grid-cols-3">
-          {quickLinks.map((item) => {
-            const Icon = item.icon;
-            return (
-              <motion.div key={item.href} whileHover={reduceMotion ? undefined : { y: -3 }} transition={{ duration: reduceMotion ? 0 : 0.18 }}>
-                <Link href={item.href} className="group flex h-full min-h-40 items-start gap-4 rounded-sm border border-border bg-surface p-5 transition-colors hover:border-accent/50 hover:bg-surface-subtle focus-visible:outline-offset-4 sm:p-6">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-sm bg-accent-muted text-accent">
-                    <Icon aria-hidden="true" className="size-5" />
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block text-lg font-semibold text-primary">{t(item.title)}</span>
-                    <span className="mt-2 block text-sm leading-6 text-secondary">{t(item.description)}</span>
-                    <ArrowRight aria-hidden="true" className="mt-4 size-4 text-accent transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
 
       <section aria-labelledby="editors-picks-title" className="border-y border-border bg-surface/60">
         <div className="mx-auto max-w-[1600px] px-4 py-16 sm:px-8 sm:py-20 2xl:px-12">
