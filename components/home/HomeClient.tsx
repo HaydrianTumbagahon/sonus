@@ -33,7 +33,7 @@ export function HomeClient({
 
       <TopFive iems={topFiveIems} />
 
-      <section aria-label={t("home.brandSectionTitle")} className="relative isolate bg-background pb-[calc(3.5rem+var(--wave-h))] pt-[calc(3.5rem+var(--wave-h))] sm:pb-[calc(4rem+var(--wave-h))] sm:pt-[calc(4rem+var(--wave-h))]">
+      <section data-intro aria-label={t("home.brandSectionTitle")} className="relative isolate bg-background pb-[calc(3.5rem+var(--wave-h))] pt-[calc(3.5rem+var(--wave-h))] sm:pb-[calc(4rem+var(--wave-h))] sm:pt-[calc(4rem+var(--wave-h))]">
         <div className="mx-auto max-w-[1600px] px-4 sm:px-8 2xl:px-12">
           <SectionHeading
             className="mb-8"

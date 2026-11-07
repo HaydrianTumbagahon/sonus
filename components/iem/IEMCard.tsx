@@ -9,7 +9,7 @@ import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import type { IEM } from "@/types/iem";
 
-export function IEMCard({ iem }: { iem: IEM }) {
+export function IEMCard({ iem, intro = false }: { iem: IEM; intro?: boolean }) {
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   const reduceMotion = useReducedMotion();
@@ -27,7 +27,7 @@ export function IEMCard({ iem }: { iem: IEM }) {
   };
 
   return (
-    <motion.article className="group flex h-full min-w-0 flex-col rounded-sm bg-surface">
+    <motion.article data-intro={intro ? "" : undefined} className="group flex h-full min-w-0 flex-col rounded-sm bg-surface">
       <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-surface-subtle">
         <button
           ref={detailsTriggerRef}

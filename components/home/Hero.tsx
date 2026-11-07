@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState, type TouchEvent } from "react";
 import { useCurrency } from "@/components/providers/CurrencyProvider";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { usePageReady } from "@/lib/transition";
 import type { IEM } from "@/types/iem";
 
 const slideInterval = 5000;
@@ -46,6 +47,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   const reduceMotion = Boolean(useReducedMotion());
+  const pageReady = usePageReady();
   const sliderRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
   const suppressImageClick = useRef(false);
@@ -95,12 +97,12 @@ export function Hero({ iems }: { iems: IEM[] }) {
   }, []);
 
   useEffect(() => {
-    if (reduceMotion || hovered || focused || !inView || !tabVisible || slides.length < 2) return;
+    if (reduceMotion || !pageReady || hovered || focused || !inView || !tabVisible || slides.length < 2) return;
     const timer = window.setInterval(() => {
       setActiveIndex((index) => (index + 1) % slides.length);
     }, slideInterval);
     return () => window.clearInterval(timer);
-  }, [focused, hovered, inView, reduceMotion, slides.length, tabVisible]);
+  }, [focused, hovered, inView, pageReady, reduceMotion, slides.length, tabVisible]);
 
   const activeIem = slides[activeIndex];
   const slideCount = slides.length;
@@ -128,9 +130,11 @@ export function Hero({ iems }: { iems: IEM[] }) {
     if (Math.abs(delta) < 48) return;
     suppressImageClick.current = true;
     if (suppressClickTimerRef.current !== null) window.clearTimeout(suppressClickTimerRef.current);
+    sliderRef.current?.setAttribute("data-no-transition", "");
     changeSlide(delta < 0 ? 1 : -1);
     suppressClickTimerRef.current = window.setTimeout(() => {
       suppressImageClick.current = false;
+      sliderRef.current?.removeAttribute("data-no-transition");
       suppressClickTimerRef.current = null;
     }, 350);
   };
@@ -140,6 +144,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
     event.preventDefault();
     event.stopPropagation();
     suppressImageClick.current = false;
+    sliderRef.current?.removeAttribute("data-no-transition");
     if (suppressClickTimerRef.current !== null) window.clearTimeout(suppressClickTimerRef.current);
     suppressClickTimerRef.current = null;
   };
@@ -151,14 +156,14 @@ export function Hero({ iems }: { iems: IEM[] }) {
       <motion.div
         aria-hidden="true"
         initial={reduceMotion ? false : { opacity: 0.9, scale: 0.85, x: "12%" }}
-        animate={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: reduceMotion ? 0 : 0.9, ease: "easeOut" }}
+        animate={pageReady || reduceMotion ? { opacity: 1, scale: 1, x: 0 } : { opacity: 0.9, scale: 0.85, x: "12%" }}
+        transition={{ duration: reduceMotion || !pageReady ? 0 : 0.9, ease: "easeOut" }}
         className="pointer-events-none absolute -right-[6%] -top-[8%] hidden h-[116%] w-[66%] md:block"
       >
         <motion.svg
           viewBox="0 0 1000 1000"
           preserveAspectRatio="none"
-          animate={reduceMotion ? undefined : { x: [0, 9, -5, 0], y: [0, -7, 5, 0], scale: [1, 1.015, 0.99, 1] }}
+          animate={reduceMotion || !pageReady ? undefined : { x: [0, 9, -5, 0], y: [0, -7, 5, 0], scale: [1, 1.015, 0.99, 1] }}
           transition={reduceMotion ? undefined : { duration: 12, ease: "easeInOut", repeat: Infinity }}
           className="size-full"
         >
@@ -171,27 +176,27 @@ export function Hero({ iems }: { iems: IEM[] }) {
         viewBox="0 0 1000 500"
         preserveAspectRatio="none"
         initial={reduceMotion ? false : { opacity: 0, scale: 0.85, y: "8%" }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: reduceMotion ? 0 : 0.9, ease: "easeOut" }}
+        animate={pageReady || reduceMotion ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.85, y: "8%" }}
+        transition={{ duration: reduceMotion || !pageReady ? 0 : 0.9, ease: "easeOut" }}
         className="pointer-events-none absolute inset-x-[-8%] bottom-[-4%] h-[53%] w-[116%] md:hidden"
       >
         <path d="M0 178 C120 95 235 214 390 163 C540 113 656 182 774 142 C871 109 934 137 1000 92 V500 H0 Z" fill="var(--brand)" />
       </motion.svg>
 
       <div className="relative z-10 mx-auto grid min-h-[calc(min(100svh,780px)-var(--header-offset))] max-w-[1600px] grid-cols-1 items-center gap-2 px-5 pb-5 pt-8 sm:px-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-0 md:px-10 md:pb-10 md:pt-0 2xl:px-12">
-        <div className="relative z-10 max-w-3xl text-center md:py-12 md:text-left">
+        <div data-intro className="relative z-10 max-w-3xl text-center md:py-12 md:text-left">
           <motion.p
             initial={reduceMotion ? false : { opacity: 0, y: 18, rotate: -4 }}
-            animate={{ opacity: 1, y: 0, rotate: -4 }}
-            transition={{ duration: reduceMotion ? 0 : 0.5, delay: reduceMotion ? 0 : 0.08, ease: "easeOut" }}
+            animate={pageReady || reduceMotion ? { opacity: 1, y: 0, rotate: -4 } : { opacity: 0, y: 18, rotate: -4 }}
+            transition={{ duration: reduceMotion || !pageReady ? 0 : 0.5, delay: reduceMotion || !pageReady ? 0 : 0.08, ease: "easeOut" }}
             className="origin-left font-script text-3xl leading-tight text-primary sm:text-5xl"
           >
             {t("home.heroScriptTop")}
           </motion.p>
           <motion.h1
             initial={reduceMotion ? false : { opacity: 0, x: -42, skewX: -12 }}
-            animate={{ opacity: 1, x: 0, skewX: -12 }}
-            transition={{ duration: reduceMotion ? 0 : 0.56, delay: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
+            animate={pageReady || reduceMotion ? { opacity: 1, x: 0, skewX: -12 } : { opacity: 0, x: -42, skewX: -12 }}
+            transition={{ duration: reduceMotion || !pageReady ? 0 : 0.56, delay: reduceMotion || !pageReady ? 0 : 0.18, ease: "easeOut" }}
             className="origin-left text-[clamp(64px,12vw,180px)] font-display uppercase leading-[0.9] tracking-wide text-primary"
             style={{ textShadow: "4px 4px 0 color-mix(in srgb, var(--brand-text) 60%, transparent)" }}
           >
@@ -199,8 +204,8 @@ export function Hero({ iems }: { iems: IEM[] }) {
           </motion.h1>
           <motion.p
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.5, delay: reduceMotion ? 0 : 0.38, ease: "easeOut" }}
+            animate={pageReady || reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+            transition={{ duration: reduceMotion || !pageReady ? 0 : 0.5, delay: reduceMotion || !pageReady ? 0 : 0.38, ease: "easeOut" }}
             className="mt-3 text-center font-script text-2xl leading-tight text-secondary sm:mt-4 sm:text-4xl md:text-left md:ml-0"
           >
             {t("home.heroScriptBottom")}
@@ -209,6 +214,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
 
         <div
           ref={sliderRef}
+          data-intro
           role="region"
           aria-roledescription={t("home.heroCarouselRole")}
           aria-label={t("home.heroCarouselLabel")}
@@ -236,22 +242,22 @@ export function Hero({ iems }: { iems: IEM[] }) {
           <div className="relative flex h-[280px] w-full items-center justify-center sm:h-[390px] md:h-[500px]">
             <motion.div
               aria-hidden="true"
-              animate={reduceMotion ? { scale: 1 } : { scale: [1, 1.03, 1] }}
-              transition={reduceMotion ? { duration: 0 } : { duration: 12, ease: "easeInOut", repeat: Infinity }}
+              animate={reduceMotion || !pageReady ? { scale: 1 } : { scale: [1, 1.03, 1] }}
+              transition={reduceMotion || !pageReady ? { duration: 0 } : { duration: 12, ease: "easeInOut", repeat: Infinity }}
               className="pointer-events-none absolute left-1/2 top-1/2 z-[1] aspect-square size-[min(78vw,515px)] rounded-full md:size-[580px]"
               style={{ border: "1.5px solid var(--brand-outline)", background: "transparent", x: "-50%", y: "-50%" }}
             />
-            <AnimatePresence mode="wait" initial={!reduceMotion}>
+            <AnimatePresence mode="wait" initial={!reduceMotion && pageReady}>
               {activeIem && (
                 <motion.div
                   key={activeIem.slug}
                   initial={reduceMotion ? { opacity: 0 } : { opacity: 0, x: 78, rotate: 5, scale: 0.96 }}
-                  animate={{ opacity: 1, x: 0, rotate: -8, scale: 1 }}
+                  animate={pageReady || reduceMotion ? { opacity: 1, x: 0, rotate: -8, scale: 1 } : { opacity: 0, x: 78, rotate: 5, scale: 0.96 }}
                   exit={reduceMotion ? { opacity: 0 } : { opacity: 0, x: -78, rotate: -15, scale: 0.97 }}
                   transition={reduceMotion
                     ? { duration: 0.16, ease: "easeOut" }
-                    : { type: "spring", stiffness: 190, damping: 22, mass: 0.9, delay: firstSlideRef.current ? 1.1 : 0 }}
-                  onAnimationComplete={() => { firstSlideRef.current = false; }}
+                      : { type: "spring", stiffness: 190, damping: 22, mass: 0.9, delay: pageReady && firstSlideRef.current ? 1.1 : 0 }}
+                  onAnimationComplete={() => { if (pageReady) firstSlideRef.current = false; }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
                   <Link
@@ -320,7 +326,7 @@ export function Hero({ iems }: { iems: IEM[] }) {
             </>
           )}
 
-          <div className="relative z-10 mt-2 flex min-h-11 items-center justify-center gap-2 md:mt-0 md:absolute md:bottom-4">
+          <div data-intro className="relative z-10 mt-2 flex min-h-11 items-center justify-center gap-2 md:mt-0 md:absolute md:bottom-4">
             <button type="button" aria-label={t("home.heroPreviousSlide")} onClick={() => changeSlide(-1)} disabled={slideCount < 2} className="inline-flex size-11 items-center justify-center text-primary transition-colors hover:text-brand-text disabled:opacity-40">
               <ChevronLeft aria-hidden="true" className="size-6" />
             </button>

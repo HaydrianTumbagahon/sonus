@@ -202,9 +202,11 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
 
     if (drag.moved) {
       suppressClickRef.current = true;
+      viewportRef.current?.querySelectorAll<HTMLAnchorElement>("[data-brand-carousel-link]").forEach((link) => link.setAttribute("data-no-transition", ""));
       if (suppressTimerRef.current !== null) window.clearTimeout(suppressTimerRef.current);
       suppressTimerRef.current = window.setTimeout(() => {
         suppressClickRef.current = false;
+        viewportRef.current?.querySelectorAll<HTMLAnchorElement>("[data-brand-carousel-link]").forEach((link) => link.removeAttribute("data-no-transition"));
         suppressTimerRef.current = null;
       }, 500);
     }
@@ -219,6 +221,7 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
     event.preventDefault();
     event.stopPropagation();
     suppressClickRef.current = false;
+    event.currentTarget.querySelectorAll<HTMLAnchorElement>("[data-brand-carousel-link]").forEach((link) => link.removeAttribute("data-no-transition"));
     if (suppressTimerRef.current !== null) window.clearTimeout(suppressTimerRef.current);
     suppressTimerRef.current = null;
   };

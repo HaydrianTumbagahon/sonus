@@ -18,3 +18,11 @@ export const revealAnimate = {
 };
 
 export const revealStagger = 0.1;
+
+export const transitionEase = [0.22, 1, 0.36, 1] as const;
+export const exitDuration = 0.28;
+export const enterDuration = 0.55;
+export const introStagger = 0.07;
+export const introDelay = 0.12;
+export const blurAmount = 12;
+export const riseAmount = 14;

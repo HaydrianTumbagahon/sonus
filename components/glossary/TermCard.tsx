@@ -9,12 +9,13 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import type { GlossaryTerm } from "@/data/glossary";
 import type { IEM } from "@/types/iem";
 
-export function TermCard({ term, terms, iems, expanded, onToggle }: {
+export function TermCard({ term, terms, iems, expanded, onToggle, intro = false }: {
   term: GlossaryTerm;
   terms: GlossaryTerm[];
   iems: Array<Pick<IEM, "slug" | "brand" | "name">>;
   expanded: boolean;
   onToggle: () => void;
+  intro?: boolean;
 }) {
   const { t } = useLanguage();
   const reduceMotion = useReducedMotion();
@@ -28,7 +29,7 @@ export function TermCard({ term, terms, iems, expanded, onToggle }: {
   });
 
   return (
-    <motion.article layout className="rounded-md border border-border bg-surface p-4">
+    <motion.article data-intro={intro ? "" : undefined} layout className="rounded-md border border-border bg-surface p-4">
       <div className="flex items-start justify-between gap-3">
         <button
           type="button"

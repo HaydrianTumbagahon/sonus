@@ -26,6 +26,7 @@ export function PageBand({ children, outlineWord, size = "default", tone = "plai
           {outlineWord ? (
             <span
               aria-hidden="true"
+              data-intro
               className="pointer-events-none absolute left-4 z-0 select-none whitespace-nowrap sm:left-6"
               style={{
                 fontFamily: "var(--font-anton), var(--font-geist-sans), sans-serif",
@@ -44,6 +45,7 @@ export function PageBand({ children, outlineWord, size = "default", tone = "plai
           ) : null}
 
           <div
+            data-intro
             className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6"
             style={{
               paddingTop: "calc(var(--header-offset) + 8px)",
@@ -89,6 +91,7 @@ export function PageBand({ children, outlineWord, size = "default", tone = "plai
       {outlineWord ? (
         <span
           aria-hidden="true"
+          data-intro
           className="pointer-events-none absolute -bottom-6 left-4 -z-10 select-none whitespace-nowrap leading-none opacity-60"
           style={{
             fontFamily: "var(--font-anton), var(--font-geist-sans), sans-serif",
@@ -103,6 +106,7 @@ export function PageBand({ children, outlineWord, size = "default", tone = "plai
       ) : null}
 
       <div
+        data-intro
         className="relative mx-auto w-full max-w-[1280px] px-4 sm:px-6"
         style={{
           paddingTop: "calc(var(--header-offset) + 8px)",

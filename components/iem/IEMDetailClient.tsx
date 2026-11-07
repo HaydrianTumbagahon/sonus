@@ -122,7 +122,7 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-12">
         <div className="min-w-0 space-y-14">
-          <section aria-labelledby="iem-title" className="scroll-mt-24 grid gap-8 md:grid-cols-2 md:items-start">
+          <section data-intro aria-labelledby="iem-title" className="scroll-mt-24 grid gap-8 md:grid-cols-2 md:items-start">
             <IEMGallery iem={iem} />
             <div className="space-y-5 md:py-4">
               <div className="flex flex-wrap items-center gap-2">
@@ -148,13 +148,13 @@ export function IEMDetailClient({ iem, allIems }: { iem: IEM; allIems: IEM[] }) 
           </section>
 
           {insight && (
-            <section id="insight" aria-labelledby="insight-title" className="scroll-mt-24 border-t border-border pt-10">
+            <section data-intro={insight ? "" : undefined} id="insight" aria-labelledby="insight-title" className="scroll-mt-24 border-t border-border pt-10">
               <h2 id="insight-title" className="mb-4 text-xl font-semibold text-primary">{t("product.personalInsight")}</h2>
               <p className="max-w-3xl text-sm leading-7 text-secondary">{insight}</p>
             </section>
           )}
 
-          <section id="build" aria-labelledby="build-title" className="scroll-mt-24 border-t border-border pt-10">
+          <section data-intro={!insight ? "" : undefined} id="build" aria-labelledby="build-title" className="scroll-mt-24 border-t border-border pt-10">
             <h2 id="build-title" className="mb-6 text-xl font-semibold text-primary">{t("product.buildMaterials")}</h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {buildRows.map(({ key, label, Icon }) => (

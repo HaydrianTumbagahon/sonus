@@ -27,7 +27,7 @@ export function IEMGrid({
           Array.from({ length: skeletonCount }, (_, index) => <IEMCardSkeleton key={index} label={skeletonLabel} />)
         ) : (
           <AnimatePresence mode="popLayout" initial={false}>
-            {items.length > 0 ? items.map((iem) => <IEMCard key={iem.slug} iem={iem} />) : (
+            {items.length > 0 ? items.map((iem, index) => <IEMCard key={iem.slug} iem={iem} intro={index < 4} />) : (
               <motion.div
                 key="empty"
                 layout

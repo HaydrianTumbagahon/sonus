@@ -7,6 +7,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { ScrollIndicators } from "@/components/layout/ScrollIndicators";
 import { ScrollReset } from "@/components/layout/ScrollReset";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { SettingsPanel } from "@/components/layout/SettingsPanel";
 import { CompareFullToast } from "@/components/compare/CompareFullToast";
 import { GlobalSearch } from "@/components/search/GlobalSearch";
@@ -81,6 +82,7 @@ export default async function RootLayout({ children }: Readonly<{
       className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} ${notoSansSC.variable} ${anton.variable} ${caveat.variable} ${theme}`}
     >
       <body>
+        <noscript><style>{`[data-page-transition] { opacity: 1 !important; }`}</style></noscript>
         <LanguageProvider initialLang={lang}>
           <CurrencyProvider initialCurrency={currency}>
             <ThemeProvider initialTheme={theme}>
@@ -90,7 +92,7 @@ export default async function RootLayout({ children }: Readonly<{
                   <Header />
                   <GlobalSearch />
                   <main className="min-h-[40vh]">
-                    {children}
+                    <PageTransition>{children}</PageTransition>
                   </main>
                   <Footer />
                   <MobileNav />

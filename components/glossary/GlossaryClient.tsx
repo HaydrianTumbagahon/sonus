@@ -72,7 +72,7 @@ export function GlossaryClient({ terms, iems }: {
       <div className="relative isolate overflow-hidden pt-[calc(2rem+var(--wave-h))]">
         <div className="relative z-10 mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 lg:py-10">
       <header className="flex flex-wrap items-end justify-between gap-4">
-        <label className="w-full max-w-sm">
+        <label data-intro className="w-full max-w-sm">
           <span className="sr-only">{t("glossary.searchPlaceholder")}</span>
           <input
             type="search"
@@ -90,7 +90,8 @@ export function GlossaryClient({ terms, iems }: {
             const id = categoryId(category);
             return (
               <li key={category}>
-                <button
+                  <button
+                  data-intro
                   type="button"
                   aria-pressed={activeCategory === id}
                   onClick={() => selectCategory(category)}
@@ -120,13 +121,14 @@ export function GlossaryClient({ terms, iems }: {
                 {t(categoryKeys[category])}
               </h2>
               <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {filteredTerms.filter((term) => term.category === category).map((term) => (
+                {filteredTerms.filter((term) => term.category === category).map((term, index) => (
                   <TermCard
                     key={term.slug}
                     term={term}
                     terms={terms}
                     iems={iems}
                     expanded={openSlugs.has(term.slug)}
+                    intro={category === glossaryCategories[0] && index < 4}
                     onToggle={() => setOpenSlugs((current) => current.has(term.slug) ? new Set() : new Set([term.slug]))}
                   />
                 ))}

@@ -11,6 +11,7 @@ import { defaultShowroomFilters, parseShowroomFilters, serializeShowroomFilters,
 import { getIEMTier } from "@/lib/tiers";
 import type { Brand, IEM } from "@/types/iem";
 import { PageBand } from "@/components/layout/PageBand";
+import { usePageReady } from "@/lib/transition";
 
 const driverAliases: Record<Exclude<DriverFilter, "all">, string[]> = {
   dd: ["dd", "dynamic driver", "dynamic"],
@@ -58,6 +59,7 @@ export function ShowroomClient({
 }) {
   const { t } = useLanguage();
   const reduceMotion = useReducedMotion();
+  const pageReady = usePageReady();
   const brandSlugs = useMemo(() => brands.map((brand) => brand.slug), [brands]);
   const [filters, setFilters] = useState<ShowroomFilters>(() =>
     parseShowroomFilters(new URLSearchParams(initialSearch), brandSlugs),
@@ -132,7 +134,7 @@ export function ShowroomClient({
         <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
 
       <section aria-label={t("showroomUi.filters")} className="space-y-3">
-        <label className="relative block w-full sm:max-w-sm">
+        <label data-intro className="relative block w-full sm:max-w-sm">
           <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-tertiary" />
           <input
             type="search"
@@ -157,7 +159,7 @@ export function ShowroomClient({
       </section>
 
       {visibleIems.length > 0 ? (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: shuffleReady ? 1 : 0 }} transition={{ duration: reduceMotion ? 0 : 0.2 }} aria-busy={!shuffleReady}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: shuffleReady && pageReady ? 1 : 0 }} transition={{ duration: reduceMotion || !pageReady ? 0 : 0.2 }} aria-busy={!shuffleReady}>
           <IEMGrid items={visibleIems} />
         </motion.div>
       ) : (

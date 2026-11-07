@@ -144,7 +144,7 @@ export function IEMFilters({
   ];
 
   return (
-    <div role="group" aria-label={t("showroomUi.filters")} className="max-w-full overflow-x-auto md:overflow-visible">
+    <div data-intro role="group" aria-label={t("showroomUi.filters")} className="max-w-full overflow-x-auto md:overflow-visible">
       <div className="flex w-max gap-2 md:w-auto md:flex-wrap">
         <FilterDropdown
           label={t("showroomUi.brand")}

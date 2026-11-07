@@ -32,7 +32,7 @@ export function BrandPageClient({ brand, iems }: { brand: Brand; iems: IEM[] }) 
       </PageBand>
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:py-10">
 
-      <header className="border-y border-border bg-surface px-5 py-7 sm:px-8 sm:py-9">
+      <header data-intro className="border-y border-border bg-surface px-5 py-7 sm:px-8 sm:py-9">
         <div className="min-w-0 max-w-3xl space-y-3">
           <div className="flex flex-wrap items-center gap-3">
             {comingSoon && <Badge variant="secondary">{t("brand.comingSoon")}</Badge>}

@@ -34,8 +34,8 @@ export default async function PrivacyPage() {
         {page.sections.map((section) => (
           <section key={section.title} className="mb-8">
             <h2 className="mb-3 text-xl text-primary sm:text-2xl">{section.title}</h2>
-            {section.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="mb-3 leading-relaxed text-secondary">{paragraph}</p>
+            {section.paragraphs.map((paragraph, index) => (
+              <p key={paragraph} data-intro={section === page.sections[0] && index === 0 ? "" : undefined} className="mb-3 leading-relaxed text-secondary">{paragraph}</p>
             ))}
             {section.bullets && (
               <ul className="mb-3 list-disc space-y-2 pl-5 leading-relaxed text-secondary">

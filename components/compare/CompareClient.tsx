@@ -13,6 +13,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { scrollToTarget } from "@/lib/scroll";
 import { useAppStore } from "@/lib/store";
 import type { Brand, IEM } from "@/types/iem";
+import { usePageReady } from "@/lib/transition";
 
 function sanitizeSlugs(slugs: string[], allIems: IEM[]): string[] {
   const allowed = new Set(allIems.map((iem) => iem.slug));
@@ -31,6 +32,7 @@ export function CompareClient({
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   const reduceMotion = useReducedMotion();
+  const pageReady = usePageReady();
   const compareList = useAppStore((state) => state.compareList);
   const setCompareList = useAppStore((state) => state.setCompareList);
   const setCompareSlot = useAppStore((state) => state.setCompareSlot);
@@ -141,7 +143,7 @@ export function CompareClient({
       </PageBand>
       <div className="relative isolate overflow-hidden pt-[calc(2.5rem+var(--wave-h))] sm:pt-[calc(3.5rem+var(--wave-h))]">
         <div className="relative z-10 mx-auto max-w-[860px] px-4 py-10 sm:px-6 sm:py-14">
-          <div className="grid grid-cols-2 gap-3 sm:gap-8">
+          <div data-intro className="grid grid-cols-2 gap-3 sm:gap-8">
             {[0, 1].map((index) => {
               const iem = slotItems[index];
               const outlineColor = compareColor(index);
@@ -149,8 +151,8 @@ export function CompareClient({
                 <motion.div
                   key={index}
                   initial={iem && !reduceMotion ? { opacity: 0, scale: 0.8, rotate: -6 } : false}
-                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                  transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 330, damping: 22 }}
+                  animate={pageReady || reduceMotion ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.8, rotate: -6 }}
+                  transition={reduceMotion || !pageReady ? { duration: 0 } : { type: "spring", stiffness: 330, damping: 22 }}
                   className="relative flex min-h-[250px] min-w-0 items-center justify-center sm:min-h-[340px]"
                 >
                   {iem ? (

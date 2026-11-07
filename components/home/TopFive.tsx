@@ -19,6 +19,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 import { formatRating } from "@/lib/format";
 import { getDailyTopFive, type DailyPick } from "@/lib/daily";
 import { revealEase, revealStagger } from "@/lib/motion";
+import { usePageReady } from "@/lib/transition";
 import type { IEM } from "@/types/iem";
 
 function plainTopRated(iems: IEM[]): DailyPick[] {
@@ -49,6 +50,7 @@ export function TopFive({ iems }: { iems: IEM[] }) {
   const { t } = useLanguage();
   const { formatPrice } = useCurrency();
   const reduceMotion = useReducedMotion();
+  const pageReady = usePageReady();
   const trackRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ pointerId: number; startX: number; startScroll: number; moved: boolean; captureTarget: HTMLElement } | null>(null);
   const suppressClickRef = useRef(false);
@@ -120,9 +122,11 @@ export function TopFive({ iems }: { iems: IEM[] }) {
     setDragging(false);
     if (drag.moved) {
       suppressClickRef.current = true;
+      trackRef.current?.querySelectorAll<HTMLAnchorElement>("[data-top-five-link]").forEach((link) => link.setAttribute("data-no-transition", ""));
       if (suppressTimerRef.current !== null) window.clearTimeout(suppressTimerRef.current);
       suppressTimerRef.current = window.setTimeout(() => {
         suppressClickRef.current = false;
+        trackRef.current?.querySelectorAll<HTMLAnchorElement>("[data-top-five-link]").forEach((link) => link.removeAttribute("data-no-transition"));
         suppressTimerRef.current = null;
       }, 500);
     }
@@ -139,12 +143,13 @@ export function TopFive({ iems }: { iems: IEM[] }) {
     event.preventDefault();
     event.stopPropagation();
     suppressClickRef.current = false;
+    event.currentTarget.querySelectorAll<HTMLAnchorElement>("[data-top-five-link]").forEach((link) => link.removeAttribute("data-no-transition"));
     if (suppressTimerRef.current !== null) window.clearTimeout(suppressTimerRef.current);
     suppressTimerRef.current = null;
   };
 
   return (
-    <section aria-labelledby="top-five-title" className="relative isolate w-full text-on-brand py-14 md:py-[72px]" style={{ background: "var(--brand)", margin: 0, border: 0, boxShadow: "none" }}>
+    <section data-intro aria-labelledby="top-five-title" className="relative isolate w-full text-on-brand py-14 md:py-[72px]" style={{ background: "var(--brand)", margin: 0, border: 0, boxShadow: "none" }}>
       <WaveEdge position="top" variant={1} />
       <WaveEdge position="bottom" variant={2} />
 
@@ -164,8 +169,8 @@ export function TopFive({ iems }: { iems: IEM[] }) {
         <motion.div
           key={dailyPicks ? "daily" : "plain"}
           initial={dailyPicks && !reduceMotion ? { opacity: 0 } : false}
-          animate={{ opacity: 1 }}
-          transition={{ duration: reduceMotion ? 0 : 0.35 }}
+          animate={{ opacity: pageReady || reduceMotion ? 1 : 0 }}
+          transition={{ duration: reduceMotion || !pageReady ? 0 : 0.35 }}
           className="mt-8"
         >
           <div
@@ -201,7 +206,7 @@ export function TopFive({ iems }: { iems: IEM[] }) {
                   key={pick.iem.slug}
                   aria-label={t("home.topFiveSlideLabel").replace("{n}", String(index + 1)).replace("{total}", String(picks.length))}
                   initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  whileInView={reduceMotion || pageReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: reduceMotion ? 0 : 0.7, delay: reduceMotion ? 0 : index * revealStagger, ease: revealEase }}
                   className="w-full min-w-full shrink-0 snap-center snap-always px-4 text-center sm:px-8 md:w-auto md:min-w-0 md:px-2 lg:px-3 xl:px-4"
