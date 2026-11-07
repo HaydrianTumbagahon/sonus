@@ -1,24 +1,43 @@
 {
   "name": "Kadenz",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 189,
+  "driverConfig": "1 × single dynamic (organic-focused)",
+  "priceUSD": 150,
   "impedance": "32 Ω",
-  "sensitivity": "122 dB/Vrms",
-  "frequencyResponse": "10 Hz - 35 kHz",
+  "sensitivity": "122 dB",
+  "frequencyResponse": "10 Hz – 30 kHz",
   "materials": {
-    "shell": "Metal",
+    "shell": "Metal / resin",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Silver-plated copper",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Deep timbre", "Organic sound", "Solid build"],
-  "cons": ["Less technical than hybrids at the price"],
-  "ratings": { "build": 8, "value": 8, "sound": 8 },
-  "insight": "A single dynamic driver configuration focusing on deep timbre and organic sound.",
-  "tags": ["mid-tier", "dd", "organic", "timbre"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Deep timbre and organic presentation",
+    "Good single-DD coherence",
+    "Solid build"
+  ],
+  "cons": [
+    "Not the most technical"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "Kadenz focuses on organic timbre and a more natural single-dynamic presentation. It appeals to listeners who prioritize tone and musicality over maximum technicality.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "organic"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

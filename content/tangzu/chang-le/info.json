@@ -1,0 +1,41 @@
+{
+  "name": "Chang Le",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 50,
+  "impedance": "20 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Decorative",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Affordable",
+    "Approachable tuning"
+  ],
+  "cons": [
+    "Basic overall"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 7,
+    "sound": 5
+  },
+  "insight": "Chang Le is another entry-level single-dynamic from Tangzu, aimed at casual listeners who want a simple and inexpensive set with the brand’s characteristic design language.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

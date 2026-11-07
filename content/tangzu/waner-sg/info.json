@@ -1,0 +1,46 @@
+{
+  "name": "Wan'er S.G",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm PET dynamic (N52 magnet, dual-cavity)",
+  "priceUSD": 20,
+  "impedance": "20 Ω",
+  "sensitivity": "107 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Decorative patterned",
+    "nozzle": "Metal",
+    "cable": "5N OFC",
+    "connector": "0.78mm 2-Pin (QDC-style)"
+  },
+  "accessories": [
+    "Cable",
+    "Multiple tip sets (balanced + vocal)",
+    "Scarf (some packages)"
+  ],
+  "pros": [
+    "Natural, balanced tuning for the price",
+    "Good vocal presentation",
+    "Very affordable",
+    "Attractive faceplate design"
+  ],
+  "cons": [
+    "Basic technical performance",
+    "QDC-style connector may limit cable options"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "Wan'er S.G became one of the most recommended ultra-budget single-dynamics thanks to its natural, vocal-friendly tuning and pleasant presentation. It remains a frequent first recommendation for newcomers seeking a safe, musical signature under $25.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget-king",
+    "vocal"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin (QDC-style)"
+}

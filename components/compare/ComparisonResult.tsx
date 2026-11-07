@@ -91,8 +91,9 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
   const pair = items.slice(0, 6);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [overflow, setOverflow] = useState({ left: false, right: false });
-  const [progress, setProgress] = useState(0);
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
+  const scrollFrameRef = useRef<number | null>(null);
   const dragRef = useRef({ active: false, moved: false, startX: 0, startScroll: 0, pointerId: -1 });
   const previousSlugs = useRef(pair.map((iem) => iem.slug).join(","));
   const previousSlugsSet = useRef(new Set<string>());
@@ -101,20 +102,32 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
     const scroller = scrollerRef.current;
     if (!scroller) return;
     const max = scroller.scrollWidth - scroller.clientWidth;
-    setOverflow({ left: scroller.scrollLeft > 2, right: max > 2 && scroller.scrollLeft < max - 2 });
-    setProgress(max <= 0 ? 0 : Math.max(0, Math.min(1, scroller.scrollLeft / max)));
+    const nextOverflow = { left: scroller.scrollLeft > 2, right: max > 2 && scroller.scrollLeft < max - 2 };
+    setOverflow((current) => current.left === nextOverflow.left && current.right === nextOverflow.right ? current : nextOverflow);
+    const progress = max <= 0 ? 0 : Math.max(0, Math.min(1, scroller.scrollLeft / max));
+    if (progressBarRef.current) progressBarRef.current.style.transform = `scaleX(${Math.max(0.08, progress)})`;
+  };
+
+  const scheduleOverflowUpdate = () => {
+    if (scrollFrameRef.current !== null) return;
+    scrollFrameRef.current = window.requestAnimationFrame(() => {
+      scrollFrameRef.current = null;
+      updateOverflow();
+    });
   };
 
   useEffect(() => {
     updateOverflow();
     const scroller = scrollerRef.current;
     if (!scroller) return;
-    scroller.addEventListener("scroll", updateOverflow, { passive: true });
-    const observer = new ResizeObserver(updateOverflow);
+    scroller.addEventListener("scroll", scheduleOverflowUpdate, { passive: true });
+    const observer = new ResizeObserver(scheduleOverflowUpdate);
     observer.observe(scroller);
     return () => {
-      scroller.removeEventListener("scroll", updateOverflow);
+      scroller.removeEventListener("scroll", scheduleOverflowUpdate);
       observer.disconnect();
+      if (scrollFrameRef.current !== null) window.cancelAnimationFrame(scrollFrameRef.current);
+      scrollFrameRef.current = null;
     };
   }, [pair.length]);
 
@@ -140,11 +153,21 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
   if (pair.length < 2) return null;
 
   const ratingKeys = ["build", "value", "sound", "overall"];
+  const ratingValue = (iem: IEM, key: string): number | undefined => {
+    if (key !== "overall") {
+      const value = iem.ratings?.[key];
+      return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+    }
+    const values = [iem.ratings?.build, iem.ratings?.value, iem.ratings?.sound];
+    if (!values.every((value): value is number => typeof value === "number" && Number.isFinite(value))) return undefined;
+    return values.reduce((sum, value) => sum + value, 0) / values.length;
+  };
+
   const numericWinner = (key: string) => {
     let winner = -1;
     let highest = -Infinity;
     for (let index = 0; index < pair.length; index += 1) {
-      const value = key === "price" ? pair[index].priceUSD : pair[index].ratings?.[key];
+      const value = key === "price" ? pair[index].priceUSD : ratingValue(pair[index], key);
       if (typeof value !== "number") continue;
       if (value > highest || (key === "price" && value === highest)) {
         highest = value;
@@ -157,10 +180,10 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
       const lowest = Math.min(...prices);
       return pair.findIndex((iem) => iem.priceUSD === lowest);
     }
-    const values = pair.map((iem) => iem.ratings?.[key]).filter((value): value is number => typeof value === "number");
+    const values = pair.map((iem) => ratingValue(iem, key)).filter((value): value is number => typeof value === "number");
     if (values.length === 0 || new Set(values).size === 1) return -1;
     const highestValue = Math.max(...values);
-    return pair.findIndex((iem) => iem.ratings?.[key] === highestValue);
+    return pair.findIndex((iem) => ratingValue(iem, key) === highestValue);
   };
 
   const standardRows = [
@@ -326,7 +349,8 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
                   <div key={key} className="grid divide-x divide-border py-1 text-center" style={{ gridTemplateColumns: `repeat(${pair.length}, minmax(0, 1fr))` }}>
                     {pair.map((iem, index) => (
                       <span key={iem.slug} role="cell" className="min-w-0 px-1.5 font-mono text-lg text-primary">
-                        {typeof iem.ratings?.[key] === "number" ? formatRating(iem.ratings[key]) : "-"}<Winner active={numericWinner(key) === index} />
+                        <span className="mr-1 text-[10px] uppercase text-tertiary">{t(`rating.${key}`)}</span>
+                        {ratingValue(iem, key) !== undefined ? `${formatRating(ratingValue(iem, key)!)} /10` : "-"}<Winner active={numericWinner(key) === index} />
                       </span>
                     ))}
                   </div>
@@ -354,8 +378,8 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
                       <div key={iem.slug} role="cell" className="grid grid-cols-4 px-4 first:pl-0 text-center font-mono text-sm text-primary">
                         {ratingKeys.map((key) => (
                           <div key={key} className="min-w-0">
-                            <span className="block text-[10px] uppercase text-tertiary">{key}</span>
-                            <span>{typeof iem.ratings?.[key] === "number" ? `${formatRating(iem.ratings[key])}/10` : "-"}<Winner active={numericWinner(key) === index} /></span>
+                            <span className="block text-[10px] uppercase text-tertiary">{t(`rating.${key}`)}</span>
+                            <span>{ratingValue(iem, key) !== undefined ? `${formatRating(ratingValue(iem, key)!)} /10` : "-"}<Winner active={numericWinner(key) === index} /></span>
                           </div>
                         ))}
                       </div>
@@ -447,8 +471,8 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
                       <div key={iem.slug} role="cell" className="border-l border-border first:border-l-0 px-2 py-3 text-center">
                         {ratingKeys.map((key) => (
                           <div key={key} className="py-1 font-mono text-sm text-primary">
-                            <span className="mr-2 text-[10px] uppercase text-tertiary">{key}</span>
-                            {typeof iem.ratings?.[key] === "number" ? formatRating(iem.ratings[key]) : "-"}<Winner active={numericWinner(key) === index} />
+                            <span className="mr-2 text-[10px] uppercase text-tertiary">{t(`rating.${key}`)}</span>
+                            {ratingValue(iem, key) !== undefined ? `${formatRating(ratingValue(iem, key)!)} /10` : "-"}<Winner active={numericWinner(key) === index} />
                           </div>
                         ))}
                       </div>
@@ -459,7 +483,7 @@ export function ComparisonResult({ items, allIems, brands, onChange, onClear, on
             </div>
             {overflow.left || overflow.right ? (
               <div className="h-[2px] w-full bg-surface-subtle">
-                <div className="h-full origin-left bg-brand transition-transform" style={{ transform: `scaleX(${Math.max(0.08, progress)})` }} />
+                <div ref={progressBarRef} className="h-full origin-left bg-brand will-change-transform" />
               </div>
             ) : null}
           </div>

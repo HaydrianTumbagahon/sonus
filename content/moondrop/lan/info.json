@@ -1,24 +1,40 @@
 {
   "name": "Lan",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 39,
+  "driverConfig": "1 × 10mm dynamic",
+  "priceUSD": 40,
   "impedance": "32 Ω",
-  "sensitivity": "123 dB/Vrms",
-  "frequencyResponse": "10 Hz - 35 kHz",
+  "sensitivity": "122 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Stainless steel",
+    "shell": "Resin / metal",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Copper",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["Compact size", "Neutral smooth tuning", "Rugged steel shell", "Great price"],
-  "cons": ["Technicalities are basic"],
-  "ratings": { "build": 8, "value": 9, "sound": 7 },
-  "insight": "A smooth, neutral, and compact single dynamic option built in a rugged steel alloy shell.",
-  "tags": ["entry-level", "dd", "neutral", "compact", "value"],
-  "releaseDate": "2022-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Good tuning for the price",
+    "Approachable signature"
+  ],
+  "cons": [
+    "Basic technical performance"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 6
+  },
+  "insight": "Lan is a budget-friendly single-dynamic that offers a pleasant, approachable signature suitable for everyday listening and newcomers.",
+  "tags": [
+    "entry-level",
+    "dd"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

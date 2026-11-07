@@ -1,0 +1,43 @@
+{
+  "name": "EA2000",
+  "driverType": "DD",
+  "driverConfig": "1 × flagship dynamic",
+  "priceUSD": 400,
+  "impedance": "15 Ω",
+  "sensitivity": "125 dB",
+  "frequencyResponse": "8 Hz – 40 kHz",
+  "materials": {
+    "shell": "Premium metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Premium modular",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Premium cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "Flagship single-DD ambition",
+    "Premium materials",
+    "Strong technical performance"
+  ],
+  "cons": [
+    "Expensive for a single dynamic",
+    "Faces strong hybrid competition"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 6,
+    "sound": 8
+  },
+  "insight": "EA2000 is Simgot’s flagship single-dynamic statement. It targets listeners who want maximum refinement and build quality from a pure dynamic design.",
+  "tags": [
+    "flagship",
+    "dd"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

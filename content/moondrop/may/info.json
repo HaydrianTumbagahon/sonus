@@ -1,24 +1,42 @@
 {
   "name": "May",
-  "driverType": "Hybrid",
-  "driverConfig": "Hybrid with DSP",
-  "priceUSD": 79,
+  "driverType": "DD",
+  "driverConfig": "1DD (DSP capable)",
+  "priceUSD": 80,
   "impedance": "30 Ω",
-  "sensitivity": "120 dB/Vrms",
-  "frequencyResponse": "20 Hz - 20 kHz",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Resin / Plastic",
-    "faceplate": "Plastic",
-    "nozzle": "Plastic",
-    "cable": "USB-C DSP cable",
-    "connector": "2-Pin / Fixed DSP"
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "DSP cable option",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "Tips", "DSP cable"],
-  "pros": ["App-controlled DSP", "Interactive tuning", "Good value"],
-  "cons": ["Reliant on DSP cable", "Build is more plastic"],
-  "ratings": { "build": 6, "value": 8, "sound": 7 },
-  "insight": "An interactive hybrid utilizing online application-controlled DSP adjustments for flexible sound.",
-  "tags": ["entry-level", "hybrid", "dsp", "tunable"],
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "DSP flexibility",
+    "Clean tuning",
+    "Good value"
+  ],
+  "cons": [
+    "Accessories are basic"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "May brings DSP tuning options into a more accessible price range. It offers a clean foundation with the ability to adjust the signature via the DSP cable.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "dsp"
+  ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

@@ -1,24 +1,43 @@
 {
   "name": "Darksaber",
   "driverType": "Hybrid",
-  "driverConfig": "Multi-driver hybrid (DD + BA + others)",
-  "priceUSD": 799,
-  "impedance": "16 Ω",
-  "sensitivity": "121 dB/Vrms",
-  "frequencyResponse": "10 Hz - 45 kHz",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 800,
+  "impedance": "15 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin",
+    "shell": "Resin / metal",
     "faceplate": "Metal",
     "nozzle": "Metal",
     "cable": "Premium",
-    "connector": "2-Pin"
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "Tips", "Cable"],
-  "pros": ["High driver count", "Strong imaging", "Versatile tuning"],
-  "cons": ["Complex signature", "Pricey"],
-  "ratings": { "build": 8, "value": 7, "sound": 8 },
-  "insight": "A hybrid monster layering multiple driver styles for high-fidelity imaging and technical performance.",
-  "tags": ["flagship", "hybrid", "technical", "imaging"],
+  "accessories": [
+    "Premium cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "High-fidelity imaging",
+    "Layered multi-driver performance",
+    "Strong technicalities"
+  ],
+  "cons": [
+    "Pricey",
+    "Tuning may not suit all preferences"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 6,
+    "sound": 8
+  },
+  "insight": "Darksaber is a high-end hybrid focused on imaging and layered presentation. It targets enthusiasts seeking technical performance and a more complex driver configuration.",
+  "tags": [
+    "flagship",
+    "hybrid"
+  ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

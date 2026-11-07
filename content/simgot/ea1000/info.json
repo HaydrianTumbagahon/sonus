@@ -1,0 +1,44 @@
+{
+  "name": "EA1000",
+  "driverType": "DD",
+  "driverConfig": "1 × advanced dynamic (Fermat)",
+  "priceUSD": 220,
+  "impedance": "16 Ω",
+  "sensitivity": "123 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Premium metal",
+    "faceplate": "Metal",
+    "nozzle": "Interchangeable",
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Premium cable",
+    "Nozzles",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "High-end single-DD performance",
+    "Excellent build and accessories",
+    "Refined technicalities"
+  ],
+  "cons": [
+    "Price approaches hybrid territory"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "EA1000 (Fermat) represents Simgot’s higher-end single-dynamic effort. It delivers refined technical performance and premium construction for listeners who prefer the coherence of a single driver at a higher price point.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "premium"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

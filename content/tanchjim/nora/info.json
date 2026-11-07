@@ -1,0 +1,47 @@
+{
+  "name": "Nora",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm DMT5 dual-magnetic dual-cavity dynamic (PU + DLC dome)",
+  "priceUSD": 110,
+  "impedance": "16 Ω ±5% @ 1 kHz",
+  "sensitivity": "125 dB/Vrms",
+  "frequencyResponse": "2 Hz – 48 kHz",
+  "materials": {
+    "shell": "High-transparency medical-grade resin",
+    "faceplate": "Metallic frame + sapphire glass",
+    "nozzle": "Metal",
+    "cable": "Silver-plated OFC Litz modular (3.5mm + 4.4mm)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Modular cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Premium faceplate design",
+    "DMT5 driver shared with higher models",
+    "Clean and refined tuning",
+    "Easy to drive",
+    "Good modular cable"
+  ],
+  "cons": [
+    "Not the most bass-heavy",
+    "Faces strong competition"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "Nora brings Tanchjim’s DMT5 driver technology into a more accessible package with a distinctive sapphire-glass faceplate. Reviewers note its clean, natural presentation and solid technical performance for the price.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "dmt5",
+    "premium-design"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

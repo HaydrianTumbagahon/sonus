@@ -1,0 +1,47 @@
+{
+  "name": "Zero:Red",
+  "driverType": "DD",
+  "driverConfig": "2DD (10mm + 7.8mm) – Truthear x Crinacle",
+  "priceUSD": 55,
+  "impedance": "17.5 Ω",
+  "sensitivity": "117.5 dB/Vrms",
+  "frequencyResponse": "20 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Distinctive red design",
+    "nozzle": "Metal",
+    "cable": "0.78mm 2-Pin",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "10Ω impedance adapter",
+    "Multiple tip sets"
+  ],
+  "pros": [
+    "Crinacle collaboration tuning",
+    "Balanced, research-oriented signature",
+    "Includes impedance adapter for bass adjustment",
+    "Strong value dual-dynamic"
+  ],
+  "cons": [
+    "Can become shouty on busy tracks for some",
+    "Shell design is polarizing"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 9,
+    "sound": 8
+  },
+  "insight": "Zero:Red is one of Truthear’s most successful Crinacle collaborations. The dual-dynamic setup and well-executed target tuning made it a benchmark recommendation in the $50 range, especially for listeners seeking a balanced, research-aligned signature.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "dual-dd",
+    "crinacle",
+    "collaboration"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

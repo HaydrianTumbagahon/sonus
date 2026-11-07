@@ -1,0 +1,42 @@
+{
+  "name": "EW100 Plus",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 25,
+  "impedance": "32 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard (DSP version available)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Very affordable",
+    "Decent tuning for the price",
+    "DSP version available"
+  ],
+  "cons": [
+    "Basic performance and build"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 8,
+    "sound": 6
+  },
+  "insight": "EW100 Plus is Simgot’s ultra-budget single-dynamic entry. It offers a surprisingly competent signature for the price and has a DSP variant for additional flexibility.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

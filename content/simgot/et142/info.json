@@ -1,0 +1,46 @@
+{
+  "name": "ET142",
+  "driverType": "Hybrid",
+  "driverConfig": "1 × 12mm planar + 1 PZT",
+  "priceUSD": 180,
+  "impedance": "20 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
+    "nozzle": "Four interchangeable nozzles",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Four nozzle sets",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Large planar driver",
+    "Multiple tuning nozzles",
+    "Good technical foundation"
+  ],
+  "cons": [
+    "Planar can require more power",
+    "Price"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "ET142 pairs a large 12mm planar driver with a piezoelectric tweeter and offers four tuning nozzles. It is one of Simgot’s more distinctive planar-focused models and appeals to listeners who want planar speed with adjustable tuning.",
+  "tags": [
+    "mid-tier",
+    "planar",
+    "pzt",
+    "tunable"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

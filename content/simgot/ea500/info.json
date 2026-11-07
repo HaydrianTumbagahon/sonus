@@ -1,0 +1,45 @@
+{
+  "name": "EA500",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm dual-magnet dynamic",
+  "priceUSD": 70,
+  "impedance": "32 Ω",
+  "sensitivity": "123 dB",
+  "frequencyResponse": "10 Hz – 30 kHz",
+  "materials": {
+    "shell": "Metal",
+    "faceplate": "Metal",
+    "nozzle": "Interchangeable",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Interchangeable nozzles",
+    "Tips"
+  ],
+  "pros": [
+    "Excellent single-DD tuning",
+    "Metal build",
+    "Nozzle options",
+    "Strong midrange"
+  ],
+  "cons": [
+    "Competition is fierce at this price"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 9,
+    "sound": 8
+  },
+  "insight": "EA500 is widely regarded as one of the best single-dynamic IEMs in its price range. The metal construction, interchangeable nozzles, and mature tuning make it a frequent recommendation for both newcomers and experienced listeners.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "metal-shell",
+    "benchmark"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

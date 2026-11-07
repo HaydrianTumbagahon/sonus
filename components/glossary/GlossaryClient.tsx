@@ -127,12 +127,7 @@ export function GlossaryClient({ terms, iems }: {
                     terms={terms}
                     iems={iems}
                     expanded={openSlugs.has(term.slug)}
-                    onToggle={() => setOpenSlugs((current) => {
-                      const next = new Set(current);
-                      if (next.has(term.slug)) next.delete(term.slug);
-                      else next.add(term.slug);
-                      return next;
-                    })}
+                    onToggle={() => setOpenSlugs((current) => current.has(term.slug) ? new Set() : new Set([term.slug]))}
                   />
                 ))}
               </div>

@@ -1,0 +1,47 @@
+{
+  "name": "Xuanwu Gate",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA + 2EST (10mm carbon composite DD + custom BAs + Sonion EST)",
+  "priceUSD": 650,
+  "impedance": "10.5 Ω ±20% @ 1 kHz",
+  "sensitivity": "103 dB @ 1 kHz",
+  "frequencyResponse": "7 Hz – 20 kHz",
+  "materials": {
+    "shell": "Premium resin / metal",
+    "faceplate": "Decorative metal",
+    "nozzle": "Metal",
+    "cable": "8-core single-crystal copper silver-plated Litz (modular 3.5/4.4)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Modular cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "Full tribrid with Sonion electrostatics",
+    "Strong technical performance",
+    "Premium cable and build",
+    "Good bass extension and air"
+  ],
+  "cons": [
+    "High price",
+    "Low impedance requires a clean source",
+    "Sensitivity is relatively modest"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 6,
+    "sound": 8
+  },
+  "insight": "Xuanwu Gate is Tangzu’s high-end tribrid flagship combining a carbon-composite dynamic, four custom balanced armatures, and dual Sonion electrostatic drivers. It targets listeners seeking elevated technical performance and EST air at a summit-fi adjacent price.",
+  "tags": [
+    "flagship",
+    "hybrid",
+    "est",
+    "tribrid"
+  ],
+  "releaseDate": "2024-02-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Origin",
+  "driverType": "DD",
+  "driverConfig": "1 × advanced DMT dynamic",
+  "priceUSD": 200,
+  "impedance": "16 Ω",
+  "sensitivity": "125 dB",
+  "frequencyResponse": "5 Hz – 48 kHz",
+  "materials": {
+    "shell": "Premium resin / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Premium modular",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Premium cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "Higher-end single-DD refinement",
+    "Good technical performance",
+    "Premium feel"
+  ],
+  "cons": [
+    "Price approaches hybrid territory"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "Origin sits higher in Tanchjim’s single-dynamic lineup and shares driver technology DNA with models like Nora and Fission. It targets listeners who want a more refined pure-DD experience.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "premium"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

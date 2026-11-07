@@ -1,0 +1,41 @@
+{
+  "name": "Nezha",
+  "driverType": "Hybrid",
+  "driverConfig": "Multi-driver hybrid",
+  "priceUSD": 200,
+  "impedance": "15 Ω",
+  "sensitivity": "112 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Decorative",
+    "nozzle": "Metal",
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "More complex hybrid configuration",
+    "Cultural naming and design"
+  ],
+  "cons": [
+    "Faces strong competition"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 6,
+    "sound": 7
+  },
+  "insight": "Nezha is a mid-tier hybrid from Tangzu that continues the brand’s mythological naming theme. It targets listeners looking for a more complex driver setup than the single-DD models.",
+  "tags": [
+    "mid-tier",
+    "hybrid"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

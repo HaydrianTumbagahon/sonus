@@ -1,0 +1,43 @@
+{
+  "name": "Hola",
+  "driverType": "DD",
+  "driverConfig": "1 × 11mm dynamic",
+  "priceUSD": 20,
+  "impedance": "28 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Resin",
+    "nozzle": "Metal",
+    "cable": "OFC",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Very affordable",
+    "Decent single-DD tuning",
+    "Easy recommendation for absolute beginners"
+  ],
+  "cons": [
+    "Basic in most respects",
+    "Superseded by Gate for many users"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 8,
+    "sound": 6
+  },
+  "insight": "Hola is an earlier ultra-budget single-dynamic from Truthear. While competent, it has largely been overtaken by Gate as the preferred sub-$20 recommendation from the brand.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

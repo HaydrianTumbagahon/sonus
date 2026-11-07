@@ -1,0 +1,45 @@
+{
+  "name": "Zetian Wu",
+  "driverType": "Planar",
+  "driverConfig": "1 × 14.5mm planar magnetic",
+  "priceUSD": 150,
+  "impedance": "16 Ω",
+  "sensitivity": "100 dB @ 1 kHz",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "4th-gen DLP 3D-printed resin",
+    "faceplate": "CNC aluminum with cloud pattern",
+    "nozzle": "Metal",
+    "cable": "5N OFC",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Balanced + vocal tips",
+    "Case"
+  ],
+  "pros": [
+    "Large 14.5mm planar driver",
+    "Distinctive cultural design",
+    "Good planar speed and detail",
+    "Attractive faceplate"
+  ],
+  "cons": [
+    "Planar can require more power",
+    "Dynamics are not the strongest"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "Zetian Wu (Empress) is Tangzu’s planar magnetic IEM featuring a large 14.5mm driver in a culturally inspired shell. Reviewers appreciate the planar speed and the distinctive design, though it benefits from a capable source.",
+  "tags": [
+    "mid-tier",
+    "planar",
+    "cultural-design"
+  ],
+  "releaseDate": "2022-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

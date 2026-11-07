@@ -1,0 +1,43 @@
+{
+  "name": "Zetian Wu Heyday",
+  "driverType": "Planar",
+  "driverConfig": "1 × 14.5mm planar (HBB collaboration / upgraded)",
+  "priceUSD": 180,
+  "impedance": "16 Ω",
+  "sensitivity": "100 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "Special edition",
+    "nozzle": "Metal",
+    "cable": "Upgraded",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Collaboration tuning",
+    "Same strong planar foundation",
+    "Special edition appeal"
+  ],
+  "cons": [
+    "Still power-hungry"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "Zetian Wu Heyday is the HBB collaboration / upgraded version of the original planar. It retains the large driver and distinctive design while offering a refined or alternate tuning.",
+  "tags": [
+    "mid-tier",
+    "planar",
+    "collaboration"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

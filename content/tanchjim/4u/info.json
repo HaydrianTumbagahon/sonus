@@ -1,0 +1,46 @@
+{
+  "name": "4U",
+  "driverType": "DD",
+  "driverConfig": "1 × dual-chamber DMT-4 Ultra dynamic",
+  "priceUSD": 70,
+  "impedance": "32 Ω ±5%",
+  "sensitivity": "122 dB/Vrms",
+  "frequencyResponse": "8 Hz – 48 kHz",
+  "materials": {
+    "shell": "Metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal (4-level adjustable filter system)",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Filter system"
+  ],
+  "pros": [
+    "Metal build at a competitive price",
+    "Adjustable filter system for tuning flexibility",
+    "Clean mid-high frequencies",
+    "Good value"
+  ],
+  "cons": [
+    "Not the most resolving",
+    "Filter differences can be subtle"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "4U (For You) offers a dual-chamber dynamic in a metal shell with a 4-level adjustable filter system. Reviewers appreciate the clean mid-high presentation and the ability to slightly shape the signature, making it a solid mid-budget single-DD option.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "metal-shell",
+    "tunable"
+  ],
+  "releaseDate": "2024-05-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

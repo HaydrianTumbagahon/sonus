@@ -1,0 +1,48 @@
+{
+  "name": "Fission",
+  "driverType": "DD",
+  "driverConfig": "1 × DMT5 dual-magnetic dual-chamber dynamic",
+  "priceUSD": 130,
+  "impedance": "16 Ω ±10%",
+  "sensitivity": "126 dB/Vrms",
+  "frequencyResponse": "8 Hz – 48 kHz",
+  "materials": {
+    "shell": "Aluminum",
+    "faceplate": "Metal with waveguide",
+    "nozzle": "Interchangeable conduits / nozzles",
+    "cable": "Modular (3.5mm / 4.4mm / USB-C)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Modular cable",
+    "Multiple nozzles",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Latest DMT5 driver technology",
+    "Modular cable including USB-C option",
+    "Interchangeable nozzles",
+    "High sensitivity and easy to drive",
+    "Clean, detailed presentation"
+  ],
+  "cons": [
+    "Treble can show a peak for sensitive listeners",
+    "Sub-bass is not the most elevated"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "Fission uses Tanchjim’s newer DMT5 dual-magnetic dual-chamber driver in an aluminum shell with interchangeable nozzles and a modular cable (including USB-C). Reviewers praise its clean midrange, detail, and overall refinement at a competitive mid-tier price.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "modular",
+    "dmt5"
+  ],
+  "releaseDate": "2025-05-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

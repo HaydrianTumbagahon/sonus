@@ -1,0 +1,46 @@
+{
+  "name": "Zero",
+  "driverType": "DD",
+  "driverConfig": "2DD – Truthear x Crinacle (original)",
+  "priceUSD": 50,
+  "impedance": "10 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Resin",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Impedance adapter (some versions)"
+  ],
+  "pros": [
+    "Original Crinacle dual-dynamic collaboration",
+    "Warm, bass-forward signature",
+    "Strong value when released"
+  ],
+  "cons": [
+    "Superseded by Zero:Red and Zero:Blue 2",
+    "Tuning is warmer / more V-shaped than later versions"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "The original Zero was the first major Truthear x Crinacle dual-dynamic collaboration. It established the brand’s reputation for well-tuned, affordable dual-DD IEMs and paved the way for the later Zero:Red and Zero:Blue 2.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "dual-dd",
+    "crinacle",
+    "classic"
+  ],
+  "releaseDate": "2022-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

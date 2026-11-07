@@ -1,0 +1,47 @@
+{
+  "name": "SuperMix 5",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 2BA + 1 Micro-Planar + 1 Bone Conduction (5-in-1 Matrix)",
+  "priceUSD": 225,
+  "impedance": "19 Ω ±15% @ 1 kHz",
+  "sensitivity": "120 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "8 Hz – 40 kHz",
+  "materials": {
+    "shell": "High-precision 3D-printed resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Litz high-purity silver-plated OCC with modular plugs",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Modular cable (3.5mm + 4.4mm)",
+    "Hard case",
+    "Multiple tip types"
+  ],
+  "pros": [
+    "Unique bone-conduction + multi-driver configuration",
+    "Strong technical performance and stage",
+    "High-quality modular cable",
+    "Ambitious 5-driver architecture"
+  ],
+  "cons": [
+    "Bone conduction effect is subtle for some listeners",
+    "Price is higher than many competitors"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "SuperMix 5 is Simgot’s ambitious five-driver hybrid that adds a coil-type bone conduction driver to a DD + BA + micro-planar foundation. Reviewers note improved texture, stage openness, and a more natural sense of body in the mid-bass region. It represents one of the more innovative configurations in its price range.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "bone-conduction",
+    "micro-planar",
+    "innovative"
+  ],
+  "releaseDate": "2026-10-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

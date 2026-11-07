@@ -1,0 +1,43 @@
+{
+  "name": "EW200",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm dynamic",
+  "priceUSD": 40,
+  "impedance": "18 Ω",
+  "sensitivity": "122 dB",
+  "frequencyResponse": "10 Hz – 30 kHz",
+  "materials": {
+    "shell": "Metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard (DSP version available)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Excellent value metal single-DD",
+    "Clean tuning",
+    "DSP option available"
+  ],
+  "cons": [
+    "Not as refined as EA500"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "EW200 is a strong budget metal single-dynamic that often punches above its price. It is frequently recommended as a step-up from ultra-budget options and has a DSP version for users who want extra tuning control.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "metal-shell",
+    "value"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

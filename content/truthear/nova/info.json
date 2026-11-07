@@ -1,0 +1,46 @@
+{
+  "name": "Nova",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA (3-way crossover)",
+  "priceUSD": 150,
+  "impedance": "15 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Premium resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Higher-quality",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Excellent technical hybrid performance",
+    "Well-executed 1DD+4BA configuration",
+    "Natural, balanced tuning with good extension",
+    "Strong imaging and resolution"
+  ],
+  "cons": [
+    "Price is higher than Hexa",
+    "Competition is fierce in this range"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 9
+  },
+  "insight": "Nova is Truthear’s higher-end hybrid that builds on the success of Hexa with a 1DD + 4BA three-way design. Reviewers frequently praise its natural balance, resolution, and technical performance, making it one of the brand’s strongest offerings.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "technical",
+    "benchmark"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

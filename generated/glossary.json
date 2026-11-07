@@ -7,7 +7,10 @@
     "explanation": "A Dynamic Driver is the most common type of driver found in IEMs and headphones. It works like a miniature version of a traditional loudspeaker: an electrical signal passes through a voice coil attached to a diaphragm (usually made of materials like PET, LCP, beryllium, or diamond-like carbon). The coil sits inside a magnetic field, and when current flows, it moves the diaphragm back and forth, creating sound waves.\n\nDynamic drivers are known for producing strong, natural bass with good physical impact and a relatively organic, coherent sound. They are generally easier to drive than other driver types and can move a lot of air, which is why they excel at low frequencies. However, a single dynamic driver can sometimes struggle with extreme detail and speed in the upper frequencies compared to multi-driver setups.\n\nModern high-end dynamic drivers often use advanced diaphragm materials, dual-chamber designs, and powerful magnets (such as N52 neodymium) to reduce distortion and improve speed and resolution.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/dynamic-drivers.jpg"
+    ]
   },
   {
     "slug": "balanced-armature",
@@ -17,7 +20,10 @@
     "explanation": "A Balanced Armature driver is a very small and precise type of driver originally developed for hearing aids. Inside the driver, a tiny armature (a metal reed) is balanced between two magnets. When an audio signal is applied, the armature vibrates and transfers that motion to a diaphragm through a small drive pin, creating sound.\n\nBecause of their small size and low mass, BA drivers are extremely fast and efficient. They excel at midrange clarity, vocal detail, and treble extension. They also produce very little vibration, which makes them ideal for multi-driver IEMs where several drivers must work together without interfering with each other.\n\nThe main limitations of BA drivers are weaker sub-bass impact compared to dynamic drivers and a tendency to sound less 'natural' or slightly more analytical if not carefully tuned. High-end IEMs often use multiple specialized BA drivers (bass, mid, treble) to cover the full frequency range with high resolution.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/balanced-armature.jpg"
+    ]
   },
   {
     "slug": "planar-magnetic",
@@ -27,7 +33,10 @@
     "explanation": "A Planar Magnetic driver (often just called a 'planar') uses a thin, flat diaphragm that has a conductive circuit printed or etched onto it. This diaphragm is suspended between arrays of magnets. When the audio signal passes through the conductive traces, the entire diaphragm moves uniformly in the magnetic field.\n\nBecause the force is distributed evenly across the whole surface of the diaphragm (instead of being driven from a single point like a dynamic driver), planar drivers typically offer excellent speed, low distortion, very good detail retrieval, and a unique sense of control and texture. Bass is usually tight and accurate rather than bloomy, and the overall presentation often feels highly resolving and 'fast'.\n\nPlanar drivers in IEMs are relatively new compared to full-size headphones. They can be more difficult to drive than typical dynamic or BA IEMs and sometimes require a bit more power to reach their full potential. They are valued for their technical performance and unique sound character.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/planar-magnetic.jpg"
+    ]
   },
   {
     "slug": "electrostatic",
@@ -37,7 +46,10 @@
     "explanation": "Electrostatic drivers (often abbreviated as EST) are among the most refined driver technologies available in IEMs. They work by suspending an extremely thin, electrically charged diaphragm between two perforated metal plates (stators). An audio signal applied to the stators creates an electrostatic field that moves the diaphragm with almost no mass or inertia.\n\nBecause the moving part is incredibly light, electrostatic drivers offer exceptional speed, transient response, and airiness, especially in the treble and upper harmonics. They are prized for their effortless detail, natural decay, and sense of 'air' around instruments.\n\nIn IEMs, electrostatic drivers are almost always used as part of a hybrid or tribrid configuration (combined with dynamic and/or balanced armature drivers) rather than as full-range drivers. They are typically dedicated to high frequencies. True electrostatic IEMs require special amplification in full-size form, but the miniature EST drivers used in modern IEMs can be driven by regular sources.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/electrostatic.webp"
+    ]
   },
   {
     "slug": "hybrid",
@@ -47,7 +59,10 @@
     "explanation": "A Hybrid IEM uses two or more different driver technologies in the same earpiece. The most common combination is a dynamic driver for bass + balanced armature drivers for mids and treble. More advanced designs may include planar magnetic, electrostatic, or even bone conduction drivers, creating tribrid or quadbrid configurations.\n\nThe goal of a hybrid design is to take advantage of the strengths of each driver type: the physical impact and natural bass of a dynamic driver, the speed and detail of balanced armatures, the resolution of planars, and the airiness of electrostatics. A well-executed hybrid can deliver a more complete and refined sound than a single-driver IEM.\n\nThe challenge with hybrids is proper crossover design and phase alignment so that the different drivers blend seamlessly. Poorly implemented hybrids can sound disjointed, with noticeable transitions between driver types. High-quality hybrids use carefully designed acoustic chambers, electronic crossovers, and sometimes acoustic dampers to achieve a coherent result.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/hybrid.webp"
+    ]
   },
   {
     "slug": "shell",
@@ -57,7 +72,10 @@
     "explanation": "The shell is the physical housing of the IEM. It contains the drivers, crossover components, and acoustic chambers, and determines how the earpiece fits in your ear. Shells can be made from resin (often 3D-printed), metal (aluminum, stainless steel, titanium), acrylic, or combinations of materials.\n\nShell design affects both comfort and sound. The internal volume and shape of the acoustic chambers influence the frequency response, especially bass and midrange. The external shape determines fit and isolation. Universal IEMs are designed to fit a wide range of ears, while custom IEMs are molded to an individual’s ear impression for maximum comfort and isolation.\n\nFaceplate (the outer decorative surface), nozzle angle, and overall size all play important roles in both aesthetics and ergonomics. A well-designed shell should feel secure without excessive pressure and maintain a good seal for proper bass response and isolation.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/shell.jpg"
+    ]
   },
   {
     "slug": "nozzle",
@@ -77,7 +95,10 @@
     "explanation": "Ear tips are the small, replaceable pieces that attach to the nozzle and form the seal inside your ear canal. They are one of the most important (and often overlooked) factors in both comfort and sound quality.\n\nCommon types include:\n• Silicone tips — durable, easy to clean, available in many shapes (single flange, double flange, wide-bore, narrow-bore).\n• Foam tips (such as Comply) — expand to fill the ear canal, offering excellent isolation and a warmer, more bass-emphasized sound.\n• Hybrid tips — combine silicone and foam characteristics.\n• Specialty tips — designed for specific nozzle sizes or to alter sound (e.g., spin-fit, final E-type, azla sedna).\n\nChanging tips (known as 'tip rolling') can noticeably alter bass quantity, treble smoothness, soundstage, and comfort. A proper seal is essential: without it, the IEM will sound thin and weak in the bass. Finding the right tip is often as important as the IEM itself.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/ear-tips.jpg"
+    ]
   },
   {
     "slug": "2-pin-mmcx",
@@ -87,7 +108,10 @@
     "explanation": "The 0.78 mm 2-pin connector is one of the two most widely used detachable cable systems in IEMs (the other being MMCX). It consists of two small metal pins on the cable that plug into corresponding sockets on the IEM.\n\n2-pin connectors are generally considered more secure and less prone to accidental disconnection than MMCX, though they can be more fragile if the pins are bent. They come in slightly different variations (recessed, flush, or protruding), so not every 2-pin cable fits every 2-pin IEM perfectly.\n\nDetachable cables allow users to replace damaged cables, upgrade to higher-quality wires, or switch between different terminations (3.5 mm, 4.4 mm balanced, USB-C, etc.). The 2-pin standard is especially popular among Chi-Fi brands.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/2-pin-mmcx.webp"
+    ]
   },
   {
     "slug": "mmcx",
@@ -97,7 +121,10 @@
     "explanation": "MMCX (Micro-Miniature Coaxial) is a circular connector system that snaps into place with a rotating collar. It is widely used by both mainstream and audiophile IEM brands.\n\nMMCX connectors allow the cable to rotate freely, which some users prefer for comfort. However, they can wear out over time with frequent cable changes and may become loose. Higher-quality MMCX implementations (sometimes called 'reinforced' or 'locking' MMCX) improve durability.\n\nLike 2-pin, MMCX enables cable swapping for upgrades, repairs, or different terminations. When buying aftermarket cables, it is important to match the connector type exactly (MMCX vs 2-pin) and check compatibility with your specific IEM model.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/2-pin-mmcx-2.webp"
+    ]
   },
   {
     "slug": "impedance-sensitivity",
@@ -107,7 +134,10 @@
     "explanation": "Impedance (measured in ohms, Ω) is the electrical resistance the IEM presents to the amplifier. Sensitivity (usually measured in dB/mW or dB/Vrms) indicates how loud the IEM will play with a given amount of power.\n\nIn simple terms:\n• Low impedance (e.g., 8–32 Ω) + high sensitivity = easy to drive from phones, dongles, and small DAPs.\n• Higher impedance or lower sensitivity = may need a more powerful source to reach full volume and dynamic potential.\n\nHowever, impedance alone does not tell the whole story. Some low-impedance IEMs are still current-demanding, and some higher-impedance IEMs can be surprisingly efficient. The combination of impedance, sensitivity, and the IEM’s actual power requirements determines real-world drivability.\n\nMatching an IEM to an appropriate source is important. An underpowered source can make an IEM sound flat, compressed, or lacking in bass control, while a good source pairing allows the IEM to perform at its best.",
     "visual": "diagram",
     "related": [],
-    "exampleIEMs": []
+    "exampleIEMs": [],
+    "images": [
+      "/glossary/Impedance-and-Sensitivity.jpg"
+    ]
   },
   {
     "slug": "sub-bass",

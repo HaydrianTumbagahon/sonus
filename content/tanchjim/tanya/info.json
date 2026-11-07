@@ -1,0 +1,41 @@
+{
+  "name": "Tanya",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 40,
+  "impedance": "32 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Low price",
+    "Approachable tuning"
+  ],
+  "cons": [
+    "Basic in most areas"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 7,
+    "sound": 5
+  },
+  "insight": "Tanya is a simple entry-level single-dynamic from Tanchjim aimed at casual use and first-time buyers.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

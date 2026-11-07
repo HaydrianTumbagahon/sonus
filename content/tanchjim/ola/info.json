@@ -1,0 +1,40 @@
+{
+  "name": "Ola",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 60,
+  "impedance": "32 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "15 Hz – 30 kHz",
+  "materials": {
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Clean signature",
+    "Good value"
+  ],
+  "cons": [
+    "Average technicalities"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 7,
+    "sound": 6
+  },
+  "insight": "Ola offers a clean, approachable single-dynamic presentation typical of Tanchjim’s more accessible models.",
+  "tags": [
+    "entry-level",
+    "dd"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

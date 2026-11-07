@@ -1,0 +1,44 @@
+{
+  "name": "Xuan Nv",
+  "driverType": "DD",
+  "driverConfig": "2DD (10mm ceramic + 8mm PU+LCP)",
+  "priceUSD": 120,
+  "impedance": "8.5 Ω ±20% @ 1 kHz",
+  "sensitivity": "98 dB @ 1 kHz",
+  "frequencyResponse": "7 Hz – 20 kHz",
+  "materials": {
+    "shell": "3D-printed medical-grade resin",
+    "faceplate": "Decorative",
+    "nozzle": "Metal",
+    "cable": "Single-crystal OFC",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Unique dual-dynamic configuration",
+    "Ceramic + composite diaphragms",
+    "Warm, engaging presentation"
+  ],
+  "cons": [
+    "Low sensitivity requires more power",
+    "Very low impedance"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "Xuan Nv uses an uncommon dual-dynamic setup pairing a 10mm ceramic driver with an 8mm PU+LCP driver. Reviewers note a warm, organic presentation and good coherence for a dual-DD design.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "dual-dd"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

@@ -1,3 +1,26 @@
+# RULES FOR EVERY TASK IN THIS PROJECT (save them, see Step 1)
+- Never ask me questions. If something is unclear, use what is written in the task; if it is
+	not covered, choose the simplest option that matches the existing design and mention it in
+	one line at the end.
+- Do exactly what a task says and nothing more. Never refactor, rename, reformat, restyle,
+	reorder or delete anything outside the task. Never delete a file unless I name it.
+- Edit files in place and reuse existing components, tokens, fonts and helpers.
+- Never edit anything inside content/ (info.json files, images, .txt files, glossary.json,
+	glossary-images) unless a task says so. Never edit generated/ by hand.
+- Do not run npm run build, npm run lint or the dev server. Allowed: `npm run build-content`
+	when a task says so, and `npx tsc --noEmit` once at the end of a task.
+- Install nothing without asking. Every import must be present. Any file using hooks, Framer
+	Motion, event handlers or browser APIs starts with "use client". app/error.tsx,
+	app/global-error.tsx and route error.tsx files must be Client Components. Pages
+	default-export a component.
+- Colors: CSS tokens only, never hardcoded colors, never className="dark" wrappers. Anton font
+	is weight 400 only, never font-bold or font-semibold on Anton text.
+- All UI text goes through t() with entries in messages/en.json, jp.json, cn.json. Delete
+	translation keys that become unused.
+- Reply with the file list only, plus one-line notes.
+
+Read docs/CONTEXT.md before every task. Everything listed under PROTECTED BUILD must not change unless the task names that exact area.
+
 # Sonus Project Instructions
 
 - Approved stack only: Next.js 15 (App Router), TypeScript strict, React 19, Tailwind CSS v4 (CSS variables mapped via `@theme`, no `tailwind.config`), customized shadcn/ui, Vaul, Radix primitives, Framer Motion, GSAP + ScrollTrigger, Lenis, Zustand, Fuse.js, next-themes, Lucide React, clsx, tailwind-merge, class-variance-authority, and tsx (dev). Use Zustand for UI state and `compareList`; use React Context for Language, Currency, and Theme. Do not install any other library without asking first.

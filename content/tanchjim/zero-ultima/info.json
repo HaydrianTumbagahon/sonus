@@ -1,0 +1,45 @@
+{
+  "name": "Zero Ultima",
+  "driverType": "DD",
+  "driverConfig": "1 × double-magnetic circuit DMT4 Ultra dynamic (PU edge + coated Ti composite dome)",
+  "priceUSD": 20,
+  "impedance": "30 Ω ±10%",
+  "sensitivity": "123 dB/Vrms",
+  "frequencyResponse": "10 Hz – 48 kHz",
+  "materials": {
+    "shell": "Lightweight resin / plastic",
+    "faceplate": "Translucent",
+    "nozzle": "Metal",
+    "cable": "Litz copper with silver-plated woven",
+    "connector": "0.78mm 2-Pin or fixed (depending on version)"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Excellent Harman-leaning tuning for the price",
+    "Very lightweight",
+    "Natural vocals and balanced signature",
+    "Extremely affordable"
+  ],
+  "cons": [
+    "Limited sub-bass extension",
+    "Basic build and accessories"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "Zero Ultima is a strong ultra-budget single-dynamic from Tanchjim. It tracks a natural, balanced signature with good midrange and is frequently recommended as one of the safer low-cost options for beginners.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget-king",
+    "harman"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

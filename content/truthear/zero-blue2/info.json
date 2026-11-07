@@ -1,0 +1,45 @@
+{
+  "name": "Zero:Blue 2",
+  "driverType": "DD",
+  "driverConfig": "2DD (10mm + 7.8mm) – Truthear x Crinacle",
+  "priceUSD": 70,
+  "impedance": "5.8 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Blue-themed",
+    "nozzle": "Metal",
+    "cable": "OFC (mic version available)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable (mic options)",
+    "Tips"
+  ],
+  "pros": [
+    "Updated Crinacle dual-dynamic tuning",
+    "Warm, punchy low end",
+    "Very easy to drive",
+    "Mic cable variants available"
+  ],
+  "cons": [
+    "Very low impedance requires a clean source",
+    "Can be bass-forward for neutral fans"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "Zero:Blue 2 continues the Crinacle dual-dynamic collaboration with a warmer, more punchy presentation compared with Zero:Red. The extremely low impedance makes it highly sensitive to source output impedance.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "dual-dd",
+    "crinacle"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

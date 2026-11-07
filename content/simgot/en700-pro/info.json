@@ -1,0 +1,40 @@
+{
+  "name": "EN700 Pro",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 100,
+  "impedance": "32 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Solid older model",
+    "Decent tuning"
+  ],
+  "cons": [
+    "Superseded by newer EA/EW series"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 6,
+    "sound": 6
+  },
+  "insight": "EN700 Pro is an earlier Simgot single-dynamic that has largely been overtaken by the more refined EA and EW series, but still offers respectable performance for its original price class.",
+  "tags": [
+    "entry-level",
+    "dd"
+  ],
+  "releaseDate": "2020-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

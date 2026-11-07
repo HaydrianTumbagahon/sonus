@@ -3,22 +3,38 @@
   "driverType": "DD",
   "driverConfig": "1DD",
   "priceUSD": 15,
-  "impedance": "32 Ω",
-  "sensitivity": "115 dB/Vrms",
-  "frequencyResponse": "20 Hz - 20 kHz",
+  "impedance": "16 Ω",
+  "sensitivity": "118 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Plastic",
-    "faceplate": "Plastic",
-    "nozzle": "Plastic",
-    "cable": "Fixed Type-C",
-    "connector": "Type-C"
+    "shell": "Plastic / metal",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Fixed or simple",
+    "connector": "0.78mm 2-Pin or Fixed"
   },
-  "accessories": ["Tips", "Simple packaging"],
-  "pros": ["Ultra affordable", "Type-C convenience", "Pocketable", "Surprisingly usable sound"],
-  "cons": ["Very basic build", "Fixed cable", "Limited technical performance"],
-  "ratings": { "build": 5, "value": 9, "sound": 6 },
-  "insight": "An ultra-affordable Type-C connection earbud built for minimalist pocket travel.",
-  "tags": ["entry-level", "dd", "type-c", "ultra-budget", "travel"],
+  "accessories": [
+    "Tips"
+  ],
+  "pros": [
+    "Extremely low price",
+    "Decent tuning"
+  ],
+  "cons": [
+    "Very basic build and performance"
+  ],
+  "ratings": {
+    "build": 4,
+    "value": 7,
+    "sound": 5
+  },
+  "insight": "Quark 2 is a true ultra-budget option. Expectations should be kept realistic, but it serves as an inexpensive entry or secondary set.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

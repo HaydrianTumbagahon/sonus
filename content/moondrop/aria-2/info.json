@@ -1,24 +1,47 @@
 {
   "name": "Aria 2",
   "driverType": "DD",
-  "driverConfig": "1DD (10mm LCP diaphragm)",
-  "priceUSD": 79,
-  "impedance": "33 Ω",
-  "sensitivity": "122 dB/Vrms",
-  "frequencyResponse": "10 Hz - 36 kHz",
+  "driverConfig": "1 × 10mm TiN ceramic-coated spherical dome composite dynamic",
+  "priceUSD": 80,
+  "impedance": "33 Ω ±15% @ 1 kHz",
+  "sensitivity": "122 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "16 Hz – 22 kHz",
   "materials": {
-    "shell": "Metal alloy",
-    "faceplate": "Metal",
-    "nozzle": "Metal",
+    "shell": "Zinc alloy precision-milled",
+    "faceplate": "Zinc alloy",
+    "nozzle": "Replaceable brass",
     "cable": "Silver-plated copper",
-    "connector": "2-Pin"
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Carrying case", "Ear tips (3 sizes)", "Cable", "Tuning nozzles (on some versions)"],
-  "pros": ["Balanced tuning", "Great value", "Solid metal build", "Beginner friendly"],
-  "cons": ["Average technicalities compared to higher models"],
-  "ratings": { "build": 8, "value": 9, "sound": 8 },
-  "insight": "The modern successor to the classic Aria. Safe, consumer-friendly Harman-inspired tuning that works as an excellent daily driver.",
-  "tags": ["entry-level", "dd", "balanced", "beginner-friendly", "value"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Excellent VDSF-tuned neutral signature",
+    "Solid metal build with replaceable brass nozzle",
+    "Low distortion and improved treble over original Aria",
+    "Great value for a metal single-DD"
+  ],
+  "cons": [
+    "Not the most resolving in class",
+    "Bass quantity may feel restrained for bassheads"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 9,
+    "sound": 8
+  },
+  "insight": "Aria 2 refines the classic Aria formula with a new TiN ceramic-coated driver, zinc alloy shell, and replaceable brass nozzle. It stays faithful to Moondrop’s VDSF target while improving technical performance and build quality, making it one of the strongest single-dynamic options under $100.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "vdsf",
+    "metal-shell",
+    "beginner-friendly"
+  ],
+  "releaseDate": "2023-11-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

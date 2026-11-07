@@ -1,39 +1,48 @@
 {
-  "name": "Nanna 2.0",
+  "name": "Nanna 2",
   "driverType": "Hybrid",
-  "driverConfig": "EST hybrid",
-  "priceUSD": 349,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 1BA + 2EST (7mm dynamic + Sonion BA + Sonion EST)",
+  "priceUSD": 949,
+  "impedance": "60 Ω",
+  "sensitivity": "110 dB ±2 dB",
+  "frequencyResponse": "5 Hz – 50 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Premium resin",
+    "faceplate": "Artistic multi-color resin",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "6N OCC silver-plated",
+    "connector": "0.78mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "6N OCC silver-plated cable (often 4.4mm)",
+    "Multiple tip sets (Final Type E, silicone, foam)",
+    "Premium case"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Excellent EST treble air and detail",
+    "Clean, vibrant W-shaped signature",
+    "Strong micro-detail and layering",
+    "Attractive artistic shells",
+    "Good accessory package"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Higher impedance benefits from a capable source",
+    "Can lean bright for sensitive listeners",
+    "Price is premium"
   ],
   "ratings": {
-    "build": 8,
-    "value": 8,
-    "sound": 8
+    "build": 9,
+    "value": 7,
+    "sound": 9
   },
-  "insight": "Nanna 2.0 from Kinera. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Nanna 2 (Imperial Nanna) is one of Kinera’s most respected hybrids. The combination of a 7mm dynamic, Sonion BA, and dual EST drivers delivers a vibrant, detailed presentation with excellent high-frequency extension. Reviewers frequently highlight its layering, micro-detail, and the sense of air the electrostatics provide.",
   "tags": [
-    "mid",
-    "hybrid"
+    "flagship",
+    "hybrid",
+    "est",
+    "w-shaped"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2021-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

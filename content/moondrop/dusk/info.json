@@ -1,24 +1,46 @@
 {
   "name": "Dusk",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 2BA + DSP",
-  "priceUSD": 359,
-  "impedance": "30 Ω (approx)",
-  "sensitivity": "122 dB/Vrms",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "1DD + 2BA + DSP (Blessing 2 collaborative)",
+  "priceUSD": 360,
+  "impedance": "Variable (DSP)",
+  "sensitivity": "Variable",
+  "frequencyResponse": "10 Hz – 30 kHz",
   "materials": {
-    "shell": "Resin",
+    "shell": "3D-printed resin",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "USB-C DSP cable + analog cable",
-    "connector": "2-Pin"
+    "cable": "DSP cable included",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "DSP cable", "Analog cable", "Ear tips", "App support"],
-  "pros": ["DSP tuning flexibility", "Excellent collaboration tuning", "Great technicalities"],
-  "cons": ["DSP cable dependency for full features", "Price"],
-  "ratings": { "build": 8, "value": 8, "sound": 9 },
-  "insight": "A highly acclaimed DSP-tunable collaborative crossover project. Offers flexibility through app-controlled tuning while maintaining strong stock performance.",
-  "tags": ["mid-tier", "hybrid", "dsp", "collaboration", "tunable"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "DSP cable",
+    "Standard cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "DSP tuning flexibility",
+    "Excellent technical foundation from Blessing platform",
+    "Highly acclaimed collaboration"
+  ],
+  "cons": [
+    "DSP cable required for full experience",
+    "Price"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 7,
+    "sound": 9
+  },
+  "insight": "Dusk is the highly regarded DSP-enabled collaboration based on the Blessing platform. The included DSP cable unlocks additional tuning options, making it one of the most flexible and critically praised mid-tier hybrids.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "dsp",
+    "collaboration"
+  ],
+  "releaseDate": "2022-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

@@ -1,0 +1,46 @@
+{
+  "name": "SuperMix 4",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 1BA + 1 Micro-Planar + 1 PZT",
+  "priceUSD": 150,
+  "impedance": "7.2 Ω ±15% @ 1 kHz",
+  "sensitivity": "120 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "8 Hz – 40 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Silver-plated OFC Litz",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Strong technical step-up from single-DD models",
+    "Good stage and imaging",
+    "Four different driver technologies",
+    "Competitive pricing"
+  ],
+  "cons": [
+    "Very low impedance requires a clean source",
+    "Can be bright depending on tip and source"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "SuperMix 4 combines a dynamic, balanced armature, micro-planar, and piezoelectric driver in a four-way design. It is frequently recommended as a technical step-up from Simgot’s single-dynamic models while remaining relatively accessible.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "pzt",
+    "micro-planar"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

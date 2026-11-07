@@ -1,24 +1,47 @@
 {
   "name": "Solis II",
   "driverType": "Hybrid",
-  "driverConfig": "Tribrid (Dynamic + BA + Electrostatic)",
-  "priceUSD": 2999,
-  "impedance": "15 Ω",
-  "sensitivity": "122 dB/Vrms",
-  "frequencyResponse": "10 Hz - 50 kHz",
+  "driverConfig": "2DD + 2BA + 4EST",
+  "priceUSD": 3000,
+  "impedance": "10 Ω ±15% @ 1 kHz",
+  "sensitivity": "121 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "7 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin",
-    "faceplate": "Metal / Resin",
+    "shell": "Premium (silver cavity)",
+    "faceplate": "Artistic metal",
     "nozzle": "Metal",
-    "cable": "Premium modular",
-    "connector": "2-Pin"
+    "cable": "Premium with modular plugs",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Premium carrying case", "Multiple ear tip sets", "Modular cable", "Cleaning tools"],
-  "pros": ["Exceptional resolution", "Beautiful design", "Airy electrostatic treble"],
-  "cons": ["Very high price", "Requires good source"],
-  "ratings": { "build": 9, "value": 6, "sound": 9 },
-  "insight": "A multi-driver tribrid art piece featuring electrostatic drivers. Summit-fi level performance with strong technicalities and refined tuning.",
-  "tags": ["flagship", "tribrid", "electrostatic", "summit-fi"],
-  "releaseDate": "2024-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Premium cable",
+    "Modular adapters (2.5/3.5/4.4)",
+    "Foam and silicone tips",
+    "Case"
+  ],
+  "pros": [
+    "Flagship-level EST air and resolution",
+    "Excellent multi-driver coherence",
+    "Premium build and accessories",
+    "Wide frequency extension"
+  ],
+  "cons": [
+    "Very high price",
+    "Low impedance requires clean source"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 5,
+    "sound": 9
+  },
+  "insight": "Solis II is Moondrop’s high-end tribrid flagship featuring dual dynamics, dual balanced armatures, and four electrostatic drivers. It delivers excellent resolution, air, and a refined overall presentation aimed at summit-fi listeners.",
+  "tags": [
+    "flagship",
+    "hybrid",
+    "est",
+    "summit-fi"
+  ],
+  "releaseDate": "2023-07-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

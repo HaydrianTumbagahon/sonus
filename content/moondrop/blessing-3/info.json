@@ -2,23 +2,45 @@
   "name": "Blessing 3",
   "driverType": "Hybrid",
   "driverConfig": "2DD + 4BA",
-  "priceUSD": 319,
+  "priceUSD": 360,
   "impedance": "14.8 Ω",
   "sensitivity": "120 dB/Vrms",
-  "frequencyResponse": "10 Hz - 30 kHz",
+  "frequencyResponse": "10 Hz – 30 kHz",
   "materials": {
     "shell": "3D-printed resin",
     "faceplate": "Metal",
     "nozzle": "Metal",
     "cable": "Silver-plated copper",
-    "connector": "2-Pin"
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Carrying case", "Ear tips (multiple sizes)", "Cable", "Cleaning brush"],
-  "pros": ["Excellent detail retrieval", "Clean neutral-bright tuning", "Great imaging", "Industry standard"],
-  "cons": ["Can be analytical", "Bass is controlled rather than fun"],
-  "ratings": { "build": 8, "value": 9, "sound": 9 },
-  "insight": "The industry-standard hybrid multi-driver set, praised for analytical detail and clean technical performance. A modern classic in the mid-tier.",
-  "tags": ["mid-tier", "hybrid", "analytical", "detail", "reference"],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Industry-standard hybrid technical performance",
+    "Excellent detail and separation",
+    "Balanced, natural tuning",
+    "Easy to drive"
+  ],
+  "cons": [
+    "Resin shell feels less premium than metal competitors",
+    "Stage is good but not class-leading"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 8,
+    "sound": 9
+  },
+  "insight": "Blessing 3 remains one of the most frequently recommended mid-tier hybrids. Its 2DD + 4BA configuration delivers strong technical performance, clean mids, and a well-controlled signature that works across genres. Many reviewers still treat it as a benchmark in its price range.",
+  "tags": [
+    "mid-tier",
+    "hybrid",
+    "benchmark",
+    "analytical"
+  ],
+  "releaseDate": "2023-04-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

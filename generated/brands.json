@@ -20,7 +20,7 @@
     "slug": "fiio",
     "status": "live",
     "description": "FiiO is the undisputed infrastructure and ecosystem titan of Chinese portable audio. Originally legendary for creating portable amplifiers and high-resolution Digital Audio Players (DAPs), FiiO successfully funneled its massive engineering budget into a sprawling line of IEMs. They are famous for exceptional mechanical builds, structural modularity, and high driver counts at fair price-to-performance metrics.",
-    "logo": "/brands/fiio/logo.png",
+    "logo": "/brands/fiio/logo.webp",
     "iemCount": 12
   },
   {
@@ -29,7 +29,7 @@
     "status": "live",
     "description": "Founded in 2016, Kinera treats IEM design like fine art. They are globally famous for their gorgeous, hand-painted custom resin outer shells and themes heavily rooted in Norse mythology. Kinera is a master of \"triple-hybrid\" and \"quad-hybrid\" platforms, packing dynamic drivers, balanced armatures, planar micro-drivers, and electrostatic units into single ear structures. They also run highly successful sister brands like Celest and QoA (Queen of Audio) to cover the budget markets.",
     "logo": "/brands/kinera/logo.webp",
-    "iemCount": 12
+    "iemCount": 11
   },
   {
     "name": "Kiwi Ears",
@@ -45,7 +45,7 @@
     "status": "live",
     "description": "Founded in 2012, KZ (Knowledge Zenith) is the historic gateway grandfather of the Chi-Fi movement. They single-handedly disrupted the global audio market by introducing multi-driver hybrid setups for under $30. KZ operates as a high-volume manufacturing powerhouse, rapidly turning out aggressive, energetic V-shaped audio signatures. They are incredibly popular among budget-conscious musicians, casual listeners, and competitive gamers.",
     "logo": "/brands/kz/logo.png",
-    "iemCount": 16
+    "iemCount": 15
   },
   {
     "name": "Moondrop",
@@ -56,27 +56,35 @@
     "iemCount": 15
   },
   {
-    "name": "Simgot",
+    "name": "SIMGOT",
     "slug": "simgot",
-    "status": "coming-soon",
-    "iemCount": 0
+    "status": "live",
+    "description": "Simgot (meaning \"Simple Elegant\") has taken over the budget and competitive gaming landscape. They specialize in squeezing elite technical resolution, sharp transient response, and precise imaging out of affordable hardware configurations. They are highly famous for their multi-nozzle acoustic filter systems, allowing users to physically swap nozzle tips to drastically alter the frequency response.",
+    "logo": "/brands/simgot/logo.jpg",
+    "iemCount": 12
   },
   {
     "name": "Tanchjim",
     "slug": "tanchjim",
-    "status": "coming-soon",
-    "iemCount": 0
+    "status": "live",
+    "description": "Tanchjim is the \"Apple of Chi-Fi\" when it comes to clean, minimalist industrial design. They favor pristine medical-grade white resins, sandblasted aerospace alloys, and crystal-clear presentation. Acoustically, Tanchjim is famous for target-curve accuracy, emphasizing hyper-clean, reference-grade neutrality, pristine female vocal clarity, and immaculate treble extension without introducing harsh sibilance.",
+    "logo": "/brands/tanchjim/logo.png",
+    "iemCount": 9
   },
   {
-    "name": "Tangzu",
+    "name": "Tangzu Audio",
     "slug": "tangzu",
-    "status": "coming-soon",
-    "iemCount": 0
+    "status": "live",
+    "description": "Formerly known as TForce, Tangzu is famous for blending high-fidelity audio design with traditional Chinese art, history, and dynasty poetry. They specialize in creating incredibly smooth, musically rich soundscapes with an emphasis on lush, natural vocal presentation. They are highly respected for utilizing uniquely textured shells and premium artistic accessories across all price brackets.",
+    "logo": "/brands/tangzu/logo.png",
+    "iemCount": 11
   },
   {
     "name": "Truthear",
     "slug": "truthear",
-    "status": "coming-soon",
-    "iemCount": 0
+    "status": "live",
+    "description": "Founded in 2022, Truthear is a masterclass in modern, streamlined Chi-Fi engineering. They partner with state-of-the-art 3D-printing medical manufacturing firms (like HeyGears) to create geometrically flawless acoustic cavities. Truthear became famous globally for implementing incredibly safe, highly accurate Harman tuning targets at price points that shocked the legacy audio industry.",
+    "logo": "/brands/truthear/logo.webp",
+    "iemCount": 8
   }
 ]

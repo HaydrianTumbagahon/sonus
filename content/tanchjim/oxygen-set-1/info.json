@@ -1,0 +1,33 @@
+{
+        "name": "Oxygen",
+        "driverType": "DD",
+        "driverConfig": "1 × 9.2mm graphene dynamic",
+        "priceUSD": 250,
+        "impedance": "32 Ω",
+        "sensitivity": "110 dB/mW",
+        "frequencyResponse": "10 Hz – 40 kHz",
+        "materials": {
+                "shell": "304 stainless steel",
+                "faceplate": "Mirrored stainless",
+                "nozzle": "Metal",
+                "cable": "Silver-plated OFC",
+                "connector": "0.78mm 2-Pin"
+        },
+        "accessories": ["Cable", "Tips", "Case"],
+        "pros": [
+                "Classic Harman-neutral tuning",
+                "Premium stainless steel build",
+                "Clean and refined presentation"
+        ],
+        "cons": ["Older model", "Stage can feel intimate"],
+        "ratings": {
+                "build": 8,
+                "value": 6,
+                "sound": 7
+        },
+        "insight": "Oxygen was Tanchjim’s earlier flagship single-dynamic and remains a reference for clean, Harman-oriented tuning in a stainless steel shell. It still holds up as a refined, neutral-leaning option.",
+        "tags": ["mid-tier", "dd", "harman", "classic"],
+        "releaseDate": "2019-01-01",
+        "measuredBy": "",
+        "connector": "0.78mm 2-Pin"
+}

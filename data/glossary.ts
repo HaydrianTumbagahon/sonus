@@ -14,6 +14,7 @@ export type GlossaryTerm = {
   visual: GlossaryVisual;
   related: string[];
   exampleIEMs: string[];
+  images?: string[];
 };
 
 export const glossaryCategories: GlossaryCategory[] = [

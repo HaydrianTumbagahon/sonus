@@ -1,0 +1,41 @@
+{
+  "name": "Shimin Li",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 40,
+  "impedance": "20 Ω",
+  "sensitivity": "110 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Decorative",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Affordable",
+    "Decent tuning"
+  ],
+  "cons": [
+    "Basic performance"
+  ],
+  "ratings": {
+    "build": 5,
+    "value": 7,
+    "sound": 5
+  },
+  "insight": "Shimin Li is an entry-level single-dynamic in Tangzu’s catalog, offering a simple and inexpensive option for casual listening.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

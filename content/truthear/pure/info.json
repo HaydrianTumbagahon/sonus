@@ -1,0 +1,45 @@
+{
+  "name": "Pure",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 3BA",
+  "priceUSD": 90,
+  "impedance": "13.8 Ω",
+  "sensitivity": "122 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin (distinctive shape)",
+    "faceplate": "Resin / metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "BK5128 / HRTF-informed tuning goals",
+    "Clean bass response",
+    "Easy to drive",
+    "Unique design language"
+  ],
+  "cons": [
+    "Tuning is polarizing (some find it too restrained)",
+    "Shell shape can be uncomfortable for some"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 7,
+    "sound": 7
+  },
+  "insight": "Pure was designed with HRTF characteristics measured on a BK5128 HATS. It aims for a clean, less colored presentation. Reception has been mixed, with some listeners appreciating the restraint and others finding it less engaging than Hexa or Nova.",
+  "tags": [
+    "entry-level",
+    "hybrid",
+    "hrt f"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

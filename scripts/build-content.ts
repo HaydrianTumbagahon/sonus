@@ -8,6 +8,7 @@ const targetRoot = path.join(contentRoot, "targets");
 const publicRoot = path.join(root, "public");
 const generatedRoot = path.join(root, "generated");
 const imageExtensions = new Set([".webp", ".png", ".jpg", ".jpeg"]);
+const glossaryImageExtensions = new Set([".webp", ".png", ".jpg", ".jpeg", ".svg"]);
 const frequencyPointCount = 480;
 const requiredInfoFields = ["name", "priceUSD", "description"];
 const warnings: string[] = [];
@@ -48,7 +49,7 @@ function normalizeDriverType(value: unknown): string | undefined {
   if (normalized.includes("balanced armature") || normalized === "ba") return "BA";
   if (normalized.includes("planar")) return "Planar";
   if (normalized.includes("electrostatic") || normalized === "est") return "EST";
-  if (normalized.includes("bone conduction")) return "Bone Conduction";
+  if (normalized.includes("bone conduction") || normalized === "bc") return "Bone Conduction";
   if (normalized.includes("hybrid")) return "Hybrid";
   return value.trim();
 }
@@ -70,8 +71,11 @@ function normalizeRatings(value: unknown): Record<string, number> | undefined {
       : typeof rawRating === "string"
         ? Number(rawRating.trim())
         : undefined;
-    if (rating !== undefined && Number.isFinite(rating) && rating >= 0 && rating <= 10) {
-      ratings[name] = rating;
+    const normalizedRating = rating !== undefined && Number.isFinite(rating)
+      ? rating > 0 && rating <= 1 ? rating * 10 : rating
+      : undefined;
+    if (normalizedRating !== undefined && normalizedRating >= 0 && normalizedRating <= 10) {
+      ratings[name] = Math.round(normalizedRating * 100) / 100;
     } else {
       warn(`Rating "${name}" must be a number from 0 to 10 (${String(rawRating)}).`);
     }
@@ -298,7 +302,7 @@ function cleanGlossaryText(value: string): string {
     .trim();
 }
 
-function loadGlossary(): Array<{
+type BuiltGlossaryTerm = {
   slug: string;
   term: string;
   category: "Hardware & Design" | "Sound Frequencies & Tuning" | "Audio Quality & Performance";
@@ -307,7 +311,10 @@ function loadGlossary(): Array<{
   visual: "diagram" | "frequency-zone" | "waveform" | "none";
   related: string[];
   exampleIEMs: string[];
-}> {
+  images?: string[];
+};
+
+function loadGlossary(): BuiltGlossaryTerm[] {
   const filePath = path.join(contentRoot, "glossary.json");
   if (!existsSync(filePath)) {
     warn("[glossary] content/glossary.json is missing.");
@@ -320,16 +327,7 @@ function loadGlossary(): Array<{
     return [];
   }
 
-  const results: Array<{
-    slug: string;
-    term: string;
-    category: "Hardware & Design" | "Sound Frequencies & Tuning" | "Audio Quality & Performance";
-    shortDefinition: string;
-    explanation: string;
-    visual: "diagram" | "frequency-zone" | "waveform" | "none";
-    related: string[];
-    exampleIEMs: string[];
-  }> = [];
+  const results: BuiltGlossaryTerm[] = [];
 
   for (const categoryValue of parsed.categories) {
     if (!isRecord(categoryValue) || !Array.isArray(categoryValue.terms)) continue;
@@ -405,6 +403,135 @@ function loadGlossary(): Array<{
     }
     unique.add(term.slug);
     return true;
+  });
+}
+
+function normalizedGlossaryKey(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function glossaryImageTerm(stem: string, suffix: number | undefined, terms: BuiltGlossaryTerm[]): { term?: BuiltGlossaryTerm; order: number } {
+  const normalizedStem = normalizedGlossaryKey(stem);
+  const combinedConnector = terms.find((term) => normalizedGlossaryKey(term.term).includes("2pinmmcx"));
+  if (normalizedStem === "2pinmmcx" && suffix === 2 && !combinedConnector) {
+    const mmcxTerm = terms.find((term) => normalizedGlossaryKey(term.slug) === "mmcx");
+    if (mmcxTerm) return { term: mmcxTerm, order: 1 };
+  }
+
+  const exact = terms.find((term) => term.slug === stem);
+  if (exact) return { term: exact, order: suffix ?? 1 };
+
+  const caseInsensitive = terms.find((term) => term.slug.toLowerCase() === stem.toLowerCase());
+  if (caseInsensitive) return { term: caseInsensitive, order: suffix ?? 1 };
+
+  const punctuationInsensitive = terms.find((term) => normalizedGlossaryKey(term.slug) === normalizedStem);
+  if (punctuationInsensitive) return { term: punctuationInsensitive, order: suffix ?? 1 };
+
+  const nameSlugMatch = terms.find((term) => slugify(term.term) === slugify(stem));
+  if (nameSlugMatch) return { term: nameSlugMatch, order: suffix ?? 1 };
+
+  const aliases: Record<string, string> = {
+    "dynamic-drivers": "dynamic-driver",
+    "impedance-and-sensitivity": "impedance-sensitivity",
+  };
+  const aliasedTerm = terms.find((term) => term.slug === aliases[slugify(stem)]);
+  return { term: aliasedTerm, order: suffix ?? 1 };
+}
+
+function editDistance(left: string, right: string): number {
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+function closestGlossaryTermSlug(stem: string, terms: BuiltGlossaryTerm[]): string {
+  if (terms.length === 0) return "none";
+  const key = normalizedGlossaryKey(stem);
+  return terms.reduce((closest, term) => {
+    const closestScore = Math.min(
+      editDistance(key, normalizedGlossaryKey(closest.slug)),
+      editDistance(key, normalizedGlossaryKey(slugify(closest.term))),
+    );
+    const termScore = Math.min(
+      editDistance(key, normalizedGlossaryKey(term.slug)),
+      editDistance(key, normalizedGlossaryKey(slugify(term.term))),
+    );
+    return termScore < closestScore ? term : closest;
+  }).slug;
+}
+
+function loadGlossaryImages(terms: BuiltGlossaryTerm[]): BuiltGlossaryTerm[] {
+  const sourceDirectory = path.join(contentRoot, "glossary-images");
+  if (!existsSync(sourceDirectory)) {
+    warn("[glossary-images] Content image directory is missing.");
+    return terms;
+  }
+
+  let files: string[];
+  try {
+    files = readdirSync(sourceDirectory, { withFileTypes: true })
+      .filter((entry) => entry.isFile())
+      .map((entry) => entry.name)
+      .sort((left, right) => left.localeCompare(right, undefined, { numeric: true, sensitivity: "base" }));
+  } catch {
+    warn("[glossary-images] Could not read the content image directory.");
+    return terms;
+  }
+
+  const destinationDirectory = path.join(publicRoot, "glossary");
+  const matchedImages = new Map<string, Array<{ order: number; file: string; url: string }>>();
+  if (files.length > 0) mkdirSync(destinationDirectory, { recursive: true });
+
+  for (const file of files) {
+    const extension = path.extname(file).toLowerCase();
+    const originalStem = path.basename(file, path.extname(file));
+    const suffixMatch = /^(.*?)-(\d+)$/.exec(originalStem);
+    const stem = suffixMatch?.[1] ?? originalStem;
+    const suffix = suffixMatch ? Number(suffixMatch[2]) : undefined;
+    const closestSlug = closestGlossaryTermSlug(stem, terms);
+
+    try {
+      copyFileSync(path.join(sourceDirectory, file), path.join(destinationDirectory, file));
+    } catch {
+      warn(`[glossary-images/${file}] Could not copy file (closest term slug: ${closestSlug}).`);
+      continue;
+    }
+
+    if (!glossaryImageExtensions.has(extension)) {
+      warn(`[glossary-images/${file}] Unsupported extension ${extension || "(none)"}; unmatched (closest term slug: ${closestSlug}).`);
+      continue;
+    }
+
+    const match = glossaryImageTerm(stem, suffix, terms);
+    if (!match.term) {
+      warn(`[glossary-images/${file}] Unmatched image file (closest term slug: ${closestSlug}).`);
+      continue;
+    }
+
+    const images = matchedImages.get(match.term.slug) ?? [];
+    images.push({ order: match.order, file, url: publicUrl("glossary", file) });
+    matchedImages.set(match.term.slug, images);
+  }
+
+  return terms.map((term) => {
+    const images = matchedImages.get(term.slug);
+    if (!images) return term;
+    return {
+      ...term,
+      images: images
+        .sort((left, right) => left.order - right.order || left.file.localeCompare(right.file, undefined, { numeric: true, sensitivity: "base" }))
+        .map((image) => image.url),
+    };
   });
 }
 
@@ -586,7 +713,7 @@ function main() {
   }
 
   const targets = loadTargets();
-  const glossary = loadGlossary();
+  const glossary = loadGlossaryImages(loadGlossary());
   mkdirSync(generatedRoot, { recursive: true });
   writeFileSync(path.join(generatedRoot, "iems.json"), `${JSON.stringify(iems, null, 2)}\n`);
   writeFileSync(path.join(generatedRoot, "brands.json"), `${JSON.stringify(brands, null, 2)}\n`);

@@ -1,39 +1,46 @@
 {
   "name": "Castor Bass Edition",
   "driverType": "DD",
-  "driverConfig": "Dual DD with switches",
+  "driverConfig": "2DD stacked (8mm + 10mm dual-magnet, electronic crossover)",
   "priceUSD": 25,
-  "impedance": "16-32 \u03a9",
-  "sensitivity": "110-122 dB",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "impedance": "16–20 Ω (Improved Bass)",
+  "sensitivity": "103 ±3 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
   "materials": {
-    "shell": "Resin / Metal",
-    "faceplate": "Metal / Resin",
+    "shell": "Resin / metal",
+    "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Standard / Premium",
-    "connector": "2-Pin"
+    "cable": "Flat transparent",
+    "connector": "0.75mm 2-Pin"
   },
   "accessories": [
-    "Carrying case",
-    "Ear tips",
-    "Cable"
+    "Cable",
+    "Tips",
+    "Tuning pin (4 switches)"
   ],
   "pros": [
-    "Good performance for the tier"
+    "Strong bass-focused tuning",
+    "Four tuning switches for further adjustment",
+    "Very affordable dual-dynamic",
+    "Harman-based mids/treble with elevated bass"
   ],
   "cons": [
-    "Details to be filled by reviewer"
+    "Bass can overwhelm for some",
+    "Basic accessories"
   ],
   "ratings": {
-    "build": 7,
+    "build": 6,
     "value": 9,
     "sound": 7
   },
-  "insight": "Castor Bass Edition from Kz. Placeholder insight \u2014 replace with your personal take.",
+  "insight": "Castor Bass Edition (Improved Bass version) uses stacked dual dynamics and four tuning switches. It is one of the strongest bass-oriented budget options from KZ, with the ability to further shape the signature via the switches.",
   "tags": [
-    "entry",
-    "dd"
+    "entry-level",
+    "dd",
+    "bass",
+    "tunable"
   ],
-  "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.75mm 2-Pin"
 }

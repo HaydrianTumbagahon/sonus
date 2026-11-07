@@ -1,24 +1,47 @@
 {
   "name": "Kato",
   "driverType": "DD",
-  "driverConfig": "1DD (10mm)",
-  "priceUSD": 189,
+  "driverConfig": "1 × 10mm dual-cavity dynamic (brass or stainless options)",
+  "priceUSD": 190,
   "impedance": "32 Ω",
   "sensitivity": "123 dB/Vrms",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "frequencyResponse": "10 Hz – 30 kHz",
   "materials": {
-    "shell": "Stainless steel / Brass options",
+    "shell": "CNC metal (brass or stainless steel versions)",
     "faceplate": "Metal",
-    "nozzle": "Interchangeable metal",
+    "nozzle": "Interchangeable",
     "cable": "Silver-plated copper",
-    "connector": "2-Pin"
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Case", "Multiple nozzles", "Ear tips", "Cable"],
-  "pros": ["Excellent build", "Spacious soundstage", "Interchangeable nozzles", "Polished tuning"],
-  "cons": ["Weight (metal shell)", "Stock cable is average"],
-  "ratings": { "build": 9, "value": 8, "sound": 8 },
-  "insight": "A legendary, highly polished all-metal favorite loved for its spacious soundstage and refined single-DD performance.",
-  "tags": ["mid-tier", "dd", "metal", "soundstage", "classic"],
+  "accessories": [
+    "Cable",
+    "Interchangeable nozzles",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Premium all-metal construction",
+    "Spacious soundstage for a single DD",
+    "Interchangeable nozzles for tuning flexibility",
+    "Polished, mature tuning"
+  ],
+  "cons": [
+    "Weight of metal shell",
+    "Price is higher than many single-DDs"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 7,
+    "sound": 8
+  },
+  "insight": "Kato is widely regarded as one of Moondrop’s most polished single-dynamic IEMs. The all-metal build, interchangeable nozzles, and spacious presentation make it a favorite among listeners who want a refined, stage-oriented single-DD experience.",
+  "tags": [
+    "mid-tier",
+    "dd",
+    "metal-shell",
+    "soundstage"
+  ],
   "releaseDate": "2021-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

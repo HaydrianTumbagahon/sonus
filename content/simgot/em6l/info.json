@@ -1,0 +1,46 @@
+{
+  "name": "EM6L",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 4BA (8mm dual-cavity dynamic + 4BA)",
+  "priceUSD": 125,
+  "impedance": "26 Ω",
+  "sensitivity": "119 dB/Vrms",
+  "frequencyResponse": "8 Hz – 40 kHz",
+  "materials": {
+    "shell": "3D-printed resin",
+    "faceplate": "CNC metal",
+    "nozzle": "Metal",
+    "cable": "Silver-plated OFC",
+    "connector": "0.78mm 2-Pin (QDC-style)"
+  },
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Harman-oriented tuning with good imaging",
+    "Popular for gaming and positional cues",
+    "Solid hybrid value",
+    "Clean overall presentation"
+  ],
+  "cons": [
+    "Durability concerns reported by some users",
+    "Can show source impedance sensitivity"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "EM6L became one of Simgot’s most recommended hybrids, especially among gamers, thanks to its wide stage and clean positional performance. The 1DD + 4BA configuration delivers a competent all-rounder at a competitive price.",
+  "tags": [
+    "entry-level",
+    "hybrid",
+    "gaming",
+    "harman"
+  ],
+  "releaseDate": "2023-08-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin (QDC-style)"
+}

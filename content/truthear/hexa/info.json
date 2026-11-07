@@ -1,0 +1,46 @@
+{
+  "name": "Hexa",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 3BA",
+  "priceUSD": 80,
+  "impedance": "20.5 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 40 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Metal / resin",
+    "nozzle": "Metal",
+    "cable": "Standard 2-Pin",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Silicone + foam tips",
+    "Case"
+  ],
+  "pros": [
+    "Excellent imaging and detail for the price",
+    "Clean, technical hybrid performance",
+    "Strong gaming / positional performance",
+    "Good isolation"
+  ],
+  "cons": [
+    "Treble can be forward for sensitive listeners",
+    "Bass is controlled rather than elevated"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 9,
+    "sound": 8
+  },
+  "insight": "Hexa is widely regarded as one of the best technical hybrids under $100. Its 1DD + 3BA configuration delivers strong imaging, detail, and a clean overall presentation that made it a staple recommendation for both music and gaming.",
+  "tags": [
+    "entry-level",
+    "hybrid",
+    "technical",
+    "gaming"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

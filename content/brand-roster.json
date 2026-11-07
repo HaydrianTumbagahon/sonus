@@ -6,8 +6,8 @@
   { "name": "Kiwi Ears", "slug": "kiwi-ears", "status": "live" },
   { "name": "KZ", "slug": "kz", "status": "live" },
   { "name": "Moondrop", "slug": "moondrop", "status": "live" },
-  { "name": "Simgot", "slug": "simgot", "status": "coming-soon" },
-  { "name": "Tanchjim", "slug": "tanchjim", "status": "coming-soon" },
-  { "name": "Tangzu", "slug": "tangzu", "status": "coming-soon" },
-  { "name": "Truthear", "slug": "truthear", "status": "coming-soon" }
+  { "name": "Simgot", "slug": "simgot", "status": "live" },
+  { "name": "Tanchjim", "slug": "tanchjim", "status": "live" },
+  { "name": "Tangzu", "slug": "tangzu", "status": "live" },
+  { "name": "Truthear", "slug": "truthear", "status": "live" }
 ]

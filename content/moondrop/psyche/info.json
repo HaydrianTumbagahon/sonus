@@ -1,24 +1,45 @@
 {
   "name": "Psyche",
   "driverType": "Hybrid",
-  "driverConfig": "Dynamic + Planar multi-driver",
-  "priceUSD": 899,
-  "impedance": "18 Ω",
-  "sensitivity": "120 dB/Vrms",
-  "frequencyResponse": "10 Hz - 40 kHz",
+  "driverConfig": "2DD + 4BA + 4 planar",
+  "priceUSD": 2400,
+  "impedance": "17.5 Ω",
+  "sensitivity": "115 dB",
+  "frequencyResponse": "7 Hz – 46 kHz",
   "materials": {
-    "shell": "Resin",
-    "faceplate": "Metal",
+    "shell": "Premium resin / metal",
+    "faceplate": "Artistic",
     "nozzle": "Metal",
-    "cable": "Premium copper",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Carrying case", "Ear tips", "Cable", "Modular plugs"],
-  "pros": ["Boutique build", "Excellent technical performance", "Unique driver combination"],
-  "cons": ["Premium pricing", "Fit can be specific"],
-  "ratings": { "build": 9, "value": 7, "sound": 9 },
-  "insight": "An ultra-premium boutique dynamic/planar flagship multi-driver design focused on high-end resolution and staging.",
-  "tags": ["flagship", "hybrid", "planar", "boutique"],
-  "releaseDate": "2023-06-01",
-  "measuredBy": ""
+  "accessories": [
+    "Premium cable",
+    "Case",
+    "Tips"
+  ],
+  "pros": [
+    "Ultra-premium multi-driver flagship",
+    "Excellent technical performance",
+    "Deep bass and airy treble"
+  ],
+  "cons": [
+    "Very expensive",
+    "Large shells possible"
+  ],
+  "ratings": {
+    "build": 9,
+    "value": 5,
+    "sound": 9
+  },
+  "insight": "Psyche is Moondrop’s ultra-premium boutique flagship combining dynamic, balanced armature, and planar drivers. It targets enthusiasts seeking top-tier technical performance and a complex, high-resolution presentation.",
+  "tags": [
+    "flagship",
+    "hybrid",
+    "planar",
+    "summit-fi"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

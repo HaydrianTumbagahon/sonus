@@ -1,0 +1,44 @@
+{
+  "name": "Gate",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm dynamic (carbon-LCP diaphragm)",
+  "priceUSD": 20,
+  "impedance": "28 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Resin",
+    "faceplate": "Resin / metal accent",
+    "nozzle": "Metal",
+    "cable": "High-quality OFC (well-regarded stock cable)",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Excellent stock cable for the price",
+    "Clean, competent tuning under $20",
+    "Easy to drive",
+    "Good entry point into the brand"
+  ],
+  "cons": [
+    "Bright lower treble for some listeners",
+    "Basic technical performance"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "Gate is Truthear’s ultra-budget single-dynamic that punches above its price thanks to a surprisingly good stock cable and a clean, modern tuning. It is frequently recommended as one of the safer sub-$20 options.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget-king"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

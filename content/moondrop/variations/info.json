@@ -1,24 +1,46 @@
 {
   "name": "Variations",
   "driverType": "Hybrid",
-  "driverConfig": "1DD + 2BA + 2EST (Tribrid)",
+  "driverConfig": "1DD + 2BA + 2EST",
   "priceUSD": 520,
   "impedance": "15.2 Ω",
   "sensitivity": "118 dB/Vrms",
-  "frequencyResponse": "9 Hz - 40 kHz",
+  "frequencyResponse": "9 Hz – 40 kHz",
   "materials": {
-    "shell": "3D-printed resin",
+    "shell": "Metal / resin",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Silver-plated copper",
-    "connector": "2-Pin"
+    "cable": "Premium",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Carrying case", "Multiple ear tips", "Cable", "Cleaning tool"],
-  "pros": ["Clean sub-bass separation", "Clear vocals", "Excellent technicalities", "VDSF tuning"],
-  "cons": ["Can be bright for some", "Fit may require tip rolling"],
-  "ratings": { "build": 8, "value": 8, "sound": 9 },
-  "insight": "The benchmark $500+ tribrid known for its clean sub-bass separation and clear vocals. One of Moondrop's most respected technical performers.",
-  "tags": ["flagship", "tribrid", "vdsf", "technical", "vocal"],
+  "accessories": [
+    "Cable",
+    "Tips",
+    "Case"
+  ],
+  "pros": [
+    "Excellent sub-bass separation and control",
+    "Clean vocals and EST air",
+    "Strong technical hybrid performance",
+    "Benchmark status in its price range"
+  ],
+  "cons": [
+    "Tuning can feel dark/warm to some",
+    "Premium price"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 7,
+    "sound": 9
+  },
+  "insight": "Variations is often cited as a mid-high end benchmark for its clean sub-bass separation, clear vocals, and the added air from dual electrostatic drivers. It remains a reference point for listeners seeking a technical, well-separated hybrid presentation.",
+  "tags": [
+    "flagship",
+    "hybrid",
+    "est",
+    "benchmark"
+  ],
   "releaseDate": "2021-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }

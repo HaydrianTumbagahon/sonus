@@ -1,0 +1,46 @@
+{
+  "name": "Wan'er S.G 2 Jade Dragon",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm PET dynamic",
+  "priceUSD": 30,
+  "impedance": "19 Ω ±20%",
+  "sensitivity": "113.5 dB @ 1 kHz",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Medical-grade resin (jade-green theme)",
+    "faceplate": "Jade Dragon decorative",
+    "nozzle": "Metal",
+    "cable": "Silver-plated copper",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tang Sancai wide-bore tips",
+    "Tips"
+  ],
+  "pros": [
+    "Distinctive jade-dragon design",
+    "Same solid Wan'er tuning foundation",
+    "Attractive limited aesthetic",
+    "Good value"
+  ],
+  "cons": [
+    "Primarily a cosmetic special edition",
+    "Performance is not a large leap over standard SG2"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "The Jade Dragon edition of Wan'er S.G 2 adds a striking jade-green Chinese dragon aesthetic while retaining the natural single-dynamic tuning that made the series popular. It is mainly a design-focused special version.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "special-edition",
+    "design"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

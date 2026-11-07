@@ -1,0 +1,45 @@
+{
+  "name": "Wan'er S.G 2 Red Lion",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm PET dynamic",
+  "priceUSD": 30,
+  "impedance": "20 Ω",
+  "sensitivity": "113.5 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Medical-grade resin (red theme)",
+    "faceplate": "Red Lion decorative",
+    "nozzle": "Metal",
+    "cable": "Silver-plated copper",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Sonic tips",
+    "Tang Sancai tips"
+  ],
+  "pros": [
+    "Eye-catching red special edition",
+    "Includes extra tip options",
+    "Same reliable Wan'er tuning",
+    "Good everyday set"
+  ],
+  "cons": [
+    "Cosmetic-focused upgrade",
+    "Not a major sonic redesign"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 8,
+    "sound": 7
+  },
+  "insight": "Red Lion is the complementary special edition to Jade Dragon, offering a bold red aesthetic and additional tip options while keeping the approachable Wan'er single-dynamic signature.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "special-edition"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "EA500 LM",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm dynamic (LM version)",
+  "priceUSD": 80,
+  "impedance": "32 Ω",
+  "sensitivity": "123 dB",
+  "frequencyResponse": "10 Hz – 30 kHz",
+  "materials": {
+    "shell": "Metal",
+    "faceplate": "Metal",
+    "nozzle": "Interchangeable",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Nozzles",
+    "Tips"
+  ],
+  "pros": [
+    "Refined version of EA500",
+    "Improved tuning balance",
+    "Same strong metal build"
+  ],
+  "cons": [
+    "Incremental upgrade over standard EA500"
+  ],
+  "ratings": {
+    "build": 8,
+    "value": 8,
+    "sound": 8
+  },
+  "insight": "EA500 LM is a refined iteration of the popular EA500, offering subtle tuning improvements while retaining the excellent metal build and nozzle system that made the original successful.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "metal-shell"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

@@ -58,7 +58,7 @@ export function GlossaryDetailClient({
         </div>
       </section>
 
-      {term.visual !== "none" && (
+      {term.visual !== "none" && (term.visual !== "waveform" || Boolean(term.images?.length)) && (
         <section aria-labelledby="term-visual" className="space-y-3">
           <h2 id="term-visual" className="text-lg font-semibold text-primary">{t("glossary.visual")}</h2>
           <TermVisual term={term} />

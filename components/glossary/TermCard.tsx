@@ -74,7 +74,7 @@ export function TermCard({ term, terms, iems, expanded, onToggle }: {
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
-              {term.visual !== "none" && <TermVisual term={term} />}
+              {term.visual !== "none" && (term.visual !== "waveform" || Boolean(term.images?.length)) && <TermVisual term={term} hideDiagramCaption />}
 
               {relatedTerms.length > 0 && <div className="space-y-2">
                 <h3 className="text-xs font-semibold text-primary">{t("glossary.related")}</h3>

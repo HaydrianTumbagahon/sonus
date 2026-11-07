@@ -1,0 +1,47 @@
+{
+  "name": "EW300",
+  "driverType": "Hybrid",
+  "driverConfig": "1DD + 1 Planar + 1 PZT (10mm DD + 6mm annular planar + piezoelectric)",
+  "priceUSD": 80,
+  "impedance": "28 Ω",
+  "sensitivity": "121 dB/Vrms (silver) / 119 dB/Vrms (gold)",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Alloy",
+    "faceplate": "Metal",
+    "nozzle": "Interchangeable (two sets)",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Two nozzle sets",
+    "Tips"
+  ],
+  "pros": [
+    "Tribrid configuration at a low price",
+    "Interchangeable nozzles",
+    "Strong bass presence",
+    "Good technical performance for the cost"
+  ],
+  "cons": [
+    "Can be bass-heavy for some preferences",
+    "Metal shell adds weight"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "EW300 packs a dynamic, annular planar, and piezoelectric driver into an affordable tribrid. The interchangeable nozzles and energetic tuning make it a popular choice for listeners who want more complexity than a pure single-DD without spending much.",
+  "tags": [
+    "entry-level",
+    "hybrid",
+    "tribrid",
+    "pzt",
+    "planar"
+  ],
+  "releaseDate": "2024-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

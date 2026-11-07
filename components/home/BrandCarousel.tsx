@@ -44,7 +44,7 @@ function brandMonogram(name: string): string {
 export function BrandCarousel({ brands }: { brands: Brand[] }) {
   const { t } = useLanguage();
   const reduceMotion = useReducedMotion();
-  const orderedBrands = [...brands].sort((left, right) => {
+  const orderedBrands = brands.filter((brand) => brand.status === "live").sort((left, right) => {
     const leftIndex = brandOrder.indexOf(left.slug as (typeof brandOrder)[number]);
     const rightIndex = brandOrder.indexOf(right.slug as (typeof brandOrder)[number]);
     return (leftIndex < 0 ? brandOrder.length : leftIndex) - (rightIndex < 0 ? brandOrder.length : rightIndex);

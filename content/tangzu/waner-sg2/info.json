@@ -1,0 +1,45 @@
+{
+  "name": "Wan'er S.G 2",
+  "driverType": "DD",
+  "driverConfig": "1 × 10mm PET dynamic",
+  "priceUSD": 25,
+  "impedance": "19–20 Ω",
+  "sensitivity": "113.5 dB",
+  "frequencyResponse": "20 Hz – 20 kHz",
+  "materials": {
+    "shell": "Medical-grade PET resin",
+    "faceplate": "Decorative",
+    "nozzle": "Metal",
+    "cable": "Silver-plated copper",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable (mic/no-mic options)",
+    "Tips including Tang Sancai"
+  ],
+  "pros": [
+    "Improved version of the popular Wan'er",
+    "Natural tuning retained",
+    "Better sensitivity and accessories",
+    "Multiple cable variants available"
+  ],
+  "cons": [
+    "Still limited technical performance",
+    "Competition is intense at this price"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 9,
+    "sound": 7
+  },
+  "insight": "Wan'er S.G 2 refines the original formula with improved driver implementation and better accessories while keeping the natural, approachable signature that made the first version popular.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget",
+    "vocal"
+  ],
+  "releaseDate": "2025-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

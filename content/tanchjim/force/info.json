@@ -1,0 +1,40 @@
+{
+  "name": "Force",
+  "driverType": "DD",
+  "driverConfig": "1DD",
+  "priceUSD": 90,
+  "impedance": "32 Ω",
+  "sensitivity": "120 dB",
+  "frequencyResponse": "10 Hz – 40 kHz",
+  "materials": {
+    "shell": "Metal / resin",
+    "faceplate": "Metal",
+    "nozzle": "Metal",
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
+  },
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Solid build",
+    "Competent tuning"
+  ],
+  "cons": [
+    "Not highly distinctive"
+  ],
+  "ratings": {
+    "build": 6,
+    "value": 7,
+    "sound": 6
+  },
+  "insight": "Force is a mid-budget single-dynamic from Tanchjim that prioritizes a balanced, everyday presentation.",
+  "tags": [
+    "entry-level",
+    "dd"
+  ],
+  "releaseDate": "2023-01-01",
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
+}

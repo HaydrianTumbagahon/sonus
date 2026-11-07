@@ -1,24 +1,45 @@
 {
   "name": "Chu II",
   "driverType": "DD",
-  "driverConfig": "1DD",
-  "priceUSD": 19,
-  "impedance": "18 Ω",
-  "sensitivity": "119 dB/Vrms",
-  "frequencyResponse": "10 Hz - 35 kHz",
+  "driverConfig": "1 × 10mm dynamic",
+  "priceUSD": 20,
+  "impedance": "18 Ω ±15% @ 1 kHz",
+  "sensitivity": "119 dB/Vrms @ 1 kHz",
+  "frequencyResponse": "20 Hz – 20 kHz",
   "materials": {
-    "shell": "Metal alloy",
+    "shell": "Metal",
     "faceplate": "Metal",
     "nozzle": "Metal",
-    "cable": "Detachable copper",
-    "connector": "2-Pin"
+    "cable": "Standard",
+    "connector": "0.78mm 2-Pin"
   },
-  "accessories": ["Tips", "Cable", "Simple pouch"],
-  "pros": ["Incredible value", "Removable cable", "Punchy bass", "Micro size", "Global best-seller"],
-  "cons": ["Build is basic at the price", "Cable is thin"],
-  "ratings": { "build": 7, "value": 10, "sound": 7 },
-  "insight": "A global best-seller featuring a removable cable, punchy bass, and micro-size fit. One of the best true entry points into IEMs.",
-  "tags": ["entry-level", "dd", "budget-king", "beginner-friendly", "value"],
+  "accessories": [
+    "Cable",
+    "Tips"
+  ],
+  "pros": [
+    "Excellent tuning for the price",
+    "Metal build",
+    "VDSF-aligned",
+    "Beginner favorite"
+  ],
+  "cons": [
+    "Basic accessories",
+    "Limited technical performance"
+  ],
+  "ratings": {
+    "build": 7,
+    "value": 10,
+    "sound": 7
+  },
+  "insight": "Chu II is one of the best true entry-level IEMs available. Its metal shell and well-executed VDSF-inspired tuning make it a frequent first recommendation for newcomers.",
+  "tags": [
+    "entry-level",
+    "dd",
+    "budget-king",
+    "beginner-friendly"
+  ],
   "releaseDate": "2023-01-01",
-  "measuredBy": ""
+  "measuredBy": "",
+  "connector": "0.78mm 2-Pin"
 }
